@@ -14,7 +14,7 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsM
 wget https://github.com/catppuccin/gtk/releases/download/v0.7.1/Catppuccin-Mocha-Standard-Mauve-Dark.zip -P $DIRMAIN/assets
 
 mkdir ~/.config ~/.fonts ~/.themes
-mkdir ~/.themes Catppuccin-Mocha-Standard-Mauve-Dark
+mkdir ~/.themes/Catppuccin-Mocha-Standard-Mauve-Dark
 unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.themes/Catppuccin-Mocha-Standard-Mauve-Dark
 unzip $DIRMAIN/assets/JetBrainsMono.zip -d ~/.fonts
 
