@@ -54,7 +54,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id nitrogen --set-zoom-fill ~/.config/background.jpg
+exec_always --no-startup-id nitrogen --restore &
 
 #
 # ____  __.            ___.   .__            .___      
