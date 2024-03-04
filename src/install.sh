@@ -3,7 +3,7 @@ export DIRMAIN=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" && pwd )
 
 echo Version 1.0
 
-sudo pacman -S pipewire lib32-pipewire pipewire-pulse pipewire-jack wireplumber rtkit i3-wm sddm polybar rofi alacritty nitrogen xf86-input-evdev pcmanfm-gtk3 lxappearance-gtk3 neofetch flameshot unzip qt5-graphicaleffects qt5-svg qt5-quickcontrols2 wget code discord steam 
+sudo pacman -S pipewire lib32-pipewire pipewire-pulse pipewire-jack wireplumber rtkit i3-wm sddm polybar rofi alacritty nitrogen xf86-input-evdev pcmanfm-gtk3 lxappearance-gtk3 neofetch flameshot unzip qt5-graphicaleffects qt5-svg qt5-quickcontrols2 wget nano code discord steam 
 
 sudo usermod -a -G rtkit $USER
 systemctl --user enable pipewire pipewire-pulse
@@ -13,10 +13,9 @@ sudo localectl set-keymap de
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip -P $DIRMAIN/assets
 wget https://github.com/catppuccin/gtk/releases/download/v0.7.1/Catppuccin-Mocha-Standard-Mauve-Dark.zip -P $DIRMAIN/assets
 
-mkdir ~/.config ~/.fonts ~/.themes
-mkdir ~/.themes/Catppuccin-Mocha-Standard-Mauve-Dark
-unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.themes/Catppuccin-Mocha-Standard-Mauve-Dark
-unzip $DIRMAIN/assets/JetBrainsMono.zip -d ~/.fonts
+mkdir ~/.config ~/.local/share/fonts ~/.local/share/themes
+unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
+unzip $DIRMAIN/assets/JetBrainsMono.zip -d ~/.local/share/fonts
 
 cp -r $DIRMAIN/config/* ~/.config
 
