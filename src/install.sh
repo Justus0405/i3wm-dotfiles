@@ -3,7 +3,7 @@ export DIRMAIN=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" && pwd )
 
 echo Version 1.0
 
-sudo pacman -S pipewire lib32-pipewire pipewire-pulse pipewire-jack wireplumber rtkit i3-wm sddm polybar rofi alacritty nitrogen xf86-input-evdev xf86-input-synaptics pcmanfm-gtk3 lxappearance-gtk3 neofetch flameshot unzip qt5-graphicaleffects qt5-svg qt5-quickcontrols2 wget nano code discord steam 
+sudo pacman -S pipewire lib32-pipewire pipewire-pulse pipewire-jack wireplumber rtkit i3-wm sddm polybar rofi alacritty nitrogen xf86-input-evdev xf86-input-synaptics pcmanfm-gtk3 lxappearance-gtk3 neofetch flameshot unzip htop qt5-graphicaleffects qt5-svg qt5-quickcontrols2 wget nano code discord steam 
 
 sudo usermod -a -G rtkit $USER
 systemctl --user enable pipewire pipewire-pulse
