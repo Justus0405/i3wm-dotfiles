@@ -13,7 +13,7 @@ sudo localectl set-keymap de
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip -P $DIRMAIN/assets
 wget https://github.com/catppuccin/gtk/releases/download/v0.7.1/Catppuccin-Mocha-Standard-Mauve-Dark.zip -P $DIRMAIN/assets
 
-mkdir ~/.config ~/.local/share/fonts ~/.local/share/themes
+mkdir -p ~/.config ~/.local/share/fonts ~/.local/share/themes
 unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
 unzip $DIRMAIN/assets/JetBrainsMono.zip -d ~/.local/share/fonts
 
