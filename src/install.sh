@@ -17,6 +17,7 @@ mkdir -p ~/.config ~/.local/share/fonts ~/.local/share/themes
 unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
 unzip $DIRMAIN/assets/JetBrainsMono.zip -d ~/.local/share/fonts/
 
+echo -e "[xin_-1]\nfile=/home/$USER/.config/background.jpg\nmode=5\nbgcolor=#000000" > config/nitrogen/bg-saved.cfg
 chmod +x $DIRMAIN/config/polybar/launch.sh
 cp -r $DIRMAIN/config/* ~/.config/
 
