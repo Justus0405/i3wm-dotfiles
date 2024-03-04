@@ -26,8 +26,6 @@ sudo cp -r $DIRMAIN/assets/sddm.conf /etc/
 sudo mv /usr/share/X11/xorg.conf.d/40-libinput.conf ~/.config/
 sudo cp -r $DIRMAIN/assets/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
 
-nitrogen --set-zoom-fill ~/.config/background.jpg
-
 sudo systemctl enable sddm
 
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
