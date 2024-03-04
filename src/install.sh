@@ -15,17 +15,17 @@ wget https://github.com/catppuccin/gtk/releases/download/v0.7.1/Catppuccin-Mocha
 
 mkdir -p ~/.config ~/.local/share/fonts ~/.local/share/themes
 unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
-unzip $DIRMAIN/assets/JetBrainsMono.zip -d ~/.local/share/fonts
+unzip $DIRMAIN/assets/JetBrainsMono.zip -d ~/.local/share/fonts/
 
-cp -r $DIRMAIN/config/* ~/.config
+cp -r $DIRMAIN/config/* ~/.config/
 
 sudo cp -r $DIRMAIN/assets/sddm/catppuccin-mocha /usr/share/sddm/themes/
 sudo cp -r $DIRMAIN/assets/sddm.conf /etc/
 
-sudo mv /usr/share/X11/xorg.conf.d/40-libinput.conf ~/.config
+sudo mv /usr/share/X11/xorg.conf.d/40-libinput.conf ~/.config/
 sudo cp -r $DIRMAIN/assets/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
 
-nitrogen --set-zoom-fill .config/background.jpg
+nitrogen --set-zoom-fill ~/.config/background.jpg
 
 sudo systemctl enable sddm
 
