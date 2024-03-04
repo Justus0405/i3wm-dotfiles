@@ -18,7 +18,7 @@ mkdir ~/.themes Catppuccin-Mocha-Standard-Mauve-Dark
 unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.themes/Catppuccin-Mocha-Standard-Mauve-Dark
 unzip $DIRMAIN/assets/JetBrainsMono.zip -d ~/.fonts
 
-cp -r $DIRMAIN/config ~/.config
+cp -r $DIRMAIN/config/* ~/.config
 
 sudo cp -r $DIRMAIN/assets/sddm/catppuccin-mocha /usr/share/sddm/themes/
 sudo cp -r $DIRMAIN/assets/sddm.conf /etc/
@@ -31,6 +31,6 @@ nitrogen --set-zoom-fill .config/background.jpg
 sudo systemctl enable sddm
 
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-sudo yay -S brave-bin
+yay -S brave-bin
 
 reboot
