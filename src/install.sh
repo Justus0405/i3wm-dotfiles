@@ -17,6 +17,7 @@ mkdir -p ~/.config ~/.local/share/fonts ~/.local/share/themes
 unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
 unzip $DIRMAIN/assets/JetBrainsMono.zip -d ~/.local/share/fonts/
 
+chmod +x $DIRMAIN/config/polybar/launch.sh
 cp -r $DIRMAIN/config/* ~/.config/
 
 sudo cp -r $DIRMAIN/assets/sddm/catppuccin-mocha /usr/share/sddm/themes/
