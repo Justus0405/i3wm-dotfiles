@@ -94,6 +94,7 @@ select fav in "${browsers[@]}"; do
 	    ;;
         *) echo "invalid option $REPLY";;
     esac
+  break
 done
 
 echo -e ""
