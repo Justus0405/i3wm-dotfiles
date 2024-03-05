@@ -78,9 +78,11 @@ select fav in "${browsers[@]}"; do
         "Brave")
             git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
             yay -S brave-bin --noconfirm
+	    break
             ;;
         "Chromium")
             sudo pacman -S chromium --noconfirm
+	    break
             ;;
         "Firefox")
             sudo pacman -S firefox --noconfirm
@@ -88,7 +90,7 @@ select fav in "${browsers[@]}"; do
             ;;
 	"Skip")
 	    echo "Skipping..."
-	    exit
+	    break
 	    ;;
         *) echo "invalid option $REPLY";;
     esac
