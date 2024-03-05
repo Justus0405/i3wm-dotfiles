@@ -1,15 +1,11 @@
 #!/bin/bash
 export DIRMAIN=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" && pwd )
-RED="\e[31m"
-GREEN="\e[32m"
-ENDCOLOR="\e[0m"
 
-
-echo -e "${GREEN}--------------------"
+echo -e "--------------------"
 echo -e "Justus0405 dotfiles "
 echo -e "Installer Ver. 1.1"
 echo -e "Have a good day!"
-echo -e "--------------------${ENDCOLOR}"
+echo -e "--------------------"
 echo -e ""
 
 while true; do
@@ -36,9 +32,9 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsM
 wget https://github.com/catppuccin/gtk/releases/download/v0.7.1/Catppuccin-Mocha-Standard-Mauve-Dark.zip -P $DIRMAIN/assets
 
 echo -e ""
-echo -e "${GREEN}--------------------"
+echo -e "--------------------"
 echo -e "Copying files..."
-echo -e "--------------------${ENDCOLOR}"
+echo -e "--------------------"
 echo -e ""
 
 mkdir -p ~/.config ~/.local/share/fonts ~/.local/share/themes
@@ -56,9 +52,9 @@ sudo mv /usr/share/X11/xorg.conf.d/40-libinput.conf ~/.config/
 sudo cp -r $DIRMAIN/assets/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
 
 echo -e ""
-echo -e "${GREEN}--------------------"
+echo -e "--------------------"
 echo -e "Enabling services..."
-echo -e "--------------------${ENDCOLOR}"
+echo -e "--------------------"
 echo -e ""
 
 systemctl --user enable pipewire pipewire-pulse
@@ -66,9 +62,9 @@ sudo systemctl disable gdm lightdm
 sudo systemctl enable sddm
 
 echo -e ""
-echo -e "${GREEN}--------------------"
+echo -e "--------------------"
 echo -e "Choosing a Browser"
-echo -e "--------------------${ENDCOLOR}"
+echo -e "--------------------"
 echo -e ""
 
 PS3='Choose your browser: '
@@ -98,9 +94,9 @@ select fav in "${browsers[@]}"; do
 done
 
 echo -e ""
-echo -e "${GREEN}--------------------"
+echo -e "--------------------"
 echo -e "Finished! Rebooting..."
-echo -e "--------------------${ENDCOLOR}"
+echo -e "--------------------"
 echo -e ""
 
 reboot
