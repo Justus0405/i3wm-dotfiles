@@ -12,6 +12,7 @@ The installation script is made for Arch, but **may** work on some Arch based di
 
 After a minimal Arch install (with grub and systemd), clone and execute -
 
+<div align = left>
 ```shell
 pacman -Syy git
 git clone https://github.com/Justus0405/i3wm-dotfiles.git
@@ -19,6 +20,7 @@ cd i3wm-dotfiles/src/
 chmod +x install.sh
 ./install.sh
 ```
+<div align = center>
 
 After the installation is finished the script will automaticly reboot into the new enviroment.
 
