@@ -90,4 +90,10 @@ After the installation is finished the script will automaticly reboot into the n
 | <kbd>Super</kbd> + <kbd>A</kbd> | focus the parent container
 | <kbd>Super</kbd> + <kbd>D</kbd> | focus the child container
 
-<!-- Insipired by hyperdots from prasanthrangan on https://github.com/prasanthrangan/hyprdots -->
+## Credits
+
+ - neofetch : https://github.com/prasanthrangan/hyprdots
+ - alacritty : https://github.com/catppuccin/alacritty
+ - rofi : https://github.com/catppuccin/rofi
+ - GTK : https://github.com/catppuccin/gtk
+ - SDDM : https://github.com/catppuccin/sddm
