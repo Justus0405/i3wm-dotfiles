@@ -71,7 +71,7 @@ echo -e "Choosing a Browser"
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
-PS3='Choose your browser: '
+PS3='Type in the NUMBER of your browser: '
 browsers=("Brave" "Chromium" "Firefox" "Skip")
 select fav in "${browsers[@]}"; do
     case $fav in
