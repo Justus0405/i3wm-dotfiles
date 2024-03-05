@@ -58,7 +58,8 @@ echo -e "--------------------"
 echo -e ""
 
 systemctl --user enable pipewire pipewire-pulse
-sudo systemctl disable gdm lightdm
+sudo systemctl disable gdm
+sudo systemctl disable lightdm
 sudo systemctl enable sddm
 
 echo -e ""
