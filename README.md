@@ -90,6 +90,9 @@ After the installation is finished the script will automaticly reboot into the n
 | <kbd>Super</kbd> + <kbd>A</kbd> | focus the parent container
 | <kbd>Super</kbd> + <kbd>D</kbd> | focus the child container
 
+<br>
+<div align = left>
+
 ## Credits
 
  - neofetch : https://github.com/prasanthrangan/hyprdots
