@@ -89,7 +89,7 @@ select fav in "${browsers[@]}"; do
 	    echo "Skipping..."
 	    break
 	    ;;
-        *) echo "invalid option $REPLY";;
+        *) echo "invalid option $REPLY, skipping...";;
     esac
   break
 done
