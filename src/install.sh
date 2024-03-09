@@ -39,7 +39,7 @@ echo -e "Copying files..."
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
-mkdir -p ~/.config ~/.local/share/fonts ~/.local/share/themes
+mkdir -p ~/.config ~/.local/share/themes
 unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
 
 echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpaper.jpg\nmode=5\nbgcolor=#000000" > config/nitrogen/bg-saved.cfg
