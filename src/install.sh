@@ -26,7 +26,7 @@ echo -e "Installing apps..."
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
-sudo pacman -S pipewire lib32-pipewire pipewire-pulse pipewire-jack wireplumber rtkit i3-wm sddm polybar rofi alacritty nitrogen xf86-input-evdev xf86-input-synaptics pcmanfm-gtk3 xarchiver lxappearance-gtk3 neofetch flameshot unzip htop qt5-graphicaleffects qt5-svg qt5-quickcontrols2 wget gvfs gvfs-smb nano code loupe totem gst-libav gst-plugins-ugly gnome-color-manager ffmpeg yt-dlp discord steam obs-studio gimp network-manager-applet gnu-free-fonts papirus-icon-theme ttf-jetbrains-mono-nerd
+sudo pacman -S alacritty code discord ffmpeg flameshot gimp gnome-color-manager gnu-free-fonts gst-libav gst-plugins-ugly gvfs gvfs-smb htop i3-wm lib32-pipewire loupe lxappearance-gtk3 nano neofetch network-manager-applet nitrogen obs-studio papirus-icon-theme pcmanfm-gtk3 pipewire pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rtkit sddm steam totem ttf-jetbrains-mono-nerd unzip wget wireplumber xarchiver xf86-input-evdev xf86-input-synaptics yt-dlp
 
 sudo usermod -a -G rtkit $USER
 sudo localectl set-keymap de
