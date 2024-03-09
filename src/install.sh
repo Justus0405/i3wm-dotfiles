@@ -59,6 +59,7 @@ echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
 systemctl --user enable pipewire pipewire-pulse
+sudo systemctl enable NetworkManager
 sudo systemctl disable gdm
 sudo systemctl disable lightdm
 sudo systemctl enable sddm
