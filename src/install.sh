@@ -20,6 +20,15 @@ while true; do
     esac
 done
 
+while true; do
+    read -p "Set keyboard layout to German? [y/N] " yn
+    case $yn in
+        [Yy]* ) echo Setting keyboard layout to German...; sudo localectl set-keymap de; break;;
+        [Nn]* ) echo Keeping current keyboard layout; break;;
+        * ) echo Keeping current keyboard layout; break;;
+    esac
+done
+
 echo -e ""
 echo -e "${GREEN}--------------------"
 echo -e "Installing apps..."
@@ -29,7 +38,6 @@ echo -e ""
 sudo pacman -S alacritty bash-completion code discord ffmpeg flameshot gimp gnome-color-manager gnu-free-fonts gst-libav gst-plugins-ugly gvfs gvfs-smb htop i3-wm lib32-pipewire loupe lxappearance-gtk3 nano neofetch network-manager-applet nitrogen obs-studio papirus-icon-theme pipewire pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rtkit sddm steam totem ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics yt-dlp
 
 sudo usermod -a -G rtkit $USER
-sudo localectl set-keymap de
 
 wget https://github.com/catppuccin/gtk/releases/download/v0.7.1/Catppuccin-Mocha-Standard-Mauve-Dark.zip -P $DIRMAIN/assets
 
