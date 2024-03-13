@@ -35,6 +35,37 @@ wget https://github.com/catppuccin/gtk/releases/download/v0.7.1/Catppuccin-Mocha
 
 echo -e ""
 echo -e "${GREEN}--------------------"
+echo -e "Choosing a Filemanager"
+echo -e "--------------------${ENDCOLOR}"
+echo -e ""
+
+PS3='Type in the NUMBER of your Filemanager: '
+filemanagers=("Nemo" "Pcmanfm-gtk3" "Nautilus" "Skip")
+select fav1 in "${filemanagers[@]}"; do
+    case $fav1 in
+        "Nemo")
+            sudo pacman -S nemo nemo-audio-tab nemo-fileroller nemo-image-converter nemo-share --noconfirm
+	    break
+            ;;
+        "Pcmanfm-gtk3")
+            sudo pacman -S pcmanfm-gtk3 xarchiver --noconfirm
+	    break
+            ;;
+        "Nautilus")
+            sudo pacman -S nautilus nautilus-image-converter nautilus-share --noconfirm
+	    break
+            ;;
+	"Skip")
+	    echo "Skipping..."
+	    break
+	    ;;
+        *) echo "invalid option $REPLY, skipping...";;
+    esac
+  break
+done
+
+echo -e ""
+echo -e "${GREEN}--------------------"
 echo -e "Copying files..."
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
@@ -72,8 +103,8 @@ echo -e ""
 
 PS3='Type in the NUMBER of your browser: '
 browsers=("Brave" "Chromium" "Firefox" "Skip")
-select fav in "${browsers[@]}"; do
-    case $fav in
+select fav2 in "${browsers[@]}"; do
+    case $fav2 in
         "Brave")
             git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm
             yay -S brave-bin --noconfirm
