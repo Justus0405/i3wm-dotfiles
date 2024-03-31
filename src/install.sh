@@ -1,4 +1,6 @@
 #!/bin/bash
+clear
+
 export DIRMAIN=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" && pwd )
 RED="\e[31m"
 GREEN="\e[32m"
