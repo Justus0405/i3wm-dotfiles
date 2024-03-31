@@ -35,11 +35,26 @@ echo -e "Installing apps..."
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
-sudo pacman -S alacritty bash-completion code discord ffmpeg flameshot gimp gnome-color-manager gnu-free-fonts gst-libav gst-plugins-ugly gvfs gvfs-smb htop i3-wm lib32-pipewire loupe lxappearance-gtk3 nano neofetch network-manager-applet nitrogen obs-studio papirus-icon-theme pipewire pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rtkit sddm steam totem ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics yt-dlp
+sudo pacman -Syy alacritty bash-completion code discord ffmpeg flameshot gimp gnome-color-manager gnu-free-fonts gst-libav gst-plugins-ugly gvfs gvfs-smb htop i3-wm lib32-pipewire loupe lxappearance-gtk3 nano neofetch nitrogen obs-studio papirus-icon-theme pipewire pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rtkit sddm steam totem ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics yt-dlp
 
 sudo usermod -a -G rtkit $USER
 
 wget https://github.com/catppuccin/gtk/releases/download/v0.7.1/Catppuccin-Mocha-Standard-Mauve-Dark.zip -P $DIRMAIN/assets
+
+echo -e ""
+echo -e "${GREEN}--------------------"
+echo -e "Wifi Menu"
+echo -e "--------------------${ENDCOLOR}"
+echo -e ""
+
+while true; do
+    read -p "Add a Wifi Menu to the top bar? (Recommended for Laptops) [y/N] " yn
+    case $yn in
+        [Yy]* ) echo Adding Wifi Menu...; sudo pacman -S network-manager-applet --noconfirm; break;;
+        [Nn]* ) echo Skipping...; break;;
+        * ) echo Skipping...; break;;
+    esac
+done
 
 echo -e ""
 echo -e "${GREEN}--------------------"
