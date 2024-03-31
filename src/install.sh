@@ -8,8 +8,8 @@ ENDCOLOR="\e[0m"
 
 echo -e "${GREEN}--------------------"
 echo -e "Justus0405 dotfiles "
-echo -e "Installer Ver. 1.1"
-echo -e "Have a good day!"
+echo -e "Installer Ver. 1.2"
+echo -e "Have a great day!"
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
