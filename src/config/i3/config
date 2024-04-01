@@ -85,8 +85,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # start a apps
-bindsym $mod+Return exec alacritty
-bindsym $mod+b exec brave
+bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+b exec --no-startup-id brave
 bindsym $mod+m exec --no-startup-id "flameshot screen"
 
 # start rofi (as a program launcher)
