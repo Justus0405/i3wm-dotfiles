@@ -1,6 +1,6 @@
 <div align = center><h1>Justus0405 i3-wm Catppuccin Dotfiles</h1><br><br>
 
-![2024-03-05_17-47](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/516aea85-15bc-4378-978e-381519ee69f8)
+![2024-04-04_19-05](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/f14c30fd-b6c6-4f25-812a-1703e2178ee3)
 
 
 ## Installation
