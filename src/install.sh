@@ -45,7 +45,7 @@ wget https://github.com/catppuccin/gtk/releases/latest/download/Catppuccin-Mocha
 
 echo -e ""
 echo -e "${GREEN}--------------------"
-echo -e "Wifi Menu"
+echo -e "Wireless Menus"
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
@@ -53,6 +53,15 @@ while true; do
     read -p "Add a Wifi Menu to the top bar? (Recommended for Laptops) [y/N] " yn
     case $yn in
         [Yy]* ) echo Adding Wifi Menu...; sudo pacman -S network-manager-applet --noconfirm; break;;
+        [Nn]* ) echo Skipping...; break;;
+        * ) echo Skipping...; break;;
+    esac
+done
+
+while true; do
+    read -p "Add Bluetooth support? [y/N] " yn
+    case $yn in
+        [Yy]* ) echo Adding Bluetooth Menu...; sudo pacman -S blueman --noconfirm; sudo systemctl enable bluetooth.service; break;;
         [Nn]* ) echo Skipping...; break;;
         * ) echo Skipping...; break;;
     esac
