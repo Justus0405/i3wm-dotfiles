@@ -1,5 +1,7 @@
 <div align = center><h1>Justus0405 i3-wm Catppuccin Dotfiles</h1><br><br>
 
+![Polybar](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/d0961d84-5124-48e7-b189-08facf90a4d7)
+
 ![2024-04-04_19-05](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/f14c30fd-b6c6-4f25-812a-1703e2178ee3)
 
 
