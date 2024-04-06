@@ -1,5 +1,7 @@
 <div align = center><h1>Justus0405 i3-wm Catppuccin Dotfiles</h1><br><br>
 
+~One config per application ideology
+
 ## Bar
 
 ![Polybar](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/d0961d84-5124-48e7-b189-08facf90a4d7)
