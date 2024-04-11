@@ -1,6 +1,6 @@
 <div align = center><h1>Justus0405 i3-wm Catppuccin Dotfiles</h1><br><br>
 
-~One config per application ideology
+~One config per application philosophy
 
 ## Bar
 
