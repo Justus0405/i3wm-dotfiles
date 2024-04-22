@@ -28,7 +28,7 @@ echo -e "Installing apps..."
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
-sudo pacman -Syy alacritty bash-completion code discord ffmpeg flameshot gimp gnome-color-manager gnu-free-fonts gst-libav gst-plugin-pipewire gst-plugins-ugly gvfs gvfs-smb htop i3-wm lib32-pipewire loupe lxappearance-gtk3 nano neofetch nitrogen nvtop obs-studio pacman-contrib pamixer papirus-icon-theme pavucontrol pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse polybar qt5-declarative qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects qt5-svg qt6-declarative qt6-svg rofi rtkit sddm steam totem ttf-jetbrains-mono ttf-jetbrains-mono-nerd udiskie unzip wget wireplumber xf86-input-evdev xf86-input-synaptics yt-dlp
+sudo pacman -Syy alacritty bash-completion code discord ffmpeg flameshot gimp gnome-color-manager gnu-free-fonts gst-libav gst-plugin-pipewire gst-plugins-ugly gvfs gvfs-smb htop i3-wm lib32-pipewire loupe lxappearance-gtk3 nano neofetch nitrogen nvtop obs-studio pacman-contrib pamixer papirus-icon-theme pavucontrol pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse polybar qt5-declarative qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects qt5-svg qt6-declarative qt6-svg rofi rtkit sddm sed steam totem ttf-jetbrains-mono ttf-jetbrains-mono-nerd udiskie unzip wget wireplumber xf86-input-evdev xf86-input-synaptics yt-dlp
 
 sudo usermod -a -G rtkit $USER
 
