@@ -50,15 +50,6 @@ while true; do
 done
 
 while true; do
-    read -p "Configure Mirrors to nearest available? (Recommended for slow Internet) [Y/n] " yn
-    case $yn in
-        [Yy]* ) echo Configuring Mirrors... THIS WILL TAKE SOME TIME!!!; sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; sudo sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup; sudo rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist; break;;
-        [Nn]* ) echo Skipping...; break;;
-        * ) echo Configuring Mirrors... THIS WILL TAKE SOME TIME!!!; sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; sudo sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup; sudo rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist; break;;
-    esac
-done
-
-while true; do
     read -p "Add a Wifi Menu to the top bar? (Recommended for Laptops) [y/N] " yn
     case $yn in
         [Yy]* ) echo Adding Wifi Menu...; sudo pacman -S network-manager-applet --noconfirm; break;;
