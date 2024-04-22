@@ -22,15 +22,6 @@ while true; do
     esac
 done
 
-while true; do
-    read -p "Set keyboard layout to German? [y/N] " yn
-    case $yn in
-        [Yy]* ) echo Setting keyboard layout to German...; sudo localectl set-keymap de; break;;
-        [Nn]* ) echo Keeping current keyboard layout; break;;
-        * ) echo Keeping current keyboard layout; break;;
-    esac
-done
-
 echo -e ""
 echo -e "${GREEN}--------------------"
 echo -e "Installing apps..."
@@ -45,9 +36,27 @@ wget https://github.com/catppuccin/gtk/releases/latest/download/Catppuccin-Mocha
 
 echo -e ""
 echo -e "${GREEN}--------------------"
-echo -e "Wireless Menus"
+echo -e "Choosing experience"
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
+
+while true; do
+    read -p "Set keyboard layout to German? [y/N] " yn
+    case $yn in
+        [Yy]* ) echo Setting keyboard layout to German...; sudo localectl set-keymap de; break;;
+        [Nn]* ) echo Keeping current keyboard layout; break;;
+        * ) echo Keeping current keyboard layout; break;;
+    esac
+done
+
+while true; do
+    read -p "Configure Mirrors to nearest available? (Recommended for slow Internet) [Y/n] " yn
+    case $yn in
+        [Yy]* ) echo Configuring Mirrors... (THIS WILL TAKE SOME TIME!!!); sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup;rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist; break;;
+        [Nn]* ) echo Skipping...; break;;
+        * ) echo Configuring Mirrors... (THIS WILL TAKE SOME TIME!!!); sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup;rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist; break;;
+    esac
+done
 
 while true; do
     read -p "Add a Wifi Menu to the top bar? (Recommended for Laptops) [y/N] " yn
@@ -100,37 +109,6 @@ done
 
 echo -e ""
 echo -e "${GREEN}--------------------"
-echo -e "Copying files..."
-echo -e "--------------------${ENDCOLOR}"
-echo -e ""
-
-mkdir -p ~/.config ~/.local/share/themes
-unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
-
-echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpaper.jpg\nmode=5\nbgcolor=#000000" > config/nitrogen/bg-saved.cfg
-chmod +x $DIRMAIN/config/polybar/launch.sh
-cp -r $DIRMAIN/config/* ~/.config/
-
-sudo cp -r $DIRMAIN/assets/sddm/catppuccin-mocha /usr/share/sddm/themes/
-sudo cp -r $DIRMAIN/assets/sddm.conf /etc/
-
-sudo mv /usr/share/X11/xorg.conf.d/40-libinput.conf ~/.config/
-sudo cp -r $DIRMAIN/assets/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
-
-echo -e ""
-echo -e "${GREEN}--------------------"
-echo -e "Enabling services..."
-echo -e "--------------------${ENDCOLOR}"
-echo -e ""
-
-systemctl --user enable pipewire pipewire-pulse
-sudo systemctl enable NetworkManager
-sudo systemctl disable gdm
-sudo systemctl disable lightdm
-sudo systemctl enable sddm
-
-echo -e ""
-echo -e "${GREEN}--------------------"
 echo -e "Choosing a Browser"
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
@@ -160,6 +138,37 @@ select fav2 in "${browsers[@]}"; do
     esac
   break
 done
+
+echo -e ""
+echo -e "${GREEN}--------------------"
+echo -e "Copying files..."
+echo -e "--------------------${ENDCOLOR}"
+echo -e ""
+
+mkdir -p ~/.config ~/.local/share/themes
+unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
+
+echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpaper.jpg\nmode=5\nbgcolor=#000000" > config/nitrogen/bg-saved.cfg
+chmod +x $DIRMAIN/config/polybar/launch.sh
+cp -r $DIRMAIN/config/* ~/.config/
+
+sudo cp -r $DIRMAIN/assets/sddm/catppuccin-mocha /usr/share/sddm/themes/
+sudo cp -r $DIRMAIN/assets/sddm.conf /etc/
+
+sudo mv /usr/share/X11/xorg.conf.d/40-libinput.conf ~/.config/
+sudo cp -r $DIRMAIN/assets/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
+
+echo -e ""
+echo -e "${GREEN}--------------------"
+echo -e "Enabling services..."
+echo -e "--------------------${ENDCOLOR}"
+echo -e ""
+
+systemctl --user enable pipewire pipewire-pulse
+sudo systemctl enable NetworkManager
+sudo systemctl disable gdm
+sudo systemctl disable lightdm
+sudo systemctl enable sddm
 
 echo -e ""
 echo -e "${GREEN}--------------------"
