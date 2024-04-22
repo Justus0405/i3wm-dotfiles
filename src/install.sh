@@ -52,9 +52,9 @@ done
 while true; do
     read -p "Configure Mirrors to nearest available? (Recommended for slow Internet) [Y/n] " yn
     case $yn in
-        [Yy]* ) echo Configuring Mirrors... (THIS WILL TAKE SOME TIME!!!); sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup;rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist; break;;
+        [Yy]* ) echo Configuring Mirrors... THIS WILL TAKE SOME TIME!!!; sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup;rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist; break;;
         [Nn]* ) echo Skipping...; break;;
-        * ) echo Configuring Mirrors... (THIS WILL TAKE SOME TIME!!!); sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup;rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist; break;;
+        * ) echo Configuring Mirrors... THIS WILL TAKE SOME TIME!!!; sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup; sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup;rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist; break;;
     esac
 done
 
