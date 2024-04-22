@@ -61,7 +61,7 @@ done
 while true; do
     read -p "Add Bluetooth support? [y/N] " yn
     case $yn in
-        [Yy]* ) echo Adding Bluetooth Menu...; sudo pacman -S blueman --noconfirm; sudo systemctl enable bluetooth.service; break;;
+        [Yy]* ) echo Adding Bluetooth Menu...; sudo pacman -S bluez bluez-utils blueman --noconfirm; sudo systemctl enable bluetooth.service; break;;
         [Nn]* ) echo Skipping...; break;;
         * ) echo Skipping...; break;;
     esac
