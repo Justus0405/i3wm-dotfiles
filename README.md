@@ -2,14 +2,13 @@
 
 ~One config per application philosophy
 
-## Bar
-
-![Polybar](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/d0961d84-5124-48e7-b189-08facf90a4d7)
-
 ## Desktop
 
-![2024-04-04_19-05](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/f14c30fd-b6c6-4f25-812a-1703e2178ee3)
+![polybar_desktop](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/8f9922a1-576f-432c-a5b6-e57ec42fada3)
 
+## Laptop
+
+![polybar_laptop](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/0261a05d-3c34-4484-8043-532ed8683106)
 
 ## Installation
 
