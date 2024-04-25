@@ -102,7 +102,7 @@ select fav1 in "${filemanagers[@]}"; do
 	    echo "Skipping..."
 	    break
 	    ;;
-        *) echo "invalid option $REPLY, skipping...";;
+        *) echo "invalid option $REPLY";;
     esac
   break
 done
@@ -134,7 +134,7 @@ select fav2 in "${browsers[@]}"; do
 	    echo "Skipping..."
 	    break
 	    ;;
-        *) echo "invalid option $REPLY, skipping...";;
+        *) echo "invalid option $REPLY";;
     esac
   break
 done
