@@ -32,7 +32,7 @@ sudo pacman -Syy alacritty bash-completion code discord ffmpeg flameshot gimp gn
 
 sudo usermod -a -G rtkit $USER
 
-wget https://github.com/catppuccin/gtk/releases/latest/download/catppuccin-mocha-mauve-standard+default.zip -P $DIRMAIN/assets
+wget https://github.com/catppuccin/gtk/releases/download/v0.7.5/Catppuccin-Mocha-Standard-Mauve-Dark.zip -P $DIRMAIN/assets
 
 echo -e ""
 echo -e "${GREEN}--------------------"
@@ -146,7 +146,7 @@ echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
 mkdir -p ~/.config ~/.local/share/themes
-unzip $DIRMAIN/assets/catppuccin-mocha-mauve-standard+default.zip -d ~/.local/share/themes/
+unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
 
 echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpaper.jpg\nmode=5\nbgcolor=#000000" > config/nitrogen/bg-saved.cfg
 chmod +x $DIRMAIN/config/polybar/launch.sh
