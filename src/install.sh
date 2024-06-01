@@ -32,7 +32,7 @@ sudo pacman -Syy alacritty bash-completion code discord ffmpeg flameshot gimp gn
 
 sudo usermod -a -G rtkit $USER
 
-wget https://github.com/catppuccin/gtk/releases/latest/download/Catppuccin-Mocha-Standard-Mauve-Dark.zip -P $DIRMAIN/assets
+wget https://github.com/catppuccin/gtk/releases/latest/download/catppuccin-mocha-mauve-standard+default.zip -P $DIRMAIN/assets
 
 echo -e ""
 echo -e "${GREEN}--------------------"
