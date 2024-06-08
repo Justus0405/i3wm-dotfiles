@@ -28,7 +28,7 @@ echo -e "Installing apps..."
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
-sudo pacman -Syy alacritty bash-completion code discord ffmpeg flameshot gimp gnome-color-manager gnu-free-fonts gst-libav gst-plugins-ugly gvfs gvfs-smb htop i3-wm lib32-pipewire loupe lxappearance-gtk3 nano neofetch nitrogen nvtop obs-studio papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse gst-plugin-pipewire pacman-contrib polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rtkit sddm steam totem ttf-jetbrains-mono ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics yt-dlp
+sudo pacman -Syy alacritty bash-completion code discord ffmpeg flameshot gimp gnome-color-manager gnu-free-fonts gst-libav gst-plugins-ugly gvfs gvfs-smb htop i3-wm lib32-pipewire loupe lxappearance-gtk3 nano neofetch nitrogen nvtop obs-studio papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse gst-plugin-pipewire pacman-contrib polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rtkit sddm steam totem ttf-jetbrains-mono ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics yt-dlp fuse ntfs-3g
 
 sudo usermod -a -G rtkit $USER
 
