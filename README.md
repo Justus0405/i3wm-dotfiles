@@ -9,11 +9,11 @@
 > No Compositor, Compositorless <br>
 > Why? Because it has better performance and latency especially on lower end hardware, plus they tend to break multi-monitor setups
 
-## Desktop
+## Screenschots
 
-![polybar_desktop](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/8f9922a1-576f-432c-a5b6-e57ec42fada3)
+![desktop_busy](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/d4c5504f-49e9-438c-a139-1564b8d4bb35)
 
-## Laptop
+![desktop_clear](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/e5713d05-7c7c-4e3b-904e-1fc28fe1ab9d)
 
 ![polybar_laptop](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/0261a05d-3c34-4484-8043-532ed8683106)
 
