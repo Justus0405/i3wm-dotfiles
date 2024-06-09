@@ -21,7 +21,6 @@
 #   |_| |_| |_|\___|_| |_| |_|\___|
 #                                  
 
-
 font pango:monospace 8
 
 default_border pixel 1
