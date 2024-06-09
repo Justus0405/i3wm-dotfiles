@@ -9,7 +9,7 @@
 > No Compositor, Compositorless <br>
 > Why? Because it has better performance and latency especially on lower end hardware, plus they tend to break multi-monitor setups
 
-## Screenschots
+## Screenshots
 
 ![desktop_busy](https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/d4c5504f-49e9-438c-a139-1564b8d4bb35)
 
