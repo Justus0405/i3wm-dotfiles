@@ -91,14 +91,6 @@ After the installation is finished the script will automaticly reboot into the n
 
 | Keys | Action |
 | :--  | :-- |
-| <kbd>Super</kbd> + <kbd>S</kbd> | change container layout stacked
-| <kbd>Super</kbd> + <kbd>W</kbd> | change container layout tabbed
-| <kbd>Super</kbd> + <kbd>E</kbd> | change container layout split
-
-<br>
-
-| Keys | Action |
-| :--  | :-- |
 | <kbd>Super</kbd> + <kbd>SHIFT</kbd> + <kbd>SPACE</kbd> | toggle tiling / floating
 | <kbd>Super</kbd> + <kbd>SPACE</kbd> | change focus between tiling / floating windows
 | <kbd>Super</kbd> + <kbd>A</kbd> | focus the parent container
