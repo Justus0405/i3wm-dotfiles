@@ -1,6 +1,13 @@
 <div align = center><h1>Justus0405 i3-wm Catppuccin Dotfiles</h1><br><br>
 
-~One config per application philosophy
+> ~One config per application philosophy
+> Why? Because I have OCD
+
+> xf86-input-evdev instead of libinput
+> Why? Because it has way better latency and accuracy
+
+> No Compositor, Compositorless
+> Why? Because it has better performance and latency especially on lower end hardware, plus they tend to break multi-monitor setups
 
 ## Desktop
 
