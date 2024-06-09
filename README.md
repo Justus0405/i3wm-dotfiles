@@ -46,6 +46,7 @@ After the installation is finished the script will automaticly reboot into the n
 | :--  | :-- |
 | <kbd>Super</kbd> + <kbd>RETURN / ENTER</kbd> | launch alacritty (terminal)
 | <kbd>Super</kbd> + <kbd>D</kbd> | launch rofi (application launcher)
+| <kbd>Super</kbd> + <kbd>E</kbd> | launch nemo (filemanager)
 | <kbd>Super</kbd> + <kbd>B</kbd> | launch brave
 | <kbd>Super</kbd> + <kbd>M</kbd> | take a screenshot
 | <kbd>Super</kbd> + <kbd>Q</kbd> | quit active/focused window
