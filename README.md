@@ -1,5 +1,6 @@
 <div align = center><h1>Justus0405 i3-wm Catppuccin Dotfiles</h1><br><br>
-
+<div align = left>
+ 
 > ~One config per application philosophy <br>
 > Why? Because I have OCD
 
@@ -36,7 +37,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-<div align = center>
+<div align = left>
 
 After the installation is finished the script will automaticly reboot into the new enviroment.
 
