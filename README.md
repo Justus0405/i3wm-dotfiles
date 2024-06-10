@@ -10,14 +10,6 @@
 > No Compositor, Compositorless <br>
 > Why? Because it has better performance and latency especially on lower end hardware, plus they tend to break multi-monitor setups
 
-## Screenshots
-
-<div align="center"><table><tr><td>Desktop Busy</td><td>Desktop Clear</td><td>Laptop Clear</td></tr><tr><td>
-<img src="https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/d4c5504f-49e9-438c-a139-1564b8d4bb35"/></td><td>
-<img src="https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/e5713d05-7c7c-4e3b-904e-1fc28fe1ab9d"/></td><td>
-<img src="https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/0261a05d-3c34-4484-8043-532ed8683106"/></td></tr>
-</table></div>
-
 ## Installation
 
 The installation script is made for Arch, but **may** work on some Arch based distros with **systemd**.
@@ -26,8 +18,6 @@ The installation script is made for Arch, but **may** work on some Arch based di
 > This script is designed to be done after a minimal arch installation, using it on previously installed desktop should work but will change whatever you currently have (gtk/qt theming, shell, sddm, etc) and is at your own risk.
 
 After a minimal Arch install (with grub and systemd), execute -
-
-<div align = left>
 
 ```shell
 pacman -Syy git
@@ -40,6 +30,14 @@ chmod +x install.sh
 <div align = left>
 
 After the installation is finished the script will automaticly reboot into the new enviroment.
+
+## Screenshots
+
+<div align="center"><table><tr><td>Desktop Busy</td><td>Desktop Clear</td><td>Laptop Clear</td></tr><tr><td>
+<img src="https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/d4c5504f-49e9-438c-a139-1564b8d4bb35"/></td><td>
+<img src="https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/e5713d05-7c7c-4e3b-904e-1fc28fe1ab9d"/></td><td>
+<img src="https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/0261a05d-3c34-4484-8043-532ed8683106"/></td></tr>
+</table></div><div align = left>
 
 ## Keybinds
 
