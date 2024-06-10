@@ -4,14 +4,31 @@ clear
 export DIRMAIN=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" && pwd )
 RED="\e[31m"
 GREEN="\e[32m"
+BLUE="\e[34m"
 ENDCOLOR="\e[0m"
 
-echo -e "${GREEN}--------------------"
-echo -e "Justus0405 dotfiles "
-echo -e "Installer Ver. 1.2"
-echo -e "Have a great day!"
-echo -e "--------------------${ENDCOLOR}"
-echo -e ""
+echo -e "${BLUE}"
+cat <<"EOF"
++-------------------------------------------------------+
+|   ____      _                              _          |
+|  / ___|__ _| |_ _ __  _ __  _   _  ___ ___(_)_ __     |
+| | |   / _` | __| '_ \| '_ \| | | |/ __/ __| | '_ \    |
+| | |__| (_| | |_| |_) | |_) | |_| | (_| (__| | | | |   |
+|  \____\__,_|\__| .__/| .__/ \__,_|\___\___|_|_| |_|   |
+|  ____        _ |_|__ |_|                              |
+| |  _ \  ___ | |_ / _(_) | ___  ___                    |
+| | | | |/ _ \| __| |_| | |/ _ \/ __|                   |
+| | |_| | (_) | |_|  _| | |  __/\__ \                   |
+| |____/ \___/ \__|_| |_|_|\___||___/                   |
+|                                                       |
++-------------------------------------------------------+
+EOF
+echo -e "${BLUE}|${ENDCOLOR}                                                       ${BLUE}|"
+echo -e "${BLUE}|${ENDCOLOR} Version: 1.2                                          ${BLUE}|"
+echo -e "${BLUE}|${ENDCOLOR} By Justus0405                                         ${BLUE}|"
+echo -e "${BLUE}|${ENDCOLOR}                                                       ${BLUE}|"
+echo -e "${BLUE}+-------------------------------------------------------+"
+echo -e "${ENDCOLOR}"
 
 while true; do
     read -p "Continue installation? [Y/n] " yn
