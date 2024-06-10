@@ -41,7 +41,15 @@ done
 
 echo -e ""
 echo -e "${GREEN}--------------------"
-echo -e "Installing apps..."
+echo -e "Updating System"
+echo -e "--------------------${ENDCOLOR}"
+echo -e ""
+
+sudo pacman -Syyu --noconfirm
+
+echo -e ""
+echo -e "${GREEN}--------------------"
+echo -e "Installing apps"
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
@@ -168,7 +176,7 @@ done
 
 echo -e ""
 echo -e "${GREEN}--------------------"
-echo -e "Copying files..."
+echo -e "Copying files"
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
@@ -187,7 +195,7 @@ sudo cp -r $DIRMAIN/assets/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
 
 echo -e ""
 echo -e "${GREEN}--------------------"
-echo -e "Enabling services..."
+echo -e "Enabling services"
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
@@ -199,7 +207,7 @@ sudo systemctl enable sddm
 
 echo -e ""
 echo -e "${GREEN}--------------------"
-echo -e "Finished! Rebooting..."
+echo -e "Finished! Rebooting"
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
