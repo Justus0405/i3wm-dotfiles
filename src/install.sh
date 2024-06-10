@@ -34,7 +34,7 @@ while true; do
     read -p "Continue installation? [Y/n] " yn
     case $yn in
         [Yy]* ) echo installing...; break;;
-        [Nn]* ) echo exiting; exit;;
+        [Nn]* ) exit;;
         * ) echo installing...; break;;
     esac
 done
