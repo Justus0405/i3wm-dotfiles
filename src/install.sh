@@ -53,6 +53,17 @@ wget https://github.com/catppuccin/gtk/releases/download/v0.7.5/Catppuccin-Mocha
 
 echo -e ""
 echo -e "${GREEN}--------------------"
+echo -e "Installing yay"
+echo -e "--------------------${ENDCOLOR}"
+echo -e ""
+
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+cd ..
+
+echo -e ""
+echo -e "${GREEN}--------------------"
 echo -e "Choosing experience"
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
@@ -135,7 +146,6 @@ browsers=("Brave" "Chromium" "Firefox" "Skip")
 select fav2 in "${browsers[@]}"; do
     case $fav2 in
         "Brave")
-            git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si --noconfirm && cd ..
             yay -S brave-bin --noconfirm
 	    break
             ;;
