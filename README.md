@@ -11,6 +11,7 @@
 > Why? Because it has better performance and latency especially on lower end hardware, plus they tend to break multi-monitor setups
 
 <div align = left><br><br>
+ 
 ## Installation
 
 The installation script is made for Arch, but **may** work on some Arch based distros with **systemd**.
@@ -33,6 +34,7 @@ chmod +x install.sh
 After the installation is finished the script will automaticly reboot into the new enviroment.
 
 <div align = left><br><br>
+ 
 ## Screenshots
 
 <div align="center"><table><tr><td>Desktop Busy</td><td>Desktop Clear</td><td>Laptop Clear</td></tr><tr><td>
@@ -42,6 +44,7 @@ After the installation is finished the script will automaticly reboot into the n
 </table></div><div align = left>
 
 <div align = left><br><br>
+ 
 ## Keybinds
 
 | Keys | Action |
@@ -100,6 +103,7 @@ After the installation is finished the script will automaticly reboot into the n
 | <kbd>Super</kbd> + <kbd>D</kbd> | focus the child container
 
 <div align = left><br><br>
+ 
 ## Credits
 
  - neofetch : https://github.com/prasanthrangan/hyprdots
