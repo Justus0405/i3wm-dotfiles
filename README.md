@@ -29,8 +29,6 @@ chmod +x install.sh
 ./install.sh
 ```
 
-<div align = left>
-
 After the installation is finished the script will automaticly reboot into the new enviroment.
 
 <div align = left><br><br>
@@ -41,7 +39,7 @@ After the installation is finished the script will automaticly reboot into the n
 <img src="https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/d4c5504f-49e9-438c-a139-1564b8d4bb35"/></td><td>
 <img src="https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/e5713d05-7c7c-4e3b-904e-1fc28fe1ab9d"/></td><td>
 <img src="https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/0261a05d-3c34-4484-8043-532ed8683106"/></td></tr>
-</table></div><div align = left>
+</table></div>
 
 <div align = left><br><br>
  
