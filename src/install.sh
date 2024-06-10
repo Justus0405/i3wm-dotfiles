@@ -148,7 +148,7 @@ echo -e ""
 mkdir -p ~/.config ~/.local/share/themes
 unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
 
-echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpaper.jpg\nmode=5\nbgcolor=#000000" > config/nitrogen/bg-saved.cfg
+echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpaper.jpg\nmode=5\nbgcolor=#000000" > $DIRMAIN/config/nitrogen/bg-saved.cfg
 chmod +x $DIRMAIN/config/polybar/launch.sh
 cp -r $DIRMAIN/config/* ~/.config/
 
