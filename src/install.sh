@@ -86,15 +86,6 @@ while true; do
 done
 
 while true; do
-    read -p "Use smaller top bar? (Recommended for Laptops) [y/N] " yn
-    case $yn in
-        [Yy]* ) echo Copying Laptop Polybar config...; cp $DIRMAIN/assets/polybar_laptop.ini $DIRMAIN/config/polybar/config.ini; break;;
-        [Nn]* ) echo Copying Desktop Polybar config...; cp $DIRMAIN/assets/polybar_desktop.ini $DIRMAIN/config/polybar/config.ini; break;;
-        * ) echo Copying Desktop Polybar config...; cp $DIRMAIN/assets/polybar_desktop.ini $DIRMAIN/config/polybar/config.ini; break;;
-    esac
-done
-
-while true; do
     read -p "Add a Wifi Menu to the top bar? (Recommended for Laptops) [y/N] " yn
     case $yn in
         [Yy]* ) echo Adding Wifi Menu...; sudo pacman -S network-manager-applet --noconfirm; break;;
