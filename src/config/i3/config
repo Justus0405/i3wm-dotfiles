@@ -23,7 +23,7 @@
 
 font pango:monospace 8
 
-default_border pixel 1
+default_border pixel 0
 gaps inner 10px
 gaps outer 10px
 smart_gaps inverse_outer
