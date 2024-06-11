@@ -10,7 +10,7 @@ configuration{
     display-run: "   Run ";
     display-window: "   Window";
     display-Network: " 󰤨  Network";
-    sidebar-mode: true;
+    sidebar-mode: false;
 }
 
 @theme "/dev/null"
@@ -36,7 +36,7 @@ element-text, element-icon , mode-switcher {
 
 window {
     height: 360px;
-    border: 3px;
+    border: 0px;
     border-color: @border-col;
     background-color: @bg-col;
 }
