@@ -9,7 +9,7 @@ configuration{
     display-drun: "   Apps ";
     display-run: "   Run ";
     display-window: "   Windows ";
-    display-Network: " 󰤨  Network ";
+    display-Network: " 󰤨  Networks ";
     sidebar-mode: false;
 }
 
