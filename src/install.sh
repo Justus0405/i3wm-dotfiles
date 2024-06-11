@@ -175,6 +175,8 @@ mkdir -p ~/.config ~/.local/share/themes
 unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
 
 echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/scenery.png\nmode=5\nbgcolor=#000000" > $DIRMAIN/config/nitrogen/bg-saved.cfg
+echo -e "[geometry]\n\n[nitrogen]\nview=icon\nrecurse=true\nsort=alpha\nicon_caps=false\ndirs=/home/$USER/.config/wallpapers;" > $DIRMAIN/config/nitrogen/nitrogen.cfg
+
 chmod +x $DIRMAIN/config/polybar/launch.sh
 cp -r $DIRMAIN/config/* ~/.config/
 
