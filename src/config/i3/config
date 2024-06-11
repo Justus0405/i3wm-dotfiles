@@ -54,6 +54,8 @@ exec --no-startup-id $HOME/.screenlayout/default.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id nitrogen --restore &
 
+for_window [class="gnome-calculator"] floating enable
+
 #
 #  _  __          _     _           _     
 # | |/ /___ _   _| |__ (_)_ __   __| |___ 
