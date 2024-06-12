@@ -50,7 +50,8 @@ After the installation is finished the script will automaticly reboot into the n
 | <kbd>Super</kbd> + <kbd>D</kbd> | launch rofi (application launcher)
 | <kbd>Super</kbd> + <kbd>E</kbd> | launch nemo (filemanager)
 | <kbd>Super</kbd> + <kbd>B</kbd> | launch brave (browser)
-| <kbd>Super</kbd> + <kbd>M</kbd> | take a screenshot (flameshot)
+| <kbd>Super</kbd> + <kbd>N</kbd> | screenshot selected area (flameshot)
+| <kbd>Super</kbd> + <kbd>M</kbd> | screenshot entire screen (flameshot)
 | <kbd>Super</kbd> + <kbd>Q</kbd> | quit active/focused window
 | <kbd>ALT</kbd> + <kbd>TAB</kbd> | switch windows
 
