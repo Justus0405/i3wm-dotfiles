@@ -45,7 +45,7 @@ echo -e "Updating System"
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
-sudo pacman -Syyu --noconfirm
+sudo pacman -Syyu
 
 echo -e ""
 echo -e "${GREEN}--------------------"
