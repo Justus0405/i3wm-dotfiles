@@ -76,7 +76,7 @@ echo -e "Installing AUR Packages"
 echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
-yay -S vesktop --noconfirm
+yay -S vesktop-bin --noconfirm
 yay -S prismlauncher-qt5-bin --noconfirm
 
 echo -e ""
