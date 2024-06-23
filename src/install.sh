@@ -86,15 +86,6 @@ echo -e "--------------------${ENDCOLOR}"
 echo -e ""
 
 while true; do
-    read -p "Set keyboard layout to German? [y/N] " yn
-    case $yn in
-        [Yy]* ) echo Setting keyboard layout to German...; sudo localectl set-keymap de; break;;
-        [Nn]* ) echo Keeping current keyboard layout; break;;
-        * ) echo Keeping current keyboard layout; break;;
-    esac
-done
-
-while true; do
     read -p "Add a Wifi Menu to the top bar? (Recommended for Laptops) [y/N] " yn
     case $yn in
         [Yy]* ) echo Adding Wifi Menu...; sudo pacman -S network-manager-applet --noconfirm; break;;
