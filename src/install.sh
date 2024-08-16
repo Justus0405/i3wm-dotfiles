@@ -89,7 +89,7 @@ EOF
 	while true; do
 		read -p "Add a Wifi Menu to the top bar? (Recommended for Laptops) [y/N] " yn
 		case $yn in
-			[Yy]* ) echo -e "Adding Wifi Menu..."; sudo pacman -S network-manager-applet --noconfirm; echo -e ""; break;;
+			[Yy]* ) echo -e "Adding Wifi Menu..."; sudo pacman -S --needed --noconfirm network-manager-applet; echo -e ""; break;;
 			[Nn]* ) echo -e "Skipping..."; echo -e ""; break;;
 			* ) echo -e "Skipping..."; echo -e ""; break;;
 		esac
@@ -98,7 +98,7 @@ EOF
 	while true; do
 		read -p "Add Bluetooth support? [y/N] " yn
 		case $yn in
-			[Yy]* ) echo -e "Adding Bluetooth Menu..."; sudo pacman -S bluez bluez-utils blueman --noconfirm; sudo systemctl enable bluetooth.service; echo -e ""; break;;
+			[Yy]* ) echo -e "Adding Bluetooth Menu..."; sudo pacman -S --needed --noconfirm bluez bluez-utils blueman; sudo systemctl enable bluetooth.service; echo -e ""; break;;
 			[Nn]* ) echo -e "Skipping..."; echo -e ""; break;;
 			* ) echo -e "Skipping..."; echo -e ""; break;;
 		esac
@@ -165,7 +165,7 @@ EOF
 			makepkg -si --noconfirm
 			cd ..
 
-			yay -S brave-bin --noconfirm
+			yay -S --noconfirm brave-bin
 		;;
 		2)
 			cd $DIRMAIN
@@ -174,9 +174,9 @@ EOF
 			makepkg -si --noconfirm
 			cd ..
 
-			yay -S brave-bin --noconfirm
-			yay -S vesktop-bin --noconfirm
-			yay -S prismlauncher-qt5-bin --noconfirm
+			yay -S --noconfirm brave-bin
+			yay -S --noconfirm vesktop-bin
+			yay -S --noconfirm prismlauncher-qt5-bin
 		;;
 	esac
 }
