@@ -162,7 +162,7 @@ EOF
 			cd $DIRMAIN
 			git clone https://aur.archlinux.org/yay.git
 			cd yay
-			makepkg -si
+			makepkg -si --noconfirm
 			cd ..
 
 			yay -S brave-bin --noconfirm
