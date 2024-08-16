@@ -23,9 +23,9 @@ EOF
 	while true; do
 		read -p "Continue installation? [Y/n] " yn
 		case $yn in
-			[Yy]* ) echo Installing...; break;;
-			[Nn]* ) echo Aborting!; exit;;
-			* ) echo Installing...; break;;
+			[Yy]* ) echo -e "Installing..."; break;;
+			[Nn]* ) echo -e "Aborting!"; exit;;
+			* ) echo -e "Installing..."; break;;
 		esac
 	done
 }
@@ -54,21 +54,21 @@ EOF
 	case $choice in
 		"1" | "minimal" | "Minimal")
 			edition=0
-			echo "Installing Minimal Edition"
+			echo -e "Installing Minimal Edition"
 			break
 		;;
 		"2" | "standard" | "Standard")
 			edition=1
-			echo "Installing Standard Edition"
+			echo -e "Installing Standard Edition"
 			break
 		;;
 		"3" | "full" | "Full")
 			edition=2
-			echo "Installing Full Edition"
+			echo -e "Installing Full Edition"
 			break
 		;;
 		*)
-			echo "Invalid Answer"
+			echo -e "Invalid Answer"
 		;;
 		esac
 	done
@@ -89,18 +89,18 @@ EOF
 	while true; do
 		read -p "Add a Wifi Menu to the top bar? (Recommended for Laptops) [y/N] " yn
 		case $yn in
-			[Yy]* ) echo Adding Wifi Menu...; sudo pacman -S network-manager-applet --noconfirm; echo ""; break;;
-			[Nn]* ) echo Skipping...; echo ""; break;;
-			* ) echo Skipping...; echo ""; break;;
+			[Yy]* ) echo -e "Adding Wifi Menu..."; sudo pacman -S network-manager-applet --noconfirm; echo -e ""; break;;
+			[Nn]* ) echo -e "Skipping..."; echo -e ""; break;;
+			* ) echo -e "Skipping..."; echo -e ""; break;;
 		esac
 	done
 
 	while true; do
 		read -p "Add Bluetooth support? [y/N] " yn
 		case $yn in
-			[Yy]* ) echo Adding Bluetooth Menu...; sudo pacman -S bluez bluez-utils blueman --noconfirm; sudo systemctl enable bluetooth.service; echo ""; break;;
-			[Nn]* ) echo Skipping...; echo ""; break;;
-			* ) echo Skipping...; echo ""; break;;
+			[Yy]* ) echo -e "Adding Bluetooth Menu..."; sudo pacman -S bluez bluez-utils blueman --noconfirm; sudo systemctl enable bluetooth.service; echo -e ""; break;;
+			[Nn]* ) echo -e "Skipping..."; echo -e ""; break;;
+			* ) echo -e "Skipping..."; echo -e ""; break;;
 		esac
 	done
 }
@@ -117,7 +117,7 @@ UPDATE_SYSTEM() {
 
 EOF
 
-	sudo pacman -Syyu || { echo "System update failed. Exiting."; exit; }
+	sudo pacman -Syyu || { echo -e "System update failed. Exiting."; exit; }
 
 }
 
@@ -171,7 +171,7 @@ EOF
 			cd $DIRMAIN
 			git clone https://aur.archlinux.org/yay.git
 			cd yay
-			makepkg -si
+			makepkg -si --noconfirm
 			cd ..
 
 			yay -S brave-bin --noconfirm
@@ -247,7 +247,7 @@ EOF
 
 	echo -e "Rebooting in..."
 	for i in {5..1}; do
-		echo "$i"
+		echo -e "$i"
 		sleep 1
 	done
 
