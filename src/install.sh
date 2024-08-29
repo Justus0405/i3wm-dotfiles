@@ -58,7 +58,7 @@ EOF
    	echo -e ""
 	echo -e "3) Full"
 	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Fonts, Icons, Audio, Input, Screenshots,"
- 	echo -e "\t           Calculator, Disk Utility, Color Manager, ffmpeg, OBS, GIMP, Steam, Yay, VSCode, Vesktop, Prismlauncher, yt-dlp"
+ 	echo -e "\t           Calculator, Disk Utility, Yay, Color Manager, ffmpeg, OBS, GIMP, Steam, VSCode, Vesktop, Prismlauncher, yt-dlp"
  	echo -e "\tBrowser  : Brave"
   	echo -e "\tMedia    : Totem, Loupe"
    	echo -e ""
