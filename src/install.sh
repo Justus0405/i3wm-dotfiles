@@ -46,8 +46,22 @@ EOF
 
 	echo -e "Choose your Edition:"
 	echo -e "1) Minimal"
+	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Fonts, Icons, Audio, Input, Screenshots"
+ 	echo -e "\tBrowser  : Chromium"
+  	echo -e "\tMedia    : none"
+   	echo -e ""
 	echo -e "2) Standard"
+ 	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Fonts, Icons, Audio, Input, Screenshots,"
+  	echo -e "\t\tCalculator, Disk Utility, Yay"
+ 	echo -e "\tBrowser  : Brave"
+  	echo -e "\tMedia    : Totem, Loupe"
+   	echo -e ""
 	echo -e "3) Full"
+	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Fonts, Icons, Audio, Input, Screenshots,"
+ 	echo -e "\t\tCalculator, Disk Utility, Color Manager, ffmpeg, OBS, GIMP, Steam, Yay, VSCode, Vesktop, Prismlauncher, yt-dlp"
+ 	echo -e "\tBrowser  : Brave"
+  	echo -e "\tMedia    : Totem, Loupe"
+   	echo -e ""
 
 	read -p "Your Choice: " choice
 
