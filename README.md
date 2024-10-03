@@ -1,22 +1,9 @@
-<div align = center><h1>Justus0405 i3-wm Catppuccin Dotfiles</h1><br><br>
-<div align = left>
- 
-> One config per application philosophy <br>
-> Why? Because I have OCD
+# Justus0405 i3-wm Catppuccin Dotfiles
 
-> xf86-input-evdev instead of libinput <br> 
-> Why? Because it has way better latency and accuracy
-
-> No Compositor, Compositorless <br>
-> Why? Because it has better performance and latency especially on lower end hardware, plus they tend to break multi-monitor setups
-
-<div align = left><br><br>
- 
 ## Installation
 
 The installation script is made for Arch, but **may** work on some Arch based distros with **systemd**.
 
-> [!CAUTION]
 > This script is designed to be done after a minimal arch installation, using it on previously installed desktop should work but will change whatever you currently have (gtk/qt theming, shell, sddm, etc) and is at your own risk.
 
 After a minimal Arch install (with grub and systemd), execute -
@@ -31,7 +18,7 @@ chmod +x install.sh
 
 After the installation is finished the script will automaticly reboot into the new enviroment.
 
-<div align = left><br><br>
+<br><br>
  
 ## Screenshots
 
@@ -40,7 +27,7 @@ After the installation is finished the script will automaticly reboot into the n
 <img src="https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/7692a7af-d621-4142-b63a-baeb354c0933"/></td></tr>
 </table></div>
 
-<div align = left><br><br>
+<br><br>
  
 ## Keybinds
 
@@ -100,12 +87,12 @@ After the installation is finished the script will automaticly reboot into the n
 | <kbd>Super</kbd> + <kbd>A</kbd> | focus the parent container
 | <kbd>Super</kbd> + <kbd>D</kbd> | focus the child container
 
-<div align = left><br><br>
+<br><br>
  
 ## Credits
 
- - neofetch : https://github.com/prasanthrangan/hyprdots
  - alacritty : https://github.com/catppuccin/alacritty
- - rofi : https://github.com/catppuccin/rofi
- - GTK : https://github.com/catppuccin/gtk
- - SDDM : https://github.com/catppuccin/sddm
+ - rofi      : https://github.com/catppuccin/rofi
+ - GTK       : https://github.com/catppuccin/gtk
+ - SDDM      : https://github.com/catppuccin/sddm
+ - neofetch  : https://github.com/prasanthrangan/hyprdots
