@@ -239,6 +239,18 @@ EOF
 	# xf86-input-evdev
 	sudo mv /usr/share/X11/xorg.conf.d/40-libinput.conf ~/.config/
 	sudo cp -r $DIRMAIN/assets/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
+
+ 	# Bashrc
+  	case $edition in
+		1)
+			# Standard
+			echo "catnap" >> ~/.bashrc
+		;;
+		2)
+			# Full
+			echo "catnap" >> ~/.bashrc
+		;;
+	esac
 }
 
 # Function for enabling services
