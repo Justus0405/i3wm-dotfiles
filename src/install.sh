@@ -147,21 +147,29 @@ INSTALL_PACKAGES() {
 
 EOF
 
+# Packages
+
+minimal="alacritty bash-completion chromium flameshot gnu-free-fonts gst-plugin-pipewire i3-wm lib32-pipewire nemo nemo-audio-tab nemo-fileroller nemo-image-converter nemo-share nitrogen papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rtkit sddm ttf-jetbrains-mono ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics"
+
+standard="fuse gnome-calculator gnome-disk-utility gnome-text-editor gst-libav gst-plugins-ugly gvfs gvfs-smb htop loupe lxappearance-gtk3 nano ntfs-3g pacman-contrib totem"
+
+full="code ffmpeg gimp gnome-color-manager nvtop obs-studio steam yt-dlp"
+
 	# Pacman
 	case $edition in
 		0)
 			# Minimal
-			sudo pacman -S --needed alacritty bash-completion chromium flameshot gnu-free-fonts gst-plugin-pipewire i3-wm lib32-pipewire nemo nemo-audio-tab nemo-fileroller nemo-image-converter nemo-share nitrogen papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rtkit sddm ttf-jetbrains-mono ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics
-			sed -i 's/brave/chromium/g' $DIRMAIN/config/i3/config
+			sudo pacman -S --needed $minimal
+   			sed -i 's/brave/chromium/g' $DIRMAIN/config/i3/config
 		;;
 		1)
 			# Standard
-			sudo pacman -S --needed alacritty bash-completion flameshot fuse gnome-calculator gnome-disk-utility gnome-text-editor gnu-free-fonts gst-libav gst-plugin-pipewire gst-plugins-ugly gvfs gvfs-smb htop i3-wm lib32-pipewire loupe lxappearance-gtk3 nano nemo nemo-audio-tab nemo-fileroller nemo-image-converter nemo-share neofetch nitrogen ntfs-3g pacman-contrib papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rtkit sddm totem ttf-jetbrains-mono ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics
-		;;
+			sudo pacman -S --needed $minimal $standard
+   		;;
 		2)
 			# Full
-			sudo pacman -S --needed alacritty bash-completion code ffmpeg flameshot fuse gimp gnome-calculator gnome-color-manager gnome-disk-utility gnome-text-editor gnu-free-fonts gst-libav gst-plugin-pipewire gst-plugins-ugly gvfs gvfs-smb htop i3-wm lib32-pipewire loupe lxappearance-gtk3 nano nemo nemo-audio-tab nemo-fileroller nemo-image-converter nemo-share neofetch nitrogen ntfs-3g nvtop obs-studio pacman-contrib papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rtkit sddm steam totem ttf-jetbrains-mono ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics yt-dlp
-		;;
+			sudo pacman -S --needed $minimal $standard $full
+   		;;
 	esac
 
 	# Important for Pipewire
