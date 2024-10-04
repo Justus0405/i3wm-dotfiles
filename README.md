@@ -23,8 +23,8 @@ After the installation is finished the script will automaticly reboot into the n
 ## Screenshots
 
 <div align="center"><table><tr><td>Desktop Clear</td><td>Desktop Busy</td></tr><tr><td>
-<img src="https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/9b622c96-3b1d-4f45-88a1-db4771b4491e"/></td><td>
-<img src="https://github.com/Justus0405/i3wm-dotfiles/assets/143542687/7692a7af-d621-4142-b63a-baeb354c0933"/></td></tr>
+<img src="https://github.com/user-attachments/assets/aab7c2f2-4b72-44ab-9e21-b6cded4f98c2"/></td><td>
+<img src="https://github.com/user-attachments/assets/8287e5f1-6152-4764-8f89-7e78c93212e5"/></td></tr>
 </table></div>
 
 <br><br>
