@@ -230,7 +230,7 @@ EOF
 	cp -r $DIRMAIN/config/* ~/.config/
 
 	# SDDM Theme
-	unzip $DIRMAIN/assets/catppuccin-mocha.zip -d /usr/share/sddm/themes/
+	sudo unzip $DIRMAIN/assets/catppuccin-mocha.zip -d /usr/share/sddm/themes/
 	sudo cp -r $DIRMAIN/assets/sddm.conf /etc/
 
 	# xf86-input-evdev
