@@ -188,6 +188,7 @@ full="code ffmpeg gimp gnome-color-manager jdk17-openjdk jdk21-openjdk jdk8-open
 			cd ..
 
 			yay -S --noconfirm brave-bin
+			yay -S --noconfirm catnap-git
 		;;
 		2)
 			cd $DIRMAIN
@@ -197,8 +198,9 @@ full="code ffmpeg gimp gnome-color-manager jdk17-openjdk jdk21-openjdk jdk8-open
 			cd ..
 
 			yay -S --noconfirm brave-bin
-			yay -S --noconfirm vesktop-bin
+			yay -S --noconfirm catnap-git
 			yay -S --noconfirm prismlauncher-qt5-bin
+			yay -S --noconfirm vesktop-bin
 		;;
 	esac
 }
