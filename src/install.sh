@@ -153,7 +153,7 @@ minimal="alacritty bash-completion chromium flameshot gnu-free-fonts gst-plugin-
 
 standard="fuse gnome-calculator gnome-disk-utility gnome-text-editor gst-libav gst-plugins-ugly gvfs gvfs-smb htop loupe lxappearance-gtk3 nano ntfs-3g pacman-contrib totem"
 
-full="code ffmpeg gimp gnome-color-manager nvtop obs-studio steam yt-dlp"
+full="code ffmpeg gimp gnome-color-manager jdk17-openjdk jdk21-openjdk jdk8-openjdk noto-fonts-emoji nvtop obs-studio pavucontrol steam yt-dlp"
 
 	# Pacman
 	case $edition in
