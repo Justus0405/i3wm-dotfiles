@@ -19,23 +19,57 @@
 #   | | | '_ \ / _ \ '_ ` _ \ / _ \
 #   | | | | | |  __/ | | | | |  __/
 #   |_| |_| |_|\___|_| |_| |_|\___|
-#                                  
+#
 
-font pango:monospace 8
+set $rosewater #f5e0dc
+set $flamingo #f2cdcd
+set $pink #f5c2e7
+set $mauve #cba6f7
+set $red #f38ba8
+set $maroon #eba0ac
+set $peach #fab387
+set $yellow #f9e2af
+set $green #a6e3a1
+set $teal #94e2d5
+set $sky #89dceb
+set $sapphire #74c7ec
+set $blue #89b4fa
+set $lavender #b4befe
+set $text #cdd6f4
+set $subtext1 #bac2de
+set $subtext0 #a6adc8
+set $overlay2 #9399b2
+set $overlay1 #7f849c
+set $overlay0 #6c7086
+set $surface2 #585b70
+set $surface1 #45475a
+set $surface0 #313244
+set $base #1e1e2e
+set $mantle #181825
+set $crust #11111b
+
+# target                 title     bg    text   indicator  border
+client.focused           $lavender $base $text  $rosewater $lavender
+client.focused_inactive  $overlay0 $base $text  $rosewater $overlay0
+client.unfocused         $overlay0 $base $text  $rosewater $overlay0
+client.urgent            $peach    $base $peach $overlay0  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
+
+
+# __        ___           _                   
+# \ \      / (_)_ __   __| | _____      _____ 
+#  \ \ /\ / /| | '_ \ / _` |/ _ \ \ /\ / / __|
+#   \ V  V / | | | | | (_| | (_) \ V  V /\__ \
+#    \_/\_/  |_|_| |_|\__,_|\___/ \_/\_/ |___/
+#
+
+font pango:JetBrains Mono Nerd Font 8
 
 default_border pixel 0
-gaps inner 10px
-gaps outer 10px
+gaps inner 15px
+gaps outer 15px
 smart_gaps inverse_outer
-
-# class                 border  backgr. text    indicator child_border
-client.focused          #cba6f7 #cba6f7 #ffffff #cba6f7   #cba6f7
-client.focused_inactive #cba6f7 #cba6f7 #ffffff #cba6f7   #cba6f7
-client.unfocused        #1E1E2E #1E1E2E #888888 #1E1E2E   #1E1E2E
-client.urgent           #f38ba8 #f38ba8 #ffffff #f38ba8   #f38ba8
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-
-client.background       #ffffff
 
 #
 #     _         _            _             _   
@@ -43,7 +77,7 @@ client.background       #ffffff
 #   / _ \| | | | __/ _ \/ __| __/ _` | '__| __|
 #  / ___ \ |_| | || (_) \__ \ || (_| | |  | |_ 
 # /_/   \_\__,_|\__\___/|___/\__\__,_|_|   \__|
-#                                              
+#
 
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
