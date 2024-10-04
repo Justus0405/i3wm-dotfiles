@@ -175,9 +175,6 @@ full="code ffmpeg gimp gnome-color-manager jdk17-openjdk jdk21-openjdk jdk8-open
 	# Important for Pipewire
 	sudo usermod -a -G rtkit $USER
 
-	# Catppuccin Mocha Mauve Dark GTK Theme
-	wget https://github.com/catppuccin/gtk/releases/download/v0.7.5/Catppuccin-Mocha-Standard-Mauve-Dark.zip -P $DIRMAIN/local/share/themes
-
 	# Yay
 	case $edition in
 		1)
@@ -221,7 +218,7 @@ EOF
 	mkdir -p ~/.config ~/.local/share/themes
 
  	# GTK and other Themes
-	unzip $DIRMAIN/local/share/themes/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
+	unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
  	cp -r $DIRMAIN/local/* ~/.local/
 
 	# Nitrogen config
