@@ -168,7 +168,7 @@ EOF
 	sudo usermod -a -G rtkit $USER
 
 	# Catppuccin Mocha Mauve Dark GTK Theme
-	wget https://github.com/catppuccin/gtk/releases/download/v0.7.5/Catppuccin-Mocha-Standard-Mauve-Dark.zip -P $DIRMAIN/local
+	wget https://github.com/catppuccin/gtk/releases/download/v0.7.5/Catppuccin-Mocha-Standard-Mauve-Dark.zip -P $DIRMAIN/local/share/themes
 
 	# Yay
 	case $edition in
@@ -207,9 +207,12 @@ COPY_FILES() {
 
 EOF
 
-	# GTK Theme
+	# Create directories
 	mkdir -p ~/.config ~/.local/share/themes
-	unzip $DIRMAIN/local/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
+
+ 	# GTK and other Themes
+	unzip $DIRMAIN/local/share/themes/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
+ 	cp -r $DIRMAIN/local/* ~/.local/
 
 	# Nitrogen config
 	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/rocket_launch.png\nmode=5\nbgcolor=#000000" > $DIRMAIN/config/nitrogen/bg-saved.cfg
