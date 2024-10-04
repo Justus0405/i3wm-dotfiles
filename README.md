@@ -91,8 +91,8 @@ After the installation is finished the script will automaticly reboot into the n
  
 ## Credits
 
-###### alacritty : https://github.com/catppuccin/alacritty
-###### rofi      : https://github.com/catppuccin/rofi
-###### GTK       : https://github.com/catppuccin/gtk
-###### SDDM      : https://github.com/catppuccin/sddm
-###### neofetch  : https://github.com/prasanthrangan/hyprdots
+- alacritty : https://github.com/catppuccin/alacritty
+- rofi      : https://github.com/catppuccin/rofi
+- GTK       : https://github.com/catppuccin/gtk
+- SDDM      : https://github.com/catppuccin/sddm
+- neofetch  : https://github.com/prasanthrangan/hyprdots
