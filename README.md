@@ -18,7 +18,7 @@ chmod +x install.sh
 
 After the installation is finished the script will automaticly reboot into the new enviroment.
 
-<br><br>
+<br>
  
 ## Screenshots
 
@@ -27,7 +27,7 @@ After the installation is finished the script will automaticly reboot into the n
 <img src="https://github.com/user-attachments/assets/8287e5f1-6152-4764-8f89-7e78c93212e5"/></td></tr>
 </table></div>
 
-<br><br>
+<br>
  
 ## Keybinds
 
@@ -87,8 +87,8 @@ After the installation is finished the script will automaticly reboot into the n
 | <kbd>Super</kbd> + <kbd>A</kbd> | focus the parent container
 | <kbd>Super</kbd> + <kbd>D</kbd> | focus the child container
 
-<br><br>
- 
+<br>
+
 ## Credits
 
 - alacritty : https://github.com/catppuccin/alacritty
