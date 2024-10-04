@@ -165,11 +165,11 @@ full="code ffmpeg gimp gnome-color-manager nvtop obs-studio steam yt-dlp"
 		1)
 			# Standard
 			sudo pacman -S --needed $minimal $standard
-   		;;
+		;;
 		2)
 			# Full
 			sudo pacman -S --needed $minimal $standard $full
-   		;;
+		;;
 	esac
 
 	# Important for Pipewire
