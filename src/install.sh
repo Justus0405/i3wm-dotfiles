@@ -58,7 +58,8 @@ EOF
    	echo -e ""
 	echo -e "3) Full"
 	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Fonts, Icons, Audio, Input, Screenshots,"
- 	echo -e "\t           Calculator, Disk Utility, Yay, Color Manager, ffmpeg, OBS, GIMP, Steam, VSCode, Vesktop, Prismlauncher, yt-dlp"
+ 	echo -e "\t           Calculator, Disk Utility, Yay, Color Manager, ffmpeg, OBS, GIMP, Steam, VSCode, Vesktop,"
+	echo -e "\t           Prismlauncher, Curseforge, r2modman, Spotify, IntelliJ, yt-dlp"
  	echo -e "\tBrowser  : Brave"
   	echo -e "\tMedia    : Totem, Loupe"
    	echo -e ""
@@ -147,13 +148,12 @@ INSTALL_PACKAGES() {
 
 EOF
 
-# Packages
-
+# Pacman Packages
 minimal="alacritty bash-completion chromium flameshot gnu-free-fonts gst-plugin-pipewire i3-wm lib32-pipewire nemo nemo-audio-tab nemo-fileroller nemo-image-converter nemo-share nitrogen papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rtkit sddm ttf-jetbrains-mono ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics"
 
 standard="fuse gnome-calculator gnome-disk-utility gnome-text-editor gst-libav gst-plugins-ugly gvfs gvfs-smb htop loupe lxappearance-gtk3 nano ntfs-3g pacman-contrib totem"
 
-full="code ffmpeg gimp gnome-color-manager jdk17-openjdk jdk21-openjdk jdk8-openjdk noto-fonts-emoji nvtop obs-studio pavucontrol steam yt-dlp"
+full="code ffmpeg gimp gnome-color-manager intellij-idea-community-edition jdk17-openjdk jdk21-openjdk jdk8-openjdk noto-fonts-emoji nvtop obs-studio pavucontrol steam yt-dlp"
 
 	# Pacman
 	case $edition in
@@ -175,6 +175,11 @@ full="code ffmpeg gimp gnome-color-manager jdk17-openjdk jdk21-openjdk jdk8-open
 	# Important for Pipewire
 	sudo usermod -a -G rtkit $USER
 
+# Yay Packages
+yay_standard="brave-bin catnap-git"
+
+yay_full="prismlauncher-qt5-bin vesktop-bin r2modman-appimage curseforge spotify spicetify-cli"
+
 	# Yay
 	case $edition in
 		1)
@@ -184,8 +189,7 @@ full="code ffmpeg gimp gnome-color-manager jdk17-openjdk jdk21-openjdk jdk8-open
 			makepkg -si --noconfirm
 			cd ..
 
-			yay -S --noconfirm brave-bin
-			yay -S --noconfirm catnap-git
+			yay -S --noconfirm $yay_standard
 		;;
 		2)
 			cd $DIRMAIN
@@ -194,10 +198,12 @@ full="code ffmpeg gimp gnome-color-manager jdk17-openjdk jdk21-openjdk jdk8-open
 			makepkg -si --noconfirm
 			cd ..
 
-			yay -S --noconfirm brave-bin
-			yay -S --noconfirm catnap-git
-			yay -S --noconfirm prismlauncher-qt5-bin
-			yay -S --noconfirm vesktop-bin
+			yay -S --noconfirm $yay_standard $yay_full
+
+			# Spicetify setup
+			sudo chmod a+wr /opt/spotify
+			sudo chmod a+wr /opt/spotify/Apps -R
+			spicetify backup apply
 		;;
 	esac
 }
