@@ -46,18 +46,18 @@ EOF
 
 	echo -e "Choose your Edition:"
 	echo -e "1) Minimal"
-	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Fonts, Icons, Audio, Input, Screenshots"
+	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Basic Fonts, Icons, Audio, Input, Screenshots"
  	echo -e "\tBrowser  : Chromium"
   	echo -e "\tMedia    : none"
    	echo -e ""
 	echo -e "2) Standard"
- 	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Fonts, Icons, Audio, Input, Screenshots,"
+ 	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Full Fonts, Icons, Audio, Input, Screenshots,"
   	echo -e "\t           Calculator, Disk Utility, Yay"
  	echo -e "\tBrowser  : Brave"
   	echo -e "\tMedia    : Totem, Loupe"
    	echo -e ""
 	echo -e "3) Full"
-	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Fonts, Icons, Audio, Input, Screenshots,"
+	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Full Fonts, Icons, Audio, Input, Screenshots,"
  	echo -e "\t           Calculator, Disk Utility, Yay, Color Manager, ffmpeg, OBS, GIMP, Steam, VSCode, Vesktop,"
 	echo -e "\t           Prismlauncher, Curseforge, r2modman, Spotify, IntelliJ, yt-dlp"
  	echo -e "\tBrowser  : Brave"
@@ -151,9 +151,9 @@ EOF
 # Pacman Packages
 minimal="alacritty bash-completion chromium flameshot gnu-free-fonts gst-plugin-pipewire i3-wm lib32-pipewire nemo nemo-audio-tab nemo-fileroller nemo-image-converter nemo-share nitrogen papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rtkit sddm ttf-jetbrains-mono ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics"
 
-standard="fuse gnome-calculator gnome-disk-utility gnome-text-editor gst-libav gst-plugins-ugly gvfs gvfs-smb htop loupe lxappearance-gtk3 nano ntfs-3g pacman-contrib totem"
+standard="fuse gnome-calculator gnome-disk-utility gnome-text-editor gst-libav gst-plugins-ugly gvfs gvfs-smb htop loupe lxappearance-gtk3 nano noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra ntfs-3g pacman-contrib totem"
 
-full="code ffmpeg gimp gnome-color-manager intellij-idea-community-edition jdk17-openjdk jdk21-openjdk jdk8-openjdk noto-fonts-emoji nvtop obs-studio pavucontrol steam yt-dlp"
+full="code ffmpeg gimp gnome-color-manager intellij-idea-community-edition jdk17-openjdk jdk21-openjdk jdk8-openjdk nvtop obs-studio pavucontrol steam yt-dlp"
 
 	# Pacman
 	case $edition in
