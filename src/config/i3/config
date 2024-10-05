@@ -72,6 +72,9 @@ gaps outer 15px
 smart_gaps inverse_outer
 
 for_window [class="gnome-calculator"] floating enable
+for_window [class="gnome-text-editor"] floating enable
+for_window [class="Totem"] floating enable
+for_window [class="loupe"] floating enable
 
 #
 #     _         _            _             _   
