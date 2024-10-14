@@ -1,0 +1,24 @@
+[Default Applications]
+text/html=code-oss.desktop
+x-scheme-handler/http=brave-browser.desktop
+x-scheme-handler/https=brave-browser.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
+x-scheme-handler/ror2mm=r2modman.desktop
+image/jpeg=org.gnome.Loupe.desktop
+image/png=org.gnome.Loupe.desktop
+image/webp=org.gnome.Loupe.desktop
+image/gif=org.gnome.Loupe.desktop
+audio/mpeg=org.gnome.Totem.desktop
+text/plain=org.gnome.TextEditor.desktop
+text/css=code-oss.desktop
+
+[Added Associations]
+image/jpeg=org.gnome.Loupe.desktop;
+image/png=org.gnome.Loupe.desktop;
+image/webp=org.gnome.Loupe.desktop;
+image/gif=org.gnome.Loupe.desktop;
+audio/mpeg=org.gnome.Totem.desktop;
+text/plain=org.gnome.TextEditor.desktop;
+text/html=code-oss.desktop;
+text/css=code-oss.desktop;
