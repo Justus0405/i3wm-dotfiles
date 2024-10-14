@@ -178,7 +178,7 @@ full="code ffmpeg gimp gnome-color-manager intellij-idea-community-edition jdk17
 # Yay Packages
 yay_standard="brave-bin catnap-git"
 
-yay_full="prismlauncher-qt5-bin vesktop-bin r2modman-appimage curseforge spotify spicetify-cli"
+yay_full="prismlauncher-qt5-bin vesktop-bin r2modman-appimage curseforge"
 
 	# Yay
 	case $edition in
@@ -199,12 +199,6 @@ yay_full="prismlauncher-qt5-bin vesktop-bin r2modman-appimage curseforge spotify
 			cd ..
 
 			yay -S --noconfirm $yay_standard $yay_full
-
-			# Spicetify setup
-			sudo chmod a+wr /opt/spotify
-			sudo chmod a+wr /opt/spotify/Apps -R
-			spicetify backup apply
-   			curl -fsSL https://raw.githubusercontent.com/spicetify/marketplace/main/resources/install.sh | sh
 		;;
 	esac
 }
