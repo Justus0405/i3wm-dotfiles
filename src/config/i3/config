@@ -133,6 +133,8 @@ bindsym $mod+m exec --no-startup-id "flameshot screen"
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
 # start rofi (as a window switcher, ALT+TAB)
 bindsym Mod1+Tab exec "rofi -modi window,run -show window"
+# start rofi (as a ssh selector)
+bindsym $mod+o exec "rofi -modi ssh,run -show ssh"
 
 # change focus
 bindsym $mod+j focus left
