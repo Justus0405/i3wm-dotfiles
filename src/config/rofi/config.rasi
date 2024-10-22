@@ -1,5 +1,5 @@
 configuration{
-    modi: "run,drun,window";
+    modi: "run,drun,window,ssh";
     show-icons: true;
     terminal: "alacritty";
     drun-display-format: "{icon} {name}";
@@ -9,6 +9,7 @@ configuration{
     display-drun: "   Apps ";
     display-run: "   Run ";
     display-window: "   Windows ";
+    display-ssh: " 󰦝  SSH ";
     display-Network: " 󰤨  Networks ";
     sidebar-mode: false;
 }
