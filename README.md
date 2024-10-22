@@ -91,9 +91,13 @@ After the installation is finished the script will automaticly reboot into the n
 
 ## Credits
 
-- Alacritty : https://github.com/catppuccin/alacritty
-- Catnap    : https://github.com/iinsertNameHere/catnap
-- Rofi      : https://github.com/catppuccin/rofi
-- GTK       : https://github.com/catppuccin/gtk
-- SDDM      : https://github.com/catppuccin/sddm
-- Neofetch  : https://github.com/prasanthrangan/hyprdots
+##### Catppuccin Team
+- [Alacritty](https://github.com/catppuccin/alacritty)
+- [Rofi](https://github.com/catppuccin/rofi)
+- [GTK](https://github.com/catppuccin/gtk)
+- [SDDM](https://github.com/catppuccin/sddm)
+
+##### Others
+- [iinsertNameHere](https://github.com/iinsertNameHere/catnap)
+- [prasanthrangan](https://github.com/prasanthrangan/hyprdots)
+- [jluttine](https://github.com/jluttine/rofi-power-menu)
