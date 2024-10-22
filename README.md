@@ -4,7 +4,7 @@
 
 The installation script is made for Arch, but **may** work on some Arch based distros with **systemd**.
 
-> [!NOTE]  
+> [!WARNING]  
 > This script is designed to be done after a minimal arch installation,
 > using it on previously installed desktop should work but will change whatever you currently have (gtk/qt theming, shell, sddm, etc) and is at your own risk.
 
