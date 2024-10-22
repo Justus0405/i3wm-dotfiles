@@ -73,6 +73,7 @@ smart_gaps inverse_outer
 
 for_window [class="gnome-text-editor"] floating enable
 for_window [class="gnome-calculator"] floating enable
+for_window [class="gnome-calendar"] floating enable
 for_window [class="file-roller"] floating enable
 for_window [class="Totem"] floating enable
 for_window [class="loupe"] floating enable
