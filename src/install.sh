@@ -44,24 +44,34 @@ CHOOSE_PROFILE() {
 
 EOF
 
-	echo -e "Choose your Edition:"
-	echo -e "1) Minimal"
-	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Basic Fonts, Icons, Audio, Input, Screenshots"
- 	echo -e "\tBrowser  : Chromium"
-  	echo -e "\tMedia    : none"
+	echo -e "╭─────────────────────────────────────────────────────────────────╮"
+	echo -e "│ 1) Minimal                                                      │"
+	echo -e "├─────────────────────────────────────────────────────────────────┤"
+	echo -e "│ Packages : Window Manager, Login Manager, File Manager,         │"
+	echo -e "│            Basic Fonts, Icons, Audio, Input, Screenshots        │"
+ 	echo -e "│ Browser  : Chromium                                             │"
+  	echo -e "│ Media    : none                                                 │"
+	echo -e "╰─────────────────────────────────────────────────────────────────╯"
    	echo -e ""
-	echo -e "2) Standard"
- 	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Full Fonts, Icons, Audio, Input, Screenshots,"
-  	echo -e "\t           Calculator, Disk Utility, Yay"
- 	echo -e "\tBrowser  : Brave"
-  	echo -e "\tMedia    : Totem, Loupe"
+
+	echo -e "╭─────────────────────────────────────────────────────────────────╮"
+	echo -e "│ 2) Standard                                                     │"
+	echo -e "├─────────────────────────────────────────────────────────────────┤"
+	echo -e "│ Packages : Minimal+, All Fonts, Calculator, Disk Utility, Yay   │"
+	echo -e "│                                                                 │"
+ 	echo -e "│ Browser  : Brave                                                │"
+  	echo -e "│ Media    : Totem, Loupe                                         │"
+	echo -e "╰─────────────────────────────────────────────────────────────────╯"
    	echo -e ""
-	echo -e "3) Full"
-	echo -e "\tPackages : Window Manager, Login Manager, File Manager, Full Fonts, Icons, Audio, Input, Screenshots,"
- 	echo -e "\t           Calculator, Disk Utility, Yay, Color Manager, ffmpeg, OBS, GIMP, Steam, VSCode, Vesktop,"
-	echo -e "\t           Prismlauncher, Curseforge, r2modman, Spotify, IntelliJ, yt-dlp"
- 	echo -e "\tBrowser  : Brave"
-  	echo -e "\tMedia    : Totem, Loupe"
+
+	echo -e "╭─────────────────────────────────────────────────────────────────╮"
+	echo -e "│ 3) Full                                                         │"
+	echo -e "├─────────────────────────────────────────────────────────────────┤"
+	echo -e "│ Packages : Standard+, OBS, GIMP, Shotcut, Steam, Dev-Enviroment,│"
+	echo -e "│            Java, Prismlauncher, CurseForge, r2modman, yt-dlp    │"
+ 	echo -e "│ Browser  : Brave                                                │"
+  	echo -e "│ Media    : Totem, Loupe                                         │"
+	echo -e "╰─────────────────────────────────────────────────────────────────╯"
    	echo -e ""
 
 	read -p "Your Choice: " choice
@@ -153,7 +163,7 @@ minimal="alacritty bash-completion chromium flameshot gnu-free-fonts gst-plugin-
 
 standard="fuse gnome-calculator gnome-disk-utility gnome-text-editor gst-libav gst-plugins-ugly gvfs gvfs-smb htop loupe lxappearance-gtk3 nano noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra ntfs-3g pacman-contrib totem"
 
-full="code ffmpeg gimp gnome-calendar gnome-color-manager intellij-idea-community-edition jdk17-openjdk jdk21-openjdk jdk8-openjdk nvtop obs-studio pavucontrol prismlauncher pycharm-community-edition resources steam yt-dlp"
+full="code ffmpeg gimp gnome-calendar gnome-color-manager intellij-idea-community-edition jdk17-openjdk jdk21-openjdk jdk8-openjdk nvtop obs-studio pavucontrol prismlauncher pycharm-community-edition resources steam shotcut yt-dlp"
 
 	# Pacman
 	case $edition in
