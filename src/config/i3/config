@@ -129,16 +129,12 @@ bindsym $mod+b exec --no-startup-id brave
 bindsym $mod+e exec --no-startup-id nemo
 bindsym $mod+n exec --no-startup-id "flameshot gui"
 bindsym $mod+m exec --no-startup-id "flameshot screen"
+bindsym Ctrl+Shift+Escape exec --no-startup-id resources
 
-# start rofi (as a program launcher)
+# start rofi (as a multi-use launcher)
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
-# start rofi (as a ssh selector)
 bindsym $mod+o exec "rofi -modi ssh,run -show ssh"
-# start rofi (as a window switcher, ALT+TAB)
 bindsym Mod1+Tab exec "rofi -modi window,run -show window"
-
-# start resources if installed
-bindsym Ctrl+Shift+Escape exec resources
 
 # change focus
 bindsym $mod+j focus left
