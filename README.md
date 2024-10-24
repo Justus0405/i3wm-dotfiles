@@ -38,13 +38,19 @@ After the installation is finished the script will automaticly reboot into the n
 | Keys | Action |
 | :--  | :-- |
 | <kbd>Super</kbd> + <kbd>RETURN / ENTER</kbd> | launch alacritty (terminal)
-| <kbd>Super</kbd> + <kbd>D</kbd> | launch rofi (application launcher)
 | <kbd>Super</kbd> + <kbd>E</kbd> | launch nemo (filemanager)
 | <kbd>Super</kbd> + <kbd>B</kbd> | launch brave (browser)
 | <kbd>Super</kbd> + <kbd>N</kbd> | screenshot selected area (flameshot)
 | <kbd>Super</kbd> + <kbd>M</kbd> | screenshot entire screen (flameshot)
 | <kbd>Super</kbd> + <kbd>Q</kbd> | quit active/focused window
-| <kbd>ALT</kbd> + <kbd>TAB</kbd> | switch windows
+
+<br>
+
+| Keys | Action |
+| :--  | :-- |
+| <kbd>Super</kbd> + <kbd>D</kbd> | Rofi (application launcher)
+| <kbd>Super</kbd> + <kbd>O</kbd> | Rofi (ssh selector)
+| <kbd>ALT</kbd> + <kbd>TAB</kbd> | Rofi (window switcher)
 
 <br>
 
