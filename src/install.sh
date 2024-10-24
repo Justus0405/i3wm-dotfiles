@@ -153,7 +153,7 @@ minimal="alacritty bash-completion chromium flameshot gnu-free-fonts gst-plugin-
 
 standard="fuse gnome-calculator gnome-disk-utility gnome-text-editor gst-libav gst-plugins-ugly gvfs gvfs-smb htop loupe lxappearance-gtk3 nano noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra ntfs-3g pacman-contrib totem"
 
-full="code ffmpeg gimp gnome-calendar gnome-color-manager intellij-idea-community-edition jdk17-openjdk jdk21-openjdk jdk8-openjdk nvtop obs-studio pavucontrol resources steam yt-dlp"
+full="code ffmpeg gimp gnome-calendar gnome-color-manager intellij-idea-community-edition jdk17-openjdk jdk21-openjdk jdk8-openjdk nvtop obs-studio pavucontrol prismlauncher pycharm-community-edition resources steam yt-dlp"
 
 	# Pacman
 	case $edition in
@@ -178,7 +178,7 @@ full="code ffmpeg gimp gnome-calendar gnome-color-manager intellij-idea-communit
 # Yay Packages
 yay_standard="brave-bin catnap-git"
 
-yay_full="prismlauncher-qt5-bin vesktop-bin r2modman-appimage curseforge"
+yay_full="r2modman-appimage curseforge"
 
 	# Yay
 	case $edition in
