@@ -226,11 +226,11 @@ COPY_FILES() {
 EOF
 
 	# Create directories
-	mkdir -p ~/.config ~/.local/share/themes
+	mkdir -p ~/.config ~/.local/share/themes ~/.local/share/PrismLauncher/themes
 
- 	# GTK and other Themes
+ 	# GTK and Prismlauncher themes
 	unzip $DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
- 	cp -r $DIRMAIN/local/* ~/.local/
+	unzip $DIRMAIN/assets/Prismlauncher-themes.zip -d ~/.local/share/PrismLauncher/themes/
 
 	# Nitrogen config
 	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/rocket_launch.png\nmode=5\nbgcolor=#000000" > $DIRMAIN/config/nitrogen/bg-saved.cfg
