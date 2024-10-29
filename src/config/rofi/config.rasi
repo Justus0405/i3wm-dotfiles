@@ -10,6 +10,7 @@ configuration{
     display-run: "   Run ";
     display-window: "   Windows ";
     display-ssh: " 󰦝  SSH ";
+    display-calc: "   ";
     display-Network: " 󰤨  Networks ";
     sidebar-mode: false;
 }
