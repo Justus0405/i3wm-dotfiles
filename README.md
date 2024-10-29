@@ -59,6 +59,7 @@ After the installation is finished the script will automaticly reboot into the n
 | :--  | :-- |
 | <kbd>Super</kbd> + <kbd>D</kbd> | Rofi (application launcher)
 | <kbd>Super</kbd> + <kbd>O</kbd> | Rofi (ssh selector)
+| <kbd>Super</kbd> + <kbd>P</kbd> | Rofi (calculator)
 | <kbd>ALT</kbd> + <kbd>TAB</kbd> | Rofi (window switcher)
 
 <br>
