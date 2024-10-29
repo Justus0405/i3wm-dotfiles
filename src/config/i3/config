@@ -134,6 +134,7 @@ bindsym Ctrl+Shift+Escape exec --no-startup-id resources
 # start rofi (as a multi-use launcher)
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
 bindsym $mod+o exec "rofi -modi ssh,run -show ssh"
+bindsym $mod+p exec "rofi -show calc -modi calc -no-show-match -no-sort"
 bindsym Mod1+Tab exec "rofi -modi window,run -show window"
 
 # change focus
