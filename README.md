@@ -32,7 +32,16 @@ After the installation is finished the script will automaticly reboot into the n
 </table></div>
 
 <br>
- 
+
+## FAQ
+
+##### How do I change, add, or delete wallpapers?
+
+- **To change your wallpaper:** Press `SUPER + D`, type `Nitrogen`, and press Enter to open it. Select your desired wallpaper and click "Apply" at the bottom-right corner.
+- **To add or delete wallpapers:** Copy your wallpaper files to `~/.config/wallpapers/` to add them, or delete files from this directory to remove them.
+
+<br>
+
 ## Keybinds
 
 | Keys | Action |
