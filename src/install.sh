@@ -260,6 +260,9 @@ EOF
 			echo "catnap" >> ~/.bashrc
 		;;
 	esac
+
+ 	# Nemo default "open in terminal" application fix
+  	gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty
 }
 
 # Function for enabling services
