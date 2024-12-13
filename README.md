@@ -2,7 +2,7 @@
 
 ## Installation
 
-> [!NOTE]  
+> [!IMPORTANT]  
 > The installation script is made for Arch,
 > but **may** work on some Arch based distros with **systemd**.
 
@@ -12,12 +12,12 @@
 
 After a minimal Arch install (with grub and systemd), execute -
 
+> [!NOTE]
+> Ensure curl is installed first using:
+> `sudo pacman -S curl`
+
 ```shell
-pacman -Syy git
-git clone https://github.com/Justus0405/i3wm-dotfiles.git
-cd i3wm-dotfiles/src/
-chmod +x install.sh
-./install.sh
+bash <(curl -L https://raw.githubusercontent.com/Justus0405/i3wm-dotfiles/refs/heads/main/setup.sh)
 ```
 
 After the installation is finished the script will automaticly reboot into the new enviroment.
@@ -109,15 +109,16 @@ After the installation is finished the script will automaticly reboot into the n
 
 <br>
 
-## Credits
+## 🌟 Credits
 
-##### Catppuccin Team
-- [Alacritty](https://github.com/catppuccin/alacritty)
-- [Rofi](https://github.com/catppuccin/rofi)
-- [GTK](https://github.com/catppuccin/gtk)
-- [SDDM](https://github.com/catppuccin/sddm)
+### 🎨 Catppuccin Team  
+- 🌸 [Alacritty](https://github.com/catppuccin/alacritty)  
+- ☕ [Rofi](https://github.com/catppuccin/rofi)  
+- 🖌️ [GTK](https://github.com/catppuccin/gtk)  
+- 🌙 [SDDM](https://github.com/catppuccin/sddm)  
 
-##### Others
-- [iinsertNameHere](https://github.com/iinsertNameHere/catnap)
-- [prasanthrangan](https://github.com/prasanthrangan/hyprdots)
-- [jluttine](https://github.com/jluttine/rofi-power-menu)
+### 🌟 Others  
+- 🛌 [iinsertNameHere](https://github.com/iinsertNameHere/catnap)  
+- 🌀 [prasanthrangan](https://github.com/prasanthrangan/hyprdots)  
+- ⚡ [jluttine](https://github.com/jluttine/rofi-power-menu)  
+
