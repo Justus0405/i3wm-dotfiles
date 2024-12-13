@@ -13,7 +13,6 @@
 > [!CAUTION]  
 > This script is designed to be done after a minimal arch installation,
 > using it on previously installed desktop should work but will change whatever you currently have (gtk/qt theming, shell, sddm, etc) and is at your own risk.
-
 <br>
 
 ***After a minimal Arch install (with grub and systemd), execute -***
@@ -28,6 +27,7 @@ bash <(curl -L https://raw.githubusercontent.com/Justus0405/i3wm-dotfiles/refs/h
 
 **After the installation is finished the script will automaticly reboot into the new enviroment.**
 <br>
+
  
 ## Screenshots
 
