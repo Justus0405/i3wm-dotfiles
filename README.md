@@ -1,8 +1,26 @@
 # Justus0405 i3-wm Catppuccin Dotfiles
 
+<p align="left">
+    <!-- Discord Badge -->
+    <a href="https://discord.gg/https://discord.com/invite/E2Bp7GtcaA"><img src="https://img.shields.io/discord/1060607505186684978?logo=Discord&colorA=1e1e2e&colorB=a6e3a1&style=for-the-badge"></a>
+    <!-- Last Commit Badge -->
+    <a href="https://github.com/Justus0405/i3wm-dotfiles/commits/main/"><img src="https://img.shields.io/github/last-commit/Justus0405/i3wm-dotfiles?logo=github&colorA=1e1e2e&colorB=cdd6f4&style=for-the-badge"></a>
+</p>
+
+<p align="left">
+ <!-- Forks Badge -->
+	<a href="https://github.com/Justus0405/i3wm-dotfiles/forks"><img src="https://img.shields.io/github/forks/Justus0405/i3wm-dotfiles?colorA=1e1e2e&colorB=ea999c&style=for-the-badge"></a>
+    <!-- Stars Badge -->
+	<a href="https://github.com/Justus0405/i3wm-dotfiles/stargazers"><img src="https://img.shields.io/github/stars/Justus0405/i3wm-dotfiles?colorA=1e1e2e&colorB=b7bdf8&style=for-the-badge"></a>
+    <!-- Issues Badge -->
+	<a href="https://github.com/Justus0405/i3wm-dotfiles/issues"><img src="https://img.shields.io/github/issues/Justus0405/i3wm-dotfiles?colorA=1e1e2e&colorB=f5a97f&style=for-the-badge"></a>
+    <!-- Contributors Badge -->
+	<a href="https://github.com/Justus0405/i3wm-dotfiles/contributors"><img src="https://img.shields.io/github/contributors/Justus0405/i3wm-dotfiles?colorA=1e1e2e&colorB=a6da95&style=for-the-badge"></a>
+</p>
+
 ## Installation
 
-> [!NOTE]  
+> [!IMPORTANT]  
 > The installation script is made for Arch,
 > but **may** work on some Arch based distros with **systemd**.
 
@@ -121,3 +139,13 @@ After the installation is finished the script will automaticly reboot into the n
 - [iinsertNameHere](https://github.com/iinsertNameHere/catnap)
 - [prasanthrangan](https://github.com/prasanthrangan/hyprdots)
 - [jluttine](https://github.com/jluttine/rofi-power-menu)
+
+#
+
+<p align="center">
+	Copyright &copy; 2024-present <a href="https://github.com/Justus0405" target="_blank">Justus0405</a>
+</p>
+
+<p align="center">
+	<a href="https://github.com/Justus0405/i3wm-dotfiles/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Justus0405/i3wm-dotfiles?logo=Github&colorA=1e1e2e&colorB=cba6f7&style=for-the-badge"></a>
+</p>
