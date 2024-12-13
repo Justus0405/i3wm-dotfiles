@@ -1,5 +1,7 @@
 # Justus0405 i3-wm Catppuccin Dotfiles
 
+<img src="https://img.shields.io/badge/Theme-Catppuccin-blue??style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=1c1c29">
+
 ## Installation
 
 > [!IMPORTANT]  
