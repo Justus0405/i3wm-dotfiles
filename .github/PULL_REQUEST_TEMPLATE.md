@@ -9,7 +9,7 @@ This pull request adds/updates/fixes [describe the main goal or feature].
 - [ ] Fixed issue #[issue number].
 - [ ] Improved <!-- optimized existing functionality -->
 - [ ] Fixes.
-- [ ] Docs/Reamde.
+- [ ] Docs/Readme.
 
 ### Context
 
