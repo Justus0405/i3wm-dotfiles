@@ -26,7 +26,7 @@ bash <(curl -L https://raw.githubusercontent.com/Justus0405/i3wm-dotfiles/refs/h
 
 
 > [!INFO]
-> **After the installation is finished the script will automaticly reboot into the new enviroment.**
+> After the installation is finished the script will automaticly reboot into the new enviroment.
 <br>
 
  
