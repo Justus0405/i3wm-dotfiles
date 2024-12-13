@@ -25,11 +25,10 @@ bash <(curl -L https://raw.githubusercontent.com/Justus0405/i3wm-dotfiles/refs/h
 > `sudo pacman -S curl`
 
 
-> [!INFO]
-> After the installation is finished the script will automaticly reboot into the new enviroment.
+**After the installation is finished the script will automaticly reboot into the new enviroment.**
+
 <br>
 
- 
 ## Screenshots
 
 <div align="center"><table><tr><td>Desktop Clear</td><td>Desktop Busy</td></tr><tr><td>
