@@ -1,6 +1,6 @@
 # Justus0405 i3-wm Catppuccin Dotfiles
 
-<img src="https://img.shields.io/badge/Theme-Catppuccin-blue?style=for-the-badge&color=7dc4e4&logoColor=D9E0EE&labelColor=1c1c29">
+<img src="https://img.shields.io/badge/Theme-Catppuccin-blue?style=for-the-badge&color=7dc4e4&logoColor=D9E0EE&labelColor=1c1c29"> <img src="https://github.com/harilvfs/assets/blob/main/themes/themes.png" />
 
 ## Installation
 
