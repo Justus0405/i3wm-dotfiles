@@ -2,6 +2,8 @@
 
 <img src="https://github.com/harilvfs/assets/blob/main/themes/themes.png" width="30" /> <img src="https://img.shields.io/badge/Theme-Catppuccin-blue?style=for-the-badge&color=7dc4e4&logoColor=D9E0EE&labelColor=1c1c29"> 
 
+<img src="https://img.shields.io/github/issues/Justus0405/i3wm-dotfiles?style=for-the-badge&color=dbb6ed&logoColor=85e185&labelColor=1c1c29" /> <img src="https://img.shields.io/github/issues-pr/Justus0405/i3wm-dotfiles?style=for-the-badge&color=ef9f9c&logoColor=85e185&labelColor=1c1c29" /> <img src="https://img.shields.io/github/last-commit/Justus0405/i3wm-dotfiles?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=1c1c29"/> <img src="https://img.shields.io/github/stars/Justus0405/i3wm-dotfiles?style=for-the-badge&logo=apachespark&color=eed49f&logoColor=D9E0EE&labelColor=1c1c29"/> <img src="https://img.shields.io/github/forks/Justus0405/i3wm-dotfiles?style=for-the-badge&color=9dc3ea&logoColor=D9E0EE&labelColor=1c1c29" />
+
 ## Installation
 
 > [!IMPORTANT]  
