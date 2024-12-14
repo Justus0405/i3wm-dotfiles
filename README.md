@@ -58,6 +58,13 @@ After the installation is finished the script will automaticly reboot into the n
 - **To change your wallpaper:** Press `SUPER + D`, type `Nitrogen`, and press Enter to open it. Select your desired wallpaper and click "Apply" at the bottom-right corner.
 - **To add or delete wallpapers:** Copy your wallpaper files to `~/.config/wallpapers/` to add them, or delete files from this directory to remove them.
 
+> [!TIP]  
+> To get more `Catppuccin` wallpapers, clone the repository directly into the `~/.config` directory.  
+
+```bash
+git clone https://github.com/harilvfs/wallpapers ~/.config
+```
+
 <br>
 
 ## Keybinds
