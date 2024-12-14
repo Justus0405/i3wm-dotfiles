@@ -159,11 +159,11 @@ INSTALL_PACKAGES() {
 EOF
 
 # Pacman Packages
-minimal="alacritty bash-completion chromium flameshot gnu-free-fonts gst-plugin-pipewire i3-wm lib32-pipewire nemo nemo-audio-tab nemo-fileroller nemo-image-converter nemo-share nitrogen papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rofi-calc rtkit sddm ttf-jetbrains-mono ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics"
+minimal="alacritty bash-completion chromium flameshot gnu-free-fonts gst-plugin-pipewire i3-wm lib32-pipewire nemo nemo-audio-tab nemo-fileroller nemo-image-converter nemo-share nitrogen papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg rofi rofi-calc rtkit sddm ttf-jetbrains-mono ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics feh"
 
-standard="fuse gnome-calculator gnome-disk-utility gnome-text-editor gst-libav gst-plugins-ugly gvfs gvfs-smb htop loupe lxappearance-gtk3 nano noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra ntfs-3g pacman-contrib totem"
+standard="fuse gnome-calculator gnome-disk-utility gnome-text-editor gst-libav gst-plugins-ugly gvfs gvfs-smb htop loupe lxappearance-gtk3 nano noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra ntfs-3g pacman-contrib totem feh"
 
-full="code dosfstools ffmpeg gimp gnome-calendar gnome-color-manager intellij-idea-community-edition jdk17-openjdk jdk21-openjdk jdk8-openjdk nvtop obs-studio p7zip pavucontrol prismlauncher pycharm-community-edition qt6-multimedia-ffmpeg resources steam shotcut unrar yt-dlp"
+full="code dosfstools ffmpeg gimp gnome-calendar gnome-color-manager intellij-idea-community-edition jdk17-openjdk jdk21-openjdk jdk8-openjdk nvtop obs-studio p7zip pavucontrol prismlauncher pycharm-community-edition qt6-multimedia-ffmpeg resources steam shotcut unrar yt-dlp feh"
 
 	# Pacman
 	case $edition in
@@ -238,6 +238,7 @@ EOF
 
 	# Permissions & .config
 	chmod +x $DIRMAIN/config/polybar/launch.sh
+	chmod +x $DIRMAIN/config/polybar/brightness.sh
  	chmod +x $DIRMAIN/config/rofi/powermenu
 	cp -r $DIRMAIN/config/* ~/.config/
 
