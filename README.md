@@ -149,4 +149,3 @@ After the installation is finished the script will automaticly reboot into the n
 <p align="center">
 	<a href="https://github.com/Justus0405/i3wm-dotfiles/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Justus0405/i3wm-dotfiles?logo=Github&colorA=1e1e2e&colorB=cba6f7&style=for-the-badge"></a>
 </p>
-
