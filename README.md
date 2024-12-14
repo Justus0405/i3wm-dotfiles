@@ -1,34 +1,47 @@
 # Justus0405 i3-wm Catppuccin Dotfiles
 
-<img src="https://github.com/harilvfs/assets/blob/main/themes/themes.png" width="30" /> <img src="https://img.shields.io/badge/Theme-Catppuccin-blue?style=for-the-badge&color=7dc4e4&logoColor=D9E0EE&labelColor=1c1c29"> 
+<p align="left">
+    <!-- Discord Badge -->
+    <a href="https://discord.gg/https://discord.com/invite/E2Bp7GtcaA"><img src="https://img.shields.io/discord/1060607505186684978?logo=Discord&colorA=1e1e2e&colorB=a6e3a1&style=for-the-badge"></a>
+    <!-- Last Commit Badge -->
+    <a href="https://github.com/Justus0405/i3wm-dotfiles/commits/main/"><img src="https://img.shields.io/github/last-commit/Justus0405/i3wm-dotfiles?logo=github&colorA=1e1e2e&colorB=cdd6f4&style=for-the-badge"></a>
+</p>
 
-<img src="https://img.shields.io/github/issues/Justus0405/i3wm-dotfiles?style=for-the-badge&color=dbb6ed&logoColor=85e185&labelColor=1c1c29" /> <img src="https://img.shields.io/github/issues-pr/Justus0405/i3wm-dotfiles?style=for-the-badge&color=ef9f9c&logoColor=85e185&labelColor=1c1c29" /> <img src="https://img.shields.io/github/last-commit/Justus0405/i3wm-dotfiles?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=1c1c29"/> <img src="https://img.shields.io/github/stars/Justus0405/i3wm-dotfiles?style=for-the-badge&logo=apachespark&color=eed49f&logoColor=D9E0EE&labelColor=1c1c29"/> <img src="https://img.shields.io/github/forks/Justus0405/i3wm-dotfiles?style=for-the-badge&color=9dc3ea&logoColor=D9E0EE&labelColor=1c1c29" /> 
+<p align="left">
+ <!-- Forks Badge -->
+	<a href="https://github.com/Justus0405/i3wm-dotfiles/forks"><img src="https://img.shields.io/github/forks/Justus0405/i3wm-dotfiles?colorA=1e1e2e&colorB=ea999c&style=for-the-badge"></a>
+    <!-- Stars Badge -->
+	<a href="https://github.com/Justus0405/i3wm-dotfiles/stargazers"><img src="https://img.shields.io/github/stars/Justus0405/i3wm-dotfiles?colorA=1e1e2e&colorB=b7bdf8&style=for-the-badge"></a>
+    <!-- Issues Badge -->
+	<a href="https://github.com/Justus0405/i3wm-dotfiles/issues"><img src="https://img.shields.io/github/issues/Justus0405/i3wm-dotfiles?colorA=1e1e2e&colorB=f5a97f&style=for-the-badge"></a>
+    <!-- Contributors Badge -->
+	<a href="https://github.com/Justus0405/i3wm-dotfiles/contributors"><img src="https://img.shields.io/github/contributors/Justus0405/i3wm-dotfiles?colorA=1e1e2e&colorB=a6da95&style=for-the-badge"></a>
+</p>
+
 ## Installation
 
 > [!IMPORTANT]  
 > The installation script is made for Arch,
 > but **may** work on some Arch based distros with **systemd**.
 
-
 > [!CAUTION]  
 > This script is designed to be done after a minimal arch installation,
 > using it on previously installed desktop should work but will change whatever you currently have (gtk/qt theming, shell, sddm, etc) and is at your own risk.
-<br>
 
-***After a minimal Arch install (with grub and systemd), execute -***
+After a minimal Arch install (with grub and systemd), execute -
 
 ```shell
-bash <(curl -L https://raw.githubusercontent.com/Justus0405/i3wm-dotfiles/refs/heads/main/setup.sh)
+pacman -Syy git
+git clone https://github.com/Justus0405/i3wm-dotfiles.git
+cd i3wm-dotfiles/src/
+chmod +x install.sh
+./install.sh
 ```
-> [!NOTE]
-> Ensure curl is installed first using:
-> `sudo pacman -S curl`
 
-
-**After the installation is finished the script will automaticly reboot into the new enviroment.**
+After the installation is finished the script will automaticly reboot into the new enviroment.
 
 <br>
-
+ 
 ## Screenshots
 
 <div align="center"><table><tr><td>Desktop Clear</td><td>Desktop Busy</td></tr><tr><td>
@@ -126,4 +139,14 @@ bash <(curl -L https://raw.githubusercontent.com/Justus0405/i3wm-dotfiles/refs/h
 - 🛌 [iinsertNameHere](https://github.com/iinsertNameHere/catnap)  
 - 🌀 [prasanthrangan](https://github.com/prasanthrangan/hyprdots)  
 - ⚡ [jluttine](https://github.com/jluttine/rofi-power-menu)  
+
+#
+
+<p align="center">
+	Copyright &copy; 2024-present <a href="https://github.com/Justus0405" target="_blank">Justus0405</a>
+</p>
+
+<p align="center">
+	<a href="https://github.com/Justus0405/i3wm-dotfiles/blob/main/LICENSE"><img src="https://img.shields.io/github/license/Justus0405/i3wm-dotfiles?logo=Github&colorA=1e1e2e&colorB=cba6f7&style=for-the-badge"></a>
+</p>
 
