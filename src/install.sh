@@ -249,11 +249,11 @@ COPY_FILES() {
 EOF
 
 	# Create directories
-	mkdir -p ~/.config ~/.local/share/themes ~/.local/share/PrismLauncher/themes
+	mkdir -p "$HOME/.config" "$HOME/.local/share/themes" "$HOME/.local/share/PrismLauncher/themes"
 
 	# GTK and Prismlauncher themes
-	unzip "$DIRMAIN"/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d ~/.local/share/themes/
-	unzip "$DIRMAIN"/assets/Prismlauncher-themes.zip -d ~/.local/share/PrismLauncher/themes/
+	unzip "$DIRMAIN"/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d "$HOME/.local/share/themes/"
+	unzip "$DIRMAIN"/assets/Prismlauncher-themes.zip -d "$HOME/.local/share/PrismLauncher/themes/"
 
 	# Nitrogen config
 	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/rocket_launch.png\nmode=5\nbgcolor=#000000" >"$DIRMAIN"/config/nitrogen/bg-saved.cfg
@@ -262,25 +262,25 @@ EOF
 	# Permissions & .config
 	chmod +x "$DIRMAIN"/config/polybar/launch.sh
 	chmod +x "$DIRMAIN"/config/rofi/powermenu
-	cp -r "$DIRMAIN"/config/* ~/.config/
+	cp -r "$DIRMAIN"/config/* "$HOME/.config/"
 
 	# SDDM Theme
 	sudo unzip "$DIRMAIN"/assets/catppuccin-mocha.zip -d /usr/share/sddm/themes/
 	sudo cp -r "$DIRMAIN"/assets/sddm.conf /etc/
 
 	# xf86-input-evdev
-	sudo mv /usr/share/X11/xorg.conf.d/40-libinput.conf ~/.config/
+	sudo mv "/usr/share/X11/xorg.conf.d/40-libinput.conf" "$HOME/.config/"
 	sudo cp -r "$DIRMAIN"/assets/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
 
 	# Bashrc
 	case $edition in
 	"1")
 		# Standard
-		echo "catnap" >>~/.bashrc
+		echo "catnap" >>"$HOME/.bashrc"
 		;;
 	"2")
 		# Full
-		echo "catnap" >>~/.bashrc
+		echo "catnap" >>"$HOME/.bashrc"
 		;;
 	esac
 
