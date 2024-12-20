@@ -256,8 +256,8 @@ EOF
 	unzip "$DIRMAIN"/assets/Prismlauncher-themes.zip -d ~/.local/share/PrismLauncher/themes/
 
 	# Nitrogen config
-	echo -e "[xin_-1]\nfile=/home/'$USER'/.config/wallpapers/rocket_launch.png\nmode=5\nbgcolor=#000000" >"$DIRMAIN"/config/nitrogen/bg-saved.cfg
-	echo -e "[geometry]\n\n[nitrogen]\nview=list\nrecurse=true\nsort=alpha\nicon_caps=false\ndirs=/home/'$USER'/.config/wallpapers;" >"$DIRMAIN"/config/nitrogen/nitrogen.cfg
+	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/rocket_launch.png\nmode=5\nbgcolor=#000000" >"$DIRMAIN"/config/nitrogen/bg-saved.cfg
+	echo -e "[geometry]\n\n[nitrogen]\nview=list\nrecurse=true\nsort=alpha\nicon_caps=false\ndirs=/home/$USER/.config/wallpapers;" >"$DIRMAIN"/config/nitrogen/nitrogen.cfg
 
 	# Permissions & .config
 	chmod +x "$DIRMAIN"/config/polybar/launch.sh
