@@ -104,6 +104,25 @@ EOF
 	done
 }
 
+# Function for updating the host system
+UPDATE_SYSTEM() {
+	clear
+	cat <<"EOF"
+╭──────────────────────────────────────────────────╮
+│                                                  │
+│ Updating System...                               │
+│                                                  │
+╰──────────────────────────────────────────────────╯
+
+EOF
+
+	sudo pacman -Syyu || {
+		echo -e "System update failed. Exiting."
+		exit 1
+	}
+
+}
+
 # Function for choosing extras
 CHOOSE_EXTRAS() {
 	clear
@@ -150,25 +169,6 @@ EOF
 	echo -e ""
 }
 
-# Function for updating the host system
-UPDATE_SYSTEM() {
-	clear
-	cat <<"EOF"
-╭──────────────────────────────────────────────────╮
-│                                                  │
-│ Updating System...                               │
-│                                                  │
-╰──────────────────────────────────────────────────╯
-
-EOF
-
-	sudo pacman -Syyu || {
-		echo -e "System update failed. Exiting."
-		exit 1
-	}
-
-}
-
 # Function for installing needed packages
 INSTALL_PACKAGES() {
 	clear
@@ -192,16 +192,16 @@ EOF
 	case $edition in
 	"0")
 		# Minimal
-		sudo pacman -S --needed "$minimal"
+		sudo pacman -S --needed $minimal
 		sed -i 's/brave/chromium/g' "$DIRMAIN"/config/i3/config
 		;;
 	"1")
 		# Standard
-		sudo pacman -S --needed "$minimal" "$standard"
+		sudo pacman -S --needed $minimal $standard
 		;;
 	"2")
 		# Full
-		sudo pacman -S --needed "$minimal" "$standard" "$full"
+		sudo pacman -S --needed $minimal $standard $full
 		;;
 	esac
 
@@ -222,7 +222,7 @@ EOF
 		makepkg -si --noconfirm
 		cd ..
 
-		yay -S --noconfirm "$yay_standard"
+		yay -S --noconfirm $yay_standard
 		;;
 	"2")
 		cd "$DIRMAIN" || exit 1
@@ -231,7 +231,7 @@ EOF
 		makepkg -si --noconfirm
 		cd ..
 
-		yay -S --noconfirm "$yay_standard" "$yay_full"
+		yay -S --noconfirm $yay_standard $yay_full
 		;;
 	esac
 }
@@ -334,9 +334,9 @@ CONFIRM_INSTALLATION
 # Step 2
 CHOOSE_PROFILE
 # Step 3
-CHOOSE_EXTRAS
-# Step 4
 UPDATE_SYSTEM
+# Step 4
+CHOOSE_EXTRAS
 # Step 5
 INSTALL_PACKAGES
 # Step 6
