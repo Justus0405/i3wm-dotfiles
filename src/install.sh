@@ -193,7 +193,7 @@ EOF
 	"0")
 		# Minimal
 		sudo pacman -S --needed $minimal
-		sed -i 's/brave/chromium/g' "$DIRMAIN"/config/i3/config
+		sed -i 's/brave/chromium/g' "$DIRMAIN/config/i3/config"
 		;;
 	"1")
 		# Standard
@@ -252,25 +252,25 @@ EOF
 	mkdir -p "$HOME/.config" "$HOME/.local/share/themes" "$HOME/.local/share/PrismLauncher/themes"
 
 	# GTK and Prismlauncher themes
-	unzip "$DIRMAIN"/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip -d "$HOME/.local/share/themes/"
-	unzip "$DIRMAIN"/assets/Prismlauncher-themes.zip -d "$HOME/.local/share/PrismLauncher/themes/"
+	unzip "$DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip" -d "$HOME/.local/share/themes/"
+	unzip "$DIRMAIN/assets/Prismlauncher-themes.zip" -d "$HOME/.local/share/PrismLauncher/themes/"
 
 	# Nitrogen config
-	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/rocket_launch.png\nmode=5\nbgcolor=#000000" >"$DIRMAIN"/config/nitrogen/bg-saved.cfg
-	echo -e "[geometry]\n\n[nitrogen]\nview=list\nrecurse=true\nsort=alpha\nicon_caps=false\ndirs=/home/$USER/.config/wallpapers;" >"$DIRMAIN"/config/nitrogen/nitrogen.cfg
+	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/rocket_launch.png\nmode=5\nbgcolor=#000000" >"$DIRMAIN/config/nitrogen/bg-saved.cfg"
+	echo -e "[geometry]\n\n[nitrogen]\nview=list\nrecurse=true\nsort=alpha\nicon_caps=false\ndirs=/home/$USER/.config/wallpapers;" >"$DIRMAIN/config/nitrogen/nitrogen.cfg"
 
 	# Permissions & .config
-	chmod +x "$DIRMAIN"/config/polybar/launch.sh
-	chmod +x "$DIRMAIN"/config/rofi/powermenu
+	chmod +x "$DIRMAIN/config/polybar/launch.sh"
+	chmod +x "$DIRMAIN/config/rofi/powermenu"
 	cp -r "$DIRMAIN"/config/* "$HOME/.config/"
 
 	# SDDM Theme
-	sudo unzip "$DIRMAIN"/assets/catppuccin-mocha.zip -d /usr/share/sddm/themes/
-	sudo cp -r "$DIRMAIN"/assets/sddm.conf /etc/
+	sudo unzip "$DIRMAIN/assets/catppuccin-mocha.zip" -d /usr/share/sddm/themes/
+	sudo cp -r "$DIRMAIN/assets/sddm.conf" /etc/
 
 	# xf86-input-evdev
 	sudo mv "/usr/share/X11/xorg.conf.d/40-libinput.conf" "$HOME/.config/"
-	sudo cp -r "$DIRMAIN"/assets/50-mouse-acceleration.conf /etc/X11/xorg.conf.d/
+	sudo cp -r "$DIRMAIN/assets/50-mouse-acceleration.conf" /etc/X11/xorg.conf.d/
 
 	# Bashrc
 	case $edition in
