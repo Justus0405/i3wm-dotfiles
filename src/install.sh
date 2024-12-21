@@ -206,7 +206,7 @@ EOF
 	esac
 
 	# Important for Pipewire
-	sudo usermod -a -G rtkit "$USER"
+	sudo usermod -a -G rtkit $USER
 
 	# Yay Packages
 	yay_standard="brave-bin catnap-git"
