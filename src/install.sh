@@ -22,7 +22,7 @@ EOF
 
 	while true; do
 		read -rp "Continue installation? [Y/n] " yn
-		case $yn in
+		case "$yn" in
 		[Nn])
 			echo -e "Aborting!"
 			exit 0
@@ -81,7 +81,7 @@ EOF
 
 		read -rp "Your Choice: " choice
 
-		case $choice in
+		case "$choice" in
 		"1" | "minimal" | "Minimal")
 			edition="0"
 			echo -e "Installing Minimal Edition"
@@ -137,7 +137,7 @@ EOF
 
 	while true; do
 		read -rp "Add a Wifi Menu to the top bar? (Recommended for Laptops) [y/N] " yn
-		case $yn in
+		case "$yn" in
 		[Yy])
 			echo -e "Adding Wifi Menu..."
 			sudo pacman -S --needed --noconfirm network-manager-applet
@@ -153,7 +153,7 @@ EOF
 
 	while true; do
 		read -rp "Add Bluetooth support? [y/N] " yn
-		case $yn in
+		case "$yn" in
 		[Yy])
 			echo -e "Adding Bluetooth Menu..."
 			sudo pacman -S --needed --noconfirm bluez bluez-utils blueman
@@ -189,7 +189,7 @@ EOF
 	full="code dosfstools ffmpeg gimp gnome-calendar gnome-color-manager intellij-idea-community-edition jdk17-openjdk jdk21-openjdk jdk8-openjdk nvtop obs-studio p7zip pavucontrol prismlauncher pycharm-community-edition qt6-multimedia-ffmpeg resources steam shotcut unrar yt-dlp"
 
 	# Pacman
-	case $edition in
+	case "$edition" in
 	"0")
 		# Minimal
 		sudo pacman -S --needed $minimal
@@ -214,7 +214,7 @@ EOF
 	yay_full="r2modman-appimage curseforge"
 
 	# Yay
-	case $edition in
+	case "$edition" in
 	"1")
 		cd "$DIRMAIN" || exit 1
 		git clone https://aur.archlinux.org/yay.git
@@ -273,7 +273,7 @@ EOF
 	sudo cp -r "$DIRMAIN/assets/50-mouse-acceleration.conf" /etc/X11/xorg.conf.d/
 
 	# Bashrc
-	case $edition in
+	case "$edition" in
 	"1")
 		# Standard
 		echo "catnap" >>"$HOME/.bashrc"
