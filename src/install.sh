@@ -99,6 +99,7 @@ EOF
 			;;
 		*)
 			echo -e "Invalid Answer"
+			continue
 			;;
 		esac
 	done
