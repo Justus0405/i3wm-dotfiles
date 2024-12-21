@@ -265,12 +265,12 @@ EOF
 	cp -r "$DIRMAIN"/config/* "$HOME/.config/"
 
 	# SDDM Theme
-	sudo unzip "$DIRMAIN/assets/catppuccin-mocha.zip" -d /usr/share/sddm/themes/
-	sudo cp -r "$DIRMAIN/assets/sddm.conf" /etc/
+	sudo unzip "$DIRMAIN/assets/catppuccin-mocha.zip" -d "/usr/share/sddm/themes/"
+	sudo cp -r "$DIRMAIN/assets/sddm.conf" "/etc/"
 
 	# xf86-input-evdev
 	sudo mv "/usr/share/X11/xorg.conf.d/40-libinput.conf" "$HOME/.config/"
-	sudo cp -r "$DIRMAIN/assets/50-mouse-acceleration.conf" /etc/X11/xorg.conf.d/
+	sudo cp -r "$DIRMAIN/assets/50-mouse-acceleration.conf" "/etc/X11/xorg.conf.d/"
 
 	# Bashrc
 	case "$edition" in
