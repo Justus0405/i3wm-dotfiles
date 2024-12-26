@@ -124,52 +124,6 @@ EOF
 
 }
 
-# Function for choosing extras
-CHOOSE_EXTRAS() {
-	clear
-	cat <<"EOF"
-╭──────────────────────────────────────────────────╮
-│                                                  │
-│ Choose extra settings                            │
-│                                                  │
-╰──────────────────────────────────────────────────╯
-
-EOF
-
-	while true; do
-		read -rp "Add a Wifi Menu to the top bar? (Recommended for Laptops) [y/N] " yn
-		case "$yn" in
-		[Yy])
-			echo -e "Adding Wifi Menu..."
-			sudo pacman -S --needed --noconfirm network-manager-applet
-			break
-			;;
-		*)
-			echo -e "Skipping..."
-			break
-			;;
-		esac
-	done
-	echo -e ""
-
-	while true; do
-		read -rp "Add Bluetooth support? [y/N] " yn
-		case "$yn" in
-		[Yy])
-			echo -e "Adding Bluetooth Menu..."
-			sudo pacman -S --needed --noconfirm bluez bluez-utils blueman
-			sudo systemctl enable bluetooth.service
-			break
-			;;
-		*)
-			echo -e "Skipping..."
-			break
-			;;
-		esac
-	done
-	echo -e ""
-}
-
 # Function for installing needed packages
 INSTALL_PACKAGES() {
 	clear
@@ -235,6 +189,52 @@ EOF
 		yay -S --noconfirm $yay_standard $yay_full
 		;;
 	esac
+}
+
+# Function for choosing extras
+CHOOSE_EXTRAS() {
+	clear
+	cat <<"EOF"
+╭──────────────────────────────────────────────────╮
+│                                                  │
+│ Choose extra settings                            │
+│                                                  │
+╰──────────────────────────────────────────────────╯
+
+EOF
+
+	while true; do
+		read -rp "Add a Wifi Menu to the top bar? (Recommended for Laptops) [y/N] " yn
+		case "$yn" in
+		[Yy])
+			echo -e "Adding Wifi Menu..."
+			sudo pacman -S --needed --noconfirm network-manager-applet
+			break
+			;;
+		*)
+			echo -e "Skipping..."
+			break
+			;;
+		esac
+	done
+	echo -e ""
+
+	while true; do
+		read -rp "Add Bluetooth support? [y/N] " yn
+		case "$yn" in
+		[Yy])
+			echo -e "Adding Bluetooth Menu..."
+			sudo pacman -S --needed --noconfirm bluez bluez-utils blueman
+			sudo systemctl enable bluetooth.service
+			break
+			;;
+		*)
+			echo -e "Skipping..."
+			break
+			;;
+		esac
+	done
+	echo -e ""
 }
 
 # Function for copying config files
@@ -337,9 +337,9 @@ CHOOSE_PROFILE
 # Step 3
 UPDATE_SYSTEM
 # Step 4
-CHOOSE_EXTRAS
-# Step 5
 INSTALL_PACKAGES
+# Step 5
+CHOOSE_EXTRAS
 # Step 6
 COPY_FILES
 # Step 7
