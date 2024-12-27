@@ -136,6 +136,32 @@ INSTALL_PACKAGES() {
 
 EOF
 
+	# Info message for right vulkan driver
+	case "$edition" in
+	"2")
+		# Full
+		echo -e ""
+		echo -e "╭─────────────────────────────────────────────────────────────────╮"
+		echo -e "│ Steam requires the usage of vulkan which needs a specific       │"
+		echo -e "│ Driver you need to choose. The Open-Source variants are all     │"
+		echo -e "│ part of the Mesa project                                        │"
+		echo -e "├─────────────────────────────────────────────────────────────────┤"
+		echo -e "│ Nvidia -> nvidia-utils            (Proprietary) (Recommended)   │"
+		echo -e "│ Nvidia -> vulkan-nouveau          (Open-Source) (Slower)        │"
+		echo -e "├─────────────────────────────────────────────────────────────────┤"
+		echo -e "│ Amd    -> vulkan-radeon           (Open-Source) (Recommended)   │"
+		echo -e "│ Amd    -> amdvlk                  (Proprietary) (Slower)        │"
+		echo -e "├─────────────────────────────────────────────────────────────────┤"
+		echo -e "│ Intel  -> vulkan-intel            (Open-Source) (Recommended)   │"
+		echo -e "├─────────────────────────────────────────────────────────────────┤"
+		echo -e "│ Virtual Machines -> vulkan-virtio (Open-Source) (Recommended)   │"
+		echo -e "├─────────────────────────────────────────────────────────────────┤"
+		echo -e "│ Software -> vulkan-swrast         (Open-Source) (Very Slow)     │"
+		echo -e "╰─────────────────────────────────────────────────────────────────╯"
+		echo -e ""
+		;;
+	esac
+
 	# Pacman Packages
 	minimal="alacritty bash-completion chromium flameshot gnu-free-fonts gst-plugin-pipewire i3-wm lib32-pipewire nemo nemo-audio-tab nemo-fileroller nemo-image-converter nemo-share nitrogen papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6-svg qt6-declarative rofi rofi-calc rtkit sddm ttf-jetbrains-mono ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics"
 
