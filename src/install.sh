@@ -328,6 +328,7 @@ ENABLE_SERVICES() {
 EOF
 
 	systemctl --user enable pipewire pipewire-pulse wireplumber
+	sudo systemctl enable systemd-timesyncd --now
 	sudo systemctl enable NetworkManager
 	sudo systemctl disable gdm
 	sudo systemctl disable lightdm
