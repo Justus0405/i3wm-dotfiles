@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Get main directory for variable install paths
-export DIRMAIN=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+export dirMain=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 
 ## Main Functions
 
 # Starting Function
-CONFIRM_INSTALLATION() {
+confirmInstallation() {
 	clear
 	cat <<"EOF"
 ╭──────────────────────────────────────────────────╮
@@ -36,7 +36,7 @@ EOF
 }
 
 # Function to determine the wanted edition
-CHOOSE_PROFILE() {
+chooseProfile() {
 
 	while true; do
 		clear
@@ -106,7 +106,7 @@ EOF
 }
 
 # Function for updating the host system
-UPDATE_SYSTEM() {
+updateSystem() {
 	clear
 	cat <<"EOF"
 ╭──────────────────────────────────────────────────╮
@@ -125,7 +125,7 @@ EOF
 }
 
 # Function for installing needed packages
-INSTALL_PACKAGES() {
+installPackages() {
 	clear
 	cat <<"EOF"
 ╭──────────────────────────────────────────────────╮
@@ -174,7 +174,7 @@ EOF
 	"0")
 		# Minimal
 		sudo pacman -S --needed $minimal
-		sed -i 's/brave/chromium/g' "$DIRMAIN/config/i3/config"
+		sed -i 's/brave/chromium/g' "$dirMain/config/i3/config"
 		;;
 	"1")
 		# Standard
@@ -190,35 +190,35 @@ EOF
 	sudo usermod -a -G rtkit $USER
 
 	# Yay Packages
-	yay_standard="brave-bin catnap-git"
+	yayStandard="brave-bin catnap-git"
 
-	yay_full="r2modman-appimage curseforge"
+	yayFull="r2modman-appimage curseforge"
 
 	# Yay
 	case "$edition" in
 	"1")
-		cd "$DIRMAIN" || exit 1
+		cd "$dirMain" || exit 1
 		git clone https://aur.archlinux.org/yay.git
 		cd yay || exit 1
 		makepkg -si --noconfirm
 		cd ..
 
-		yay -S --noconfirm $yay_standard
+		yay -S --noconfirm $yayStandard
 		;;
 	"2")
-		cd "$DIRMAIN" || exit 1
+		cd "$dirMain" || exit 1
 		git clone https://aur.archlinux.org/yay.git
 		cd yay || exit 1
 		makepkg -si --noconfirm
 		cd ..
 
-		yay -S --noconfirm $yay_standard $yay_full
+		yay -S --noconfirm $yayStandard $yayFull
 		;;
 	esac
 }
 
 # Function for choosing extras
-CHOOSE_EXTRAS() {
+chooseExtras() {
 	clear
 	cat <<"EOF"
 ╭──────────────────────────────────────────────────╮
@@ -264,7 +264,7 @@ EOF
 }
 
 # Function for copying config files
-COPY_FILES() {
+copyFiles() {
 	clear
 	cat <<"EOF"
 ╭──────────────────────────────────────────────────╮
@@ -279,25 +279,25 @@ EOF
 	mkdir -p "$HOME/.config" "$HOME/.local/share/themes" "$HOME/.local/share/PrismLauncher/themes"
 
 	# GTK and Prismlauncher themes
-	unzip "$DIRMAIN/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip" -d "$HOME/.local/share/themes/"
-	unzip "$DIRMAIN/assets/Prismlauncher-themes.zip" -d "$HOME/.local/share/PrismLauncher/themes/"
+	unzip "$dirMain/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip" -d "$HOME/.local/share/themes/"
+	unzip "$dirMain/assets/Prismlauncher-themes.zip" -d "$HOME/.local/share/PrismLauncher/themes/"
 
 	# Nitrogen config
-	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/rocket_launch.png\nmode=5\nbgcolor=#000000" >"$DIRMAIN/config/nitrogen/bg-saved.cfg"
-	echo -e "[geometry]\n\n[nitrogen]\nview=list\nrecurse=true\nsort=alpha\nicon_caps=false\ndirs=/home/$USER/.config/wallpapers;" >"$DIRMAIN/config/nitrogen/nitrogen.cfg"
+	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/rocket_launch.png\nmode=5\nbgcolor=#000000" >"$dirMain/config/nitrogen/bg-saved.cfg"
+	echo -e "[geometry]\n\n[nitrogen]\nview=list\nrecurse=true\nsort=alpha\nicon_caps=false\ndirs=/home/$USER/.config/wallpapers;" >"$dirMain/config/nitrogen/nitrogen.cfg"
 
 	# Permissions & .config
-	chmod +x "$DIRMAIN/config/polybar/launch.sh"
-	chmod +x "$DIRMAIN/config/rofi/powermenu"
-	cp -r "$DIRMAIN"/config/* "$HOME/.config/"
+	chmod +x "$dirMain/config/polybar/launch.sh"
+	chmod +x "$dirMain/config/rofi/powermenu"
+	cp -r "$dirMain"/config/* "$HOME/.config/"
 
 	# SDDM Theme
-	sudo unzip "$DIRMAIN/assets/catppuccin-mocha.zip" -d "/usr/share/sddm/themes/"
-	sudo cp -r "$DIRMAIN/assets/sddm.conf" "/etc/"
+	sudo unzip "$dirMain/assets/catppuccin-mocha.zip" -d "/usr/share/sddm/themes/"
+	sudo cp -r "$dirMain/assets/sddm.conf" "/etc/"
 
 	# xf86-input-evdev
 	sudo mv "/usr/share/X11/xorg.conf.d/40-libinput.conf" "$HOME/.config/"
-	sudo cp -r "$DIRMAIN/assets/50-mouse-acceleration.conf" "/etc/X11/xorg.conf.d/"
+	sudo cp -r "$dirMain/assets/50-mouse-acceleration.conf" "/etc/X11/xorg.conf.d/"
 
 	# Bashrc
 	case "$edition" in
@@ -316,7 +316,7 @@ EOF
 }
 
 # Function for enabling services
-ENABLE_SERVICES() {
+enableServices() {
 	clear
 	cat <<"EOF"
 ╭──────────────────────────────────────────────────╮
@@ -336,7 +336,7 @@ EOF
 }
 
 # Function for rebooting
-FINISHED() {
+finished() {
 	clear
 	cat <<"EOF"
 ╭──────────────────────────────────────────────────╮
@@ -358,18 +358,18 @@ EOF
 }
 
 # Step 1
-CONFIRM_INSTALLATION
+confirmInstallation
 # Step 2
-CHOOSE_PROFILE
+chooseProfile
 # Step 3
-UPDATE_SYSTEM
+updateSystem
 # Step 4
-INSTALL_PACKAGES
+installPackages
 # Step 5
-CHOOSE_EXTRAS
+chooseExtras
 # Step 6
-COPY_FILES
+copyFiles
 # Step 7
-ENABLE_SERVICES
+enableServices
 # Step 8
-FINISHED
+finished
