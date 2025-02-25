@@ -14,7 +14,7 @@ confirmInstallation() {
 │ Catppuccin Dotfiles                              │
 │ By Justus0405                                    │
 │                                                  │
-│ Installer Version 1.4                            │
+│ Installer Version 1.5                            │
 │                                                  │
 ╰──────────────────────────────────────────────────╯
 
@@ -117,10 +117,7 @@ updateSystem() {
 
 EOF
 
-	sudo pacman -Syyu || {
-		echo -e "System update failed. Exiting."
-		exit 1
-	}
+	sudo pacman -Syyu || errorHandling 1
 
 }
 
@@ -173,16 +170,16 @@ EOF
 	case "$edition" in
 	"0")
 		# Minimal
-		sudo pacman -S --needed $minimal
+		sudo pacman -S --needed $minimal || errorHandling 2
 		sed -i 's/brave/chromium/g' "$dirMain/config/i3/config"
 		;;
 	"1")
 		# Standard
-		sudo pacman -S --needed $minimal $standard
+		sudo pacman -S --needed $minimal $standard || errorHandling 2
 		;;
 	"2")
 		# Full
-		sudo pacman -S --needed $minimal $standard $full
+		sudo pacman -S --needed $minimal $standard $full || errorHandling 2
 		;;
 	esac
 
@@ -215,6 +212,59 @@ EOF
 		yay -S --noconfirm $yayStandard $yayFull
 		;;
 	esac
+}
+
+# Function for choosing input settings
+chooseInput() {
+	clear
+	cat <<"EOF"
+╭──────────────────────────────────────────────────╮
+│                                                  │
+│ Choose input settings                            │
+│                                                  │
+╰──────────────────────────────────────────────────╯
+
+EOF
+
+	while true; do
+		read -rp "Please choose your keyboard layout ('us' or 'de' for Desktop, 'de-latin1' for Laptops): " layout
+		if sudo localectl set-keymap "$layout"; then
+			break
+		else
+			echo -e "${layout} is not a valid keyboard layout"
+		fi
+	done
+	echo -e ""
+
+	echo -e "╭───────────────────────────────────────────╮"
+	echo -e "│ Please choose your preffered input driver │"
+	echo -e "├───────────────────────┬───────────────────┴───────────────────────────────────────╮"
+	echo -e "│ 1: libinput (Default) │ Best hardware support, variable sensitivity, High Latency │"
+	echo -e "├───────────────────────┼───────────────────────────────────────────────────────────┤"
+	echo -e "│ 2: xf86-input-evdev   │ Lowest Latency, limited support, no sensitivity setting   │"
+	echo -e "╰───────────────────────┴───────────────────────────────────────────────────────────╯"
+	echo -e ""
+	while true; do
+		read -rp "Your Choice: " choice
+
+		case "$choice" in
+		"1" | "libinput" | "Libinput" | "default" | "Default")
+			echo -e "You chose libinput"
+			break
+			;;
+		"2" | "xf86-input-evdev")
+			# xf86-input-evdev
+			echo -e "You chose xf86-input-evdev"
+			sudo mv "/usr/share/X11/xorg.conf.d/40-libinput.conf" "$HOME/.config/"
+			sudo cp -r "$dirMain/assets/50-mouse-acceleration.conf" "/etc/X11/xorg.conf.d/"
+			break
+			;;
+		*)
+			echo -e "Invalid Answer"
+			continue
+			;;
+		esac
+	done
 }
 
 # Function for choosing extras
@@ -279,8 +329,8 @@ EOF
 	mkdir -p "$HOME/.config" "$HOME/.local/share/themes" "$HOME/.local/share/PrismLauncher/themes"
 
 	# GTK and Prismlauncher themes
-	unzip "$dirMain/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip" -d "$HOME/.local/share/themes/"
-	unzip "$dirMain/assets/Prismlauncher-themes.zip" -d "$HOME/.local/share/PrismLauncher/themes/"
+	unzip "$dirMain/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip" -d "$HOME/.local/share/themes/" || errorHandling 3
+	unzip "$dirMain/assets/Prismlauncher-themes.zip" -d "$HOME/.local/share/PrismLauncher/themes/" || errorHandling 3
 
 	# Nitrogen config
 	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/rocket_launch.png\nmode=5\nbgcolor=#000000" >"$dirMain/config/nitrogen/bg-saved.cfg"
@@ -292,12 +342,8 @@ EOF
 	cp -r "$dirMain"/config/* "$HOME/.config/"
 
 	# SDDM Theme
-	sudo unzip "$dirMain/assets/catppuccin-mocha.zip" -d "/usr/share/sddm/themes/"
+	sudo unzip "$dirMain/assets/catppuccin-mocha.zip" -d "/usr/share/sddm/themes/" || errorHandling 3
 	sudo cp -r "$dirMain/assets/sddm.conf" "/etc/"
-
-	# xf86-input-evdev
-	sudo mv "/usr/share/X11/xorg.conf.d/40-libinput.conf" "$HOME/.config/"
-	sudo cp -r "$dirMain/assets/50-mouse-acceleration.conf" "/etc/X11/xorg.conf.d/"
 
 	# Bashrc
 	case "$edition" in
@@ -357,19 +403,45 @@ EOF
 	sudo reboot now
 }
 
-# Step 1
-confirmInstallation
+# Experimental way for handling errors using codes
+errorHandling() {
+	case "$1" in
+	"1")
+	echo -e "Error: System update failed. Exiting."
+	;;
+	"2")
+	echo -e "Error: couldnt install packages. Do you have your package manager configured correctly?"
+	;;
+	"3")
+	echo -e "Error: couldnt unzip assets. Do you have your package manager configured correctly?"
+	;;
+	*)
+	echo -e "Error: Unexpected issue."
+	;;
+	esac
+	exit 1
+}
+
+# PROGRAM START
+
+# Step 1: Set up trap for SIGINT (CTRL+C)
+trap 'echo -e "Exited"; exit 0' SIGINT
+
 # Step 2
-chooseProfile
+confirmInstallation
 # Step 3
-updateSystem
+chooseProfile
 # Step 4
-installPackages
+updateSystem
 # Step 5
-chooseExtras
+installPackages
 # Step 6
-copyFiles
+chooseInput
 # Step 7
-enableServices
+chooseExtras
 # Step 8
+copyFiles
+# Step 9
+enableServices
+# Step 10
 finished
