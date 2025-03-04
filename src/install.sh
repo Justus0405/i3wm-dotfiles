@@ -255,6 +255,7 @@ EOF
 		"2" | "xf86-input-evdev")
 			# xf86-input-evdev
 			echo -e "You chose xf86-input-evdev"
+			mkdir -p "$HOME/.config"
 			sudo mv "/usr/share/X11/xorg.conf.d/40-libinput.conf" "$HOME/.config/"
 			sudo cp -r "$dirMain/assets/50-mouse-acceleration.conf" "/etc/X11/xorg.conf.d/"
 			break
