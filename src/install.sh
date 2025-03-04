@@ -329,7 +329,8 @@ EOF
 	mkdir -p "$HOME/.config" "$HOME/.local/share/themes" "$HOME/.local/share/PrismLauncher/themes"
 
 	# GTK and Prismlauncher themes
-	unzip "$dirMain/assets/Catppuccin-Mocha-Standard-Mauve-Dark.zip" -d "$HOME/.local/share/themes/" || errorHandling 3
+	unzip "$dirMain/assets/catppuccin-mocha-mauve-standard+default.zip" -d "$HOME/.local/share/themes/" || errorHandling 3
+	unzip "$dirMain/assets/gtk-4.0.zip" -d "$HOME/.config/" || errorHandling 3
 	unzip "$dirMain/assets/Prismlauncher-themes.zip" -d "$HOME/.local/share/PrismLauncher/themes/" || errorHandling 3
 
 	# Nitrogen config
