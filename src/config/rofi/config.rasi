@@ -1,92 +1,56 @@
-configuration{
+configuration {
     modi: "run,drun,window,ssh";
-    show-icons: true;
     terminal: "alacritty";
+
+    hide-scrollbar: true;
+    show-icons: true;
+    sidebar-mode: false;
+    disable-history: false;
+
+    display-calc: "   ";
+    display-drun: "   Apps ";
+    display-Network: " 󰤨  Networks ";
+    display-run: "   Run ";
+    display-ssh: " 󰦝  SSH ";
+    display-window: "   Windows ";
+
     drun-display-format: "{icon} {name}";
     location: 0;
-    disable-history: false;
-    hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: "   Windows ";
-    display-ssh: " 󰦝  SSH ";
-    display-calc: "   ";
-    display-Network: " 󰤨  Networks ";
-    sidebar-mode: false;
 }
 
 @theme "/dev/null"
 
 * {
-    bg-col:  #1e1e2e;
-    bg-col-light: #1e1e2e;
-    border-col: #cba6f7;
-    selected-col: #1e1e2e;
+    width: 25%;
+    font: "JetBrainsMono Nerd Font 16";
+    base: #1e1e2e;
     mauve: #cba6f7;
-    fg-col: #cdd6f4;
-    fg-col2: #cba6f7;
-    grey: #6c7086;
-
-    width: 600;
-    font: "JetBrainsMono Nerd Font 14";
+    overlay: #6c7086;
+    subtext: #a6adc8;
+    text: #cdd6f4;
 }
 
-element-text, element-icon , mode-switcher {
+/* General elements */
+element-icon, element-text, mode-switcher {
     background-color: inherit;
-    text-color:       inherit;
+    text-color: inherit;
 }
 
-window {
-    height: 360px;
-    border: 0px;
-    border-color: @border-col;
-    background-color: @bg-col;
-}
-
-mainbox {
-    background-color: @bg-col;
-}
-
-inputbar {
-    children: [prompt,entry];
-    background-color: @bg-col;
-    border-radius: 5px;
-    padding: 2px;
-}
-
-prompt {
-    background-color: @mauve;
-    padding: 6px;
-    text-color: @bg-col;
-    border-radius: 3px;
-    margin: 20px 0px 0px 20px;
-}
-
-textbox-prompt-colon {
-    expand: false;
-    str: ":";
-}
-
-entry {
-    padding: 6px;
-    margin: 20px 0px 0px 10px;
-    text-color: @fg-col;
-    background-color: @bg-col;
+/* Main containers */
+window, element, listview, mainbox {
+    background-color: @base;
 }
 
 listview {
-    border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
     columns: 1;
-    lines: 5;
-    background-color: @bg-col;
+    lines: 6;
+    margin: 10px 0px 20px 20px;
+    padding: 5px 0px 0px;
 }
 
 element {
     padding: 5px;
-    background-color: @bg-col;
-    text-color: @fg-col  ;
+    text-color: @text;
 }
 
 element-icon {
@@ -94,38 +58,55 @@ element-icon {
 }
 
 element selected {
-    background-color:  @selected-col ;
-    text-color: @fg-col2  ;
+    background-color: @base;
+    text-color: @mauve;
 }
 
-mode-switcher {
-    spacing: 0;
-  }
+/* Input & Prompt */
+inputbar {
+    background-color: @base;
+    border-radius: 5px;
+    children: [prompt, entry];
+    padding: 5px;
+}
 
+entry {
+    background-color: @base;
+    margin: 20px 0px 0px 10px;
+    padding: 5px;
+    text-color: @text;
+}
+
+prompt {
+    background-color: @mauve;
+    border-radius: 5px;
+    margin: 20px 0px 0px 20px;
+    padding: 5px;
+    text-color: @base;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: ":";
+}
+
+/* Buttons */
 button {
-    padding: 10px;
-    background-color: @bg-col-light;
-    text-color: @grey;
-    vertical-align: 0.5; 
+    background-color: @base;
     horizontal-align: 0.5;
+    padding: 10px;
+    text-color: @overlay;
+    vertical-align: 0.5;
 }
 
 button selected {
-  background-color: @bg-col;
-  text-color: @mauve;
-}
-
-message {
-    background-color: @bg-col-light;
-    margin: 2px;
-    padding: 2px;
-    border-radius: 5px;
-}
-
-textbox {
-    padding: 6px;
-    margin: 20px 0px 0px 20px;
+    background-color: @base;
     text-color: @mauve;
-    background-color: @bg-col-light;
 }
 
+/* Additional UI elements */
+message, textbox {
+    background-color: @base;
+    padding: 5px 0px 0px 10px;
+    text-color: @mauve;
+}
