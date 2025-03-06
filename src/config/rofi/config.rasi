@@ -21,7 +21,7 @@ configuration {
 @theme "/dev/null"
 
 * {
-    width: 25%;
+    width: 600px;
     font: "JetBrainsMono Nerd Font 16";
     base: #1e1e2e;
     mauve: #cba6f7;
