@@ -127,7 +127,7 @@ updateSystem() {
 
 EOF
 
-	sudo pacman -Syyu || errorHandling 1
+	sudo pacman -Syyu --noconfirm || errorHandling 1
 
 }
 
@@ -138,7 +138,7 @@ EOF
 # //////////////////////////////////////////////////
 installPackages() {
 	local file="$1"
-	sed '/^\s*#/d;/^\s*$/d' "$dirMain/packages/$file" | sudo pacman -S --needed - || errorHandling 2
+	sed '/^\s*#/d;/^\s*$/d' "$dirMain/packages/$file" | sudo pacman -S --needed --noconfirm - || errorHandling 2
 }
 
 # //////////////////////////////////////////////////
