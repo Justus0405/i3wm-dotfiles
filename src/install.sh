@@ -1,11 +1,13 @@
 #!/bin/bash
 
 # Get main directory for variable install paths
-export dirMain=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+dirMain=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 
-## Main Functions
-
-# Starting Function
+# //////////////////////////////////////////////////
+#
+# Confirmation Function
+#
+# //////////////////////////////////////////////////
 confirmInstallation() {
 	clear
 	cat <<"EOF"
@@ -14,7 +16,7 @@ confirmInstallation() {
 │ Catppuccin Dotfiles                              │
 │ By Justus0405                                    │
 │                                                  │
-│ Installer Version 1.5                            │
+│ Installer Version 1.6                            │
 │                                                  │
 ╰──────────────────────────────────────────────────╯
 
@@ -35,7 +37,11 @@ EOF
 	done
 }
 
-# Function to determine the wanted edition
+# //////////////////////////////////////////////////
+#
+# Choose Edition Function
+#
+# //////////////////////////////////////////////////
 chooseProfile() {
 
 	while true; do
@@ -105,7 +111,11 @@ EOF
 	done
 }
 
-# Function for updating the host system
+# //////////////////////////////////////////////////
+#
+# Update System Function
+#
+# //////////////////////////////////////////////////
 updateSystem() {
 	clear
 	cat <<"EOF"
@@ -121,13 +131,27 @@ EOF
 
 }
 
-# Function for installing needed packages
+## //////////////////////////////////////////////////
+#
+# Install Packages Sub-Function
+#
+# //////////////////////////////////////////////////
 installPackages() {
+	local file="$1"
+	sed '/^\s*#/d;/^\s*$/d' "$dirMain/packages/$file" | sudo pacman -S --needed - || errorHandling 2
+}
+
+# //////////////////////////////////////////////////
+#
+# Install System using Pacman Function
+#
+# //////////////////////////////////////////////////
+pacmanPackages() {
 	clear
 	cat <<"EOF"
 ╭──────────────────────────────────────────────────╮
 │                                                  │
-│ Installing Packages...                           │
+│ Installing System Packages...                    │
 │                                                  │
 ╰──────────────────────────────────────────────────╯
 
@@ -159,62 +183,80 @@ EOF
 		;;
 	esac
 
-	# Pacman Packages
-	minimal="alacritty bash-completion chromium flameshot gnome-keyring gnu-free-fonts gst-plugin-pipewire i3-wm lib32-pipewire nemo nemo-audio-tab nemo-fileroller nemo-image-converter nemo-share nitrogen papirus-icon-theme pipewire pipewire-alsa pipewire-audio pipewire-jack pipewire-pulse polkit-gnome polybar qt5-graphicaleffects qt5-quickcontrols2 qt5-svg qt6-svg qt6-declarative rofi rofi-calc rtkit sddm ttf-jetbrains-mono ttf-jetbrains-mono-nerd unzip wget wireplumber xf86-input-evdev xf86-input-synaptics"
-
-	standard="fuse gnome-calculator gnome-disk-utility gnome-text-editor gst-libav gst-plugins-ugly gvfs gvfs-smb htop loupe lxappearance-gtk3 nano noto-fonts noto-fonts-emoji noto-fonts-cjk noto-fonts-extra ntfs-3g pacman-contrib totem"
-
-	full="code dosfstools ffmpeg gimp gnome-calendar gnome-color-manager intellij-idea-community-edition jdk17-openjdk jdk21-openjdk jdk8-openjdk nvtop obs-studio p7zip pavucontrol prismlauncher pycharm-community-edition qt6-multimedia-ffmpeg resources steam shotcut unrar yt-dlp"
-
 	# Pacman
 	case "$edition" in
 	"0")
 		# Minimal
-		sudo pacman -S --needed $minimal || errorHandling 2
+		install_packages "minimal.txt"
 		sed -i 's/brave/chromium/g' "$dirMain/config/i3/config"
 		;;
 	"1")
 		# Standard
-		sudo pacman -S --needed $minimal $standard || errorHandling 2
+		install_packages "minimal.txt"
+		install_packages "standard.txt"
 		;;
 	"2")
 		# Full
-		sudo pacman -S --needed $minimal $standard $full || errorHandling 2
+		install_packages "minimal.txt"
+		install_packages "standard.txt"
+		install_packages "full.txt"
 		;;
 	esac
 
 	# Important for Pipewire
-	sudo usermod -a -G rtkit $USER
+	sudo usermod -a -G rtkit "$USER"
+}
 
-	# Yay Packages
-	yayStandard="brave-bin catnap-git"
+# //////////////////////////////////////////////////
+#
+# Install Yay Sub-Function
+#
+# //////////////////////////////////////////////////
+installYay() {
+	cd "$dirMain" || exit 1
+	git clone https://aur.archlinux.org/yay.git
+	cd yay || exit 1
+	makepkg -si --noconfirm
+	cd "$dirMain" || exit 1
+}
 
-	yayFull="r2modman-appimage curseforge"
+# //////////////////////////////////////////////////
+#
+# Install Yay Packages Function
+#
+# //////////////////////////////////////////////////
+yayPackages() {
+	clear
+	cat <<"EOF"
+╭──────────────────────────────────────────────────╮
+│                                                  │
+│ Installing Yay and Packages...                   │
+│                                                  │
+╰──────────────────────────────────────────────────╯
 
-	# Yay
+EOF
+
 	case "$edition" in
 	"1")
-		cd "$dirMain" || exit 1
-		git clone https://aur.archlinux.org/yay.git
-		cd yay || exit 1
-		makepkg -si --noconfirm
-		cd ..
+		installYay
 
-		yay -S --noconfirm $yayStandard
+		# Install yay packages
+		yay -S --noconfirm brave-bin catnap-git
 		;;
 	"2")
-		cd "$dirMain" || exit 1
-		git clone https://aur.archlinux.org/yay.git
-		cd yay || exit 1
-		makepkg -si --noconfirm
-		cd ..
+		installYay
 
-		yay -S --noconfirm $yayStandard $yayFull
+		# Install yay packages
+		yay -S --noconfirm brave-bin catnap-git r2modman-appimage curseforge
 		;;
 	esac
 }
 
-# Function for choosing input settings
+# //////////////////////////////////////////////////
+#
+# Choose Input Drivers Function
+#
+# //////////////////////////////////////////////////
 chooseInput() {
 	clear
 	cat <<"EOF"
@@ -268,7 +310,11 @@ EOF
 	done
 }
 
-# Function for choosing extras
+# //////////////////////////////////////////////////
+#
+# Choose Extras Function
+#
+# //////////////////////////////////////////////////
 chooseExtras() {
 	clear
 	cat <<"EOF"
@@ -314,7 +360,11 @@ EOF
 	echo -e ""
 }
 
-# Function for copying config files
+# //////////////////////////////////////////////////
+#
+# Copy Config Files and Themes Function
+#
+# //////////////////////////////////////////////////
 copyFiles() {
 	clear
 	cat <<"EOF"
@@ -330,9 +380,9 @@ EOF
 	mkdir -p "$HOME/.config" "$HOME/.local/share/themes" "$HOME/.local/share/PrismLauncher/themes"
 
 	# GTK and Prismlauncher themes
-	unzip "$dirMain/assets/catppuccin-mocha-mauve-standard+default.zip" -d "$HOME/.local/share/themes/" || errorHandling 3
-	unzip "$dirMain/assets/gtk-4.0.zip" -d "$HOME/.config/" || errorHandling 3
-	unzip "$dirMain/assets/Prismlauncher-themes.zip" -d "$HOME/.local/share/PrismLauncher/themes/" || errorHandling 3
+	unzip -o "$dirMain/assets/catppuccin-mocha-mauve-standard+default.zip" -d "$HOME/.local/share/themes/" || errorHandling 3
+	unzip -o "$dirMain/assets/gtk-4.0.zip" -d "$HOME/.config/" || errorHandling 3
+	unzip -o "$dirMain/assets/Prismlauncher-themes.zip" -d "$HOME/.local/share/PrismLauncher/themes/" || errorHandling 3
 
 	# Nitrogen config
 	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/rocket_launch.png\nmode=5\nbgcolor=#000000" >"$dirMain/config/nitrogen/bg-saved.cfg"
@@ -344,7 +394,7 @@ EOF
 	cp -r "$dirMain"/config/* "$HOME/.config/"
 
 	# SDDM Theme
-	sudo unzip "$dirMain/assets/catppuccin-mocha.zip" -d "/usr/share/sddm/themes/" || errorHandling 3
+	sudo unzip -o "$dirMain/assets/catppuccin-mocha.zip" -d "/usr/share/sddm/themes/" || errorHandling 3
 	sudo cp -r "$dirMain/assets/sddm.conf" "/etc/"
 
 	# Bashrc
@@ -363,7 +413,11 @@ EOF
 	gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty
 }
 
-# Function for enabling services
+# //////////////////////////////////////////////////
+#
+# Enable Services Function
+#
+# //////////////////////////////////////////////////
 enableServices() {
 	clear
 	cat <<"EOF"
@@ -383,7 +437,11 @@ EOF
 	sudo systemctl enable sddm
 }
 
-# Function for rebooting
+# //////////////////////////////////////////////////
+#
+# Reboot Prompt Function
+#
+# //////////////////////////////////////////////////
 finished() {
 	clear
 	cat <<"EOF"
@@ -405,45 +463,64 @@ EOF
 	sudo reboot now
 }
 
-# Experimental way for handling errors using codes
+# //////////////////////////////////////////////////
+#
+# Error Handling Function (Experimental)
+#
+# //////////////////////////////////////////////////
 errorHandling() {
 	case "$1" in
 	"1")
-	echo -e "Error: System update failed. Exiting."
-	;;
+		echo -e "Error: System update failed. Exiting."
+		;;
 	"2")
-	echo -e "Error: couldnt install packages. Do you have your package manager configured correctly?"
-	;;
+		echo -e "Error: couldnt install packages. Do you have your package manager configured correctly?"
+		;;
 	"3")
-	echo -e "Error: couldnt unzip assets. Do you have your package manager configured correctly?"
-	;;
+		echo -e "Error: couldnt unzip assets. Do you have your package manager configured correctly?"
+		;;
 	*)
-	echo -e "Error: Unexpected issue."
-	;;
+		echo -e "Error: Unexpected issue."
+		;;
 	esac
 	exit 1
 }
 
+# //////////////////////////////////////////////////
+#
 # PROGRAM START
+#
+# //////////////////////////////////////////////////
 
 # Step 1: Set up trap for SIGINT (CTRL+C)
 trap 'echo -e "Exited"; exit 0' SIGINT
 
 # Step 2
 confirmInstallation
+
 # Step 3
 chooseProfile
+
 # Step 4
 updateSystem
+
 # Step 5
-installPackages
+pacmanPackages
+
 # Step 6
-chooseInput
+yayPackages
+
 # Step 7
-chooseExtras
+chooseInput
+
 # Step 8
-copyFiles
+chooseExtras
+
 # Step 9
-enableServices
+copyFiles
+
 # Step 10
+enableServices
+
+# Step 11
 finished

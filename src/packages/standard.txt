@@ -1,0 +1,33 @@
+# System Utilities
+dosfstools
+nvtop
+htop
+btop
+nano
+pacman-contrib
+ntfs-3g
+
+# GNOME Applications
+gnome-calculator
+gnome-disk-utility
+gnome-text-editor
+
+# Advanced File Management
+fuse
+gvfs
+gvfs-smb
+
+# Extended Multimedia & Plugins
+gst-libav
+gst-plugins-ugly
+totem
+loupe
+
+# Extended Fonts
+noto-fonts
+noto-fonts-emoji
+noto-fonts-cjk
+noto-fonts-extra
+
+# Appearance
+lxappearance-gtk3

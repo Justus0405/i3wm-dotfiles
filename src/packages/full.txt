@@ -1,0 +1,25 @@
+# Development Tools
+code
+intellij-idea-community-edition
+pycharm-community-edition
+jdk8-openjdk
+jdk17-openjdk
+jdk21-openjdk
+
+# Full Multimedia & Audio
+ffmpeg
+gimp
+shotcut
+qt6-multimedia-ffmpeg
+obs-studio
+yt-dlp
+
+# Gaming
+steam
+prismlauncher
+
+# More GNOME Applications
+gnome-calendar
+gnome-color-manager
+resources
+pavucontrol

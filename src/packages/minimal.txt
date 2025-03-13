@@ -1,0 +1,58 @@
+# Window Manager & UI
+i3-wm
+polybar
+rofi
+rofi-calc
+sddm
+
+# Icons & Themes
+papirus-icon-theme
+nitrogen
+
+# Fonts
+gnu-free-fonts
+ttf-jetbrains-mono
+ttf-jetbrains-mono-nerd
+
+# File Management
+nemo
+nemo-audio-tab
+nemo-fileroller
+nemo-image-converter
+nemo-share
+
+# Audio
+pipewire
+pipewire-alsa
+pipewire-audio
+pipewire-jack
+pipewire-pulse
+wireplumber
+
+# Multimedia & Plugins
+gst-plugin-pipewire
+flameshot
+chromium
+
+# System & Utilities
+alacritty
+bash-completion
+gnome-keyring
+qt5-graphicaleffects
+qt5-quickcontrols2
+qt5-svg
+qt6-svg
+qt6-declarative
+rtkit
+polkit-gnome
+
+# Input Drivers
+xf86-input-evdev
+xf86-input-synaptics
+
+# File Compression & Downloads
+zip
+unzip
+unrar
+p7zip
+wget
