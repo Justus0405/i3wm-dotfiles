@@ -187,19 +187,19 @@ EOF
 	case "$edition" in
 	"0")
 		# Minimal
-		install_packages "minimal.txt"
+		installPackages "minimal.txt"
 		sed -i 's/brave/chromium/g' "$dirMain/config/i3/config"
 		;;
 	"1")
 		# Standard
-		install_packages "minimal.txt"
-		install_packages "standard.txt"
+		installPackages "minimal.txt"
+		installPackages "standard.txt"
 		;;
 	"2")
 		# Full
-		install_packages "minimal.txt"
-		install_packages "standard.txt"
-		install_packages "full.txt"
+		installPackages "minimal.txt"
+		installPackages "standard.txt"
+		installPackages "full.txt"
 		;;
 	esac
 
