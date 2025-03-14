@@ -3,7 +3,6 @@ dosfstools
 nvtop
 htop
 btop
-nano
 pacman-contrib
 ntfs-3g
 
