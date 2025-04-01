@@ -247,7 +247,7 @@ EOF
 		installYay
 
 		# Install yay packages
-		yay -S --noconfirm brave-bin catnap-git r2modman-appimage curseforge
+		yay -S --noconfirm brave-bin catnap-git vscodium-bin r2modman-appimage curseforge
 		;;
 	esac
 }

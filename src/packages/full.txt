@@ -1,5 +1,4 @@
 # Development Tools
-code
 intellij-idea-community-edition
 pycharm-community-edition
 jdk8-openjdk
