@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Get main directory for variable install paths
 dirMain=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
