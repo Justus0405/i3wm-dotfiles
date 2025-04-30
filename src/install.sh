@@ -78,7 +78,7 @@ EOF
 		echo -e "╭─────────────────────────────────────────────────────────────────╮"
 		echo -e "│ 3) Full                                                         │"
 		echo -e "├─────────────────────────────────────────────────────────────────┤"
-		echo -e "│ Packages : Standard+, OBS, GIMP, Shotcut, Steam, Dev-Enviroment,│"
+		echo -e "│ Packages : Standard+, GIMP, Shotcut, Steam, Dev-Enviroment,     │"
 		echo -e "│            Java, Prismlauncher, CurseForge, r2modman, yt-dlp    │"
 		echo -e "│ Browser  : Brave                                                │"
 		echo -e "│ Media    : Totem, Loupe                                         │"
@@ -247,7 +247,7 @@ EOF
 		installYay
 
 		# Install yay packages
-		yay -S --noconfirm brave-bin catnap-git vscodium-bin r2modman-appimage curseforge
+		yay -S --noconfirm brave-bin catnap-git vscodium-bin r2modman-appimage curseforge gpu-screen-recorder
 		;;
 	esac
 }

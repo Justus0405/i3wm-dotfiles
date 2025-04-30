@@ -10,7 +10,6 @@ ffmpeg
 gimp
 shotcut
 qt6-multimedia-ffmpeg
-obs-studio
 yt-dlp
 
 # Gaming
