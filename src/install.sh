@@ -390,7 +390,7 @@ EOF
 
 	# Permissions & .config
 	chmod +x "$dirMain/config/polybar/launch.sh"
-	chmod +x "$dirMain/config/rofi/powermenu"
+	chmod +x "$dirMain/config/rofi/scripts/"*
 	cp -r "$dirMain"/config/* "$HOME/.config/"
 
 	# SDDM Theme
