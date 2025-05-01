@@ -9,7 +9,7 @@ fi
 options=(" Start Recording" " Stop  Recording" " Pause/Resume Recording" " Start   Replay" " Stop    Replay" " Save    Replay")
 
 # Print Menu Items each with a newline
-choice=$(printf '%s\n' "${options[@]}" | rofi -dmenu -i -p "󰕧 Recorder ")
+choice=$(printf '%s\n' "${options[@]}" | rofi -dmenu -i -p " 󰕧 Recorder ")
 
 # Get date for file name
 date=$(date +"%d-%m-%Y_%H-%M-%S")
