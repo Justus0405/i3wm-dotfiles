@@ -68,7 +68,7 @@ EOF
 		echo -e "╭─────────────────────────────────────────────────────────────────╮"
 		echo -e "│ 2) Standard                                                     │"
 		echo -e "├─────────────────────────────────────────────────────────────────┤"
-		echo -e "│ Packages : Minimal+, All Fonts, Calculator, Disk Utility, Yay   │"
+		echo -e "│ Packages : Minimal+, Calculator, Disk Utility, Yay              │"
 		echo -e "│                                                                 │"
 		echo -e "│ Browser  : Brave                                                │"
 		echo -e "│ Media    : Totem, Loupe                                         │"

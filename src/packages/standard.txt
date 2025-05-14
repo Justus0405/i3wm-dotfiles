@@ -22,11 +22,5 @@ gst-plugins-ugly
 totem
 loupe
 
-# Extended Fonts
-noto-fonts
-noto-fonts-emoji
-noto-fonts-cjk
-noto-fonts-extra
-
 # Appearance
 lxappearance-gtk3

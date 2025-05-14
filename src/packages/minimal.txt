@@ -13,6 +13,10 @@ nitrogen
 gnu-free-fonts
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
+noto-fonts
+noto-fonts-emoji
+noto-fonts-cjk
+noto-fonts-extra
 
 # File Management
 nemo
