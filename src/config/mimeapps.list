@@ -1,4 +1,5 @@
 [Default Applications]
+inode/directory=nemo.desktop
 x-scheme-handler/http=brave-browser.desktop
 x-scheme-handler/https=brave-browser.desktop
 x-scheme-handler/about=brave-browser.desktop
@@ -7,8 +8,8 @@ x-scheme-handler/ror2mm=r2modman.desktop
 text/html=code-codium.desktop
 text/css=code-codium.desktop
 text/markdown=codium.desktop
-application/x-shellscript=codium.desktop
 text/plain=org.gnome.TextEditor.desktop
+application/x-shellscript=codium.desktop
 image/jpeg=org.gnome.Loupe.desktop
 image/png=org.gnome.Loupe.desktop
 image/webp=org.gnome.Loupe.desktop
