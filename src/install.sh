@@ -299,7 +299,7 @@ EOF
 			echo -e "You chose xf86-input-evdev"
 			mkdir -p "$HOME/.config"
 			sudo mv "/usr/share/X11/xorg.conf.d/40-libinput.conf" "$HOME/.config/"
-			sudo cp -r "$dirMain/assets/50-mouse-acceleration.conf" "/etc/X11/xorg.conf.d/"
+			sudo cp -r "$dirMain/assets/xf86-input-evdev/50-mouse-acceleration.conf" "/etc/X11/xorg.conf.d/"
 			break
 			;;
 		*)
@@ -380,12 +380,12 @@ EOF
 	mkdir -p "$HOME/.config" "$HOME/.local/share/themes" "$HOME/.local/share/PrismLauncher/themes"
 
 	# GTK and Prismlauncher themes
-	unzip -o "$dirMain/assets/catppuccin-mocha-mauve-standard+default.zip" -d "$HOME/.local/share/themes/" || errorHandling 3
-	unzip -o "$dirMain/assets/gtk-4.0.zip" -d "$HOME/.config/" || errorHandling 3
-	unzip -o "$dirMain/assets/Prismlauncher-themes.zip" -d "$HOME/.local/share/PrismLauncher/themes/" || errorHandling 3
+	unzip -o "$dirMain/assets/gtk/catppuccin-mocha-mauve-standard+default.zip" -d "$HOME/.local/share/themes/" || errorHandling 3
+	unzip -o "$dirMain/assets/gtk/gtk-4.0.zip" -d "$HOME/.config/" || errorHandling 3
+	unzip -o "$dirMain/assets/prismlauncher/Prismlauncher-themes.zip" -d "$HOME/.local/share/PrismLauncher/themes/" || errorHandling 3
 
 	# Nitrogen config
-	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/rocket_launch.png\nmode=5\nbgcolor=#000000" >"$dirMain/config/nitrogen/bg-saved.cfg"
+	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/cloudy_crescent.png\nmode=5\nbgcolor=#000000" >"$dirMain/config/nitrogen/bg-saved.cfg"
 	echo -e "[geometry]\n\n[nitrogen]\nview=list\nrecurse=true\nsort=alpha\nicon_caps=false\ndirs=/home/$USER/.config/wallpapers;" >"$dirMain/config/nitrogen/nitrogen.cfg"
 
 	# Permissions & .config
@@ -394,8 +394,13 @@ EOF
 	cp -r "$dirMain"/config/* "$HOME/.config/"
 
 	# SDDM Theme
-	sudo unzip -o "$dirMain/assets/catppuccin-mocha.zip" -d "/usr/share/sddm/themes/" || errorHandling 3
-	sudo cp -r "$dirMain/assets/sddm.conf" "/etc/"
+	sudo unzip -o "$dirMain/assets/sddm/catppuccin-mocha.zip" -d "/usr/share/sddm/themes/" || errorHandling 3
+	sudo cp -r "$dirMain/assets/sddm/sddm.conf" "/etc/"
+
+	# Nemo scripts & config
+	gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty
+	mkdir -p "$HOME/.local/share/nemo/scripts/"
+	cp -r "$dirMain/assets/nemo/"* "$HOME/.local/share/nemo/scripts/"
 
 	# Bashrc
 	case "$edition" in
@@ -408,9 +413,6 @@ EOF
 		echo "catnap" >>"$HOME/.bashrc"
 		;;
 	esac
-
-	# Nemo default "open in terminal" application fix
-	gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty
 }
 
 # //////////////////////////////////////////////////

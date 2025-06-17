@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for FILE in "$@"; do
+    DIR=$(dirname "$FILE")
+    BASENAME=$(basename "$FILE")
+    OUTPUT="$DIR/${BASENAME%.*}-720p.mp4"
+
+    ffmpeg -i "$FILE" -vf scale=-1:720 "$OUTPUT"
+done

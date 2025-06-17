@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for FILE in "$@"; do
+    DIR=$(dirname "$FILE")
+    BASENAME=$(basename "$FILE")
+    OUTPUT="$DIR/${BASENAME%.*}-compressed.mp4"
+
+    ffmpeg -i "$FILE" -vcodec libx264 -crf 28 "$OUTPUT"
+done
