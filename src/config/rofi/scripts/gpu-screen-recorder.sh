@@ -12,7 +12,7 @@ options=(" Start Recording" " Stop  Recording" " Pause/Resume Recording
 choice=$(printf '%s\n' "${options[@]}" | rofi -dmenu -i -p " 󰕧 Recorder ")
 
 # Get date for file name
-date=$(date +"%d-%m-%Y_%H-%M-%S")
+date=$(date +"%Y-%m-%d_%H-%M-%S")
 
 # gpu-screen-recorder options
 recording_options=(
