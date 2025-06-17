@@ -38,8 +38,8 @@ After the installation is finished the script will automaticly reboot into the n
 ## Screenshots
 
 <div align="center"><table><tr><td>Desktop Clear</td><td>Desktop Busy</td></tr><tr><td>
-<img src="https://github.com/user-attachments/assets/aab7c2f2-4b72-44ab-9e21-b6cded4f98c2"/></td><td>
-<img src="https://github.com/user-attachments/assets/8287e5f1-6152-4764-8f89-7e78c93212e5"/></td></tr>
+<img src="https://github.com/user-attachments/assets/2b2f32ed-15bf-463a-8485-6b54815746b4"/></td><td>
+<img src="https://github.com/user-attachments/assets/50d05b9c-315d-4805-b8ab-3058dc34fe81"/></td></tr>
 </table></div>
 
 <br>
