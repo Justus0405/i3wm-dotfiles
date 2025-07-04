@@ -1,4 +1,4 @@
-# Justus0405 i3-wm Catppuccin Dotfiles
+![Justus0405 i3-wm Catppuccin Dotfiles](https://github.com/user-attachments/assets/2eaa5c58-7aba-40a1-84ba-0abd88d56092)
 
 <p align="center">
     <!-- Discord Badge -->
