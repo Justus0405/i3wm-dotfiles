@@ -79,7 +79,7 @@ EOF
 		echo -e "│ 3) Full                                                         │"
 		echo -e "├─────────────────────────────────────────────────────────────────┤"
 		echo -e "│ Packages : Standard+, GIMP, Shotcut, Steam, Dev-Enviroment,     │"
-		echo -e "│            Java, Prismlauncher, CurseForge, r2modman, yt-dlp    │"
+		echo -e "│            Vesktop, Prismlauncher, CurseForge, r2modman, yt-dlp │"
 		echo -e "│ Browser  : Brave                                                │"
 		echo -e "│ Media    : Totem, Loupe                                         │"
 		echo -e "╰─────────────────────────────────────────────────────────────────╯"
@@ -247,7 +247,7 @@ EOF
 		installYay
 
 		# Install yay packages
-		yay -S --noconfirm brave-bin catnap-git vscodium-bin r2modman-appimage curseforge gpu-screen-recorder
+		yay -S --noconfirm brave-bin catnap-git vscodium-bin vesktop-bin r2modman-appimage curseforge gpu-screen-recorder
 		;;
 	esac
 }
@@ -399,6 +399,7 @@ EOF
 
 	# Nemo scripts & config
 	gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty
+	gsettings set org.nemo.icon-view default-zoom-level 'larger'
 	mkdir -p "$HOME/.local/share/nemo/scripts/"
 	cp -r "$dirMain/assets/nemo/"* "$HOME/.local/share/nemo/scripts/"
 
