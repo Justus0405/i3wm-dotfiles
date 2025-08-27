@@ -37,9 +37,9 @@ After the installation is finished the script will automaticly reboot into the n
 
 ## Screenshots
 
-<div align="center"><table><tr><td>Desktop Clear</td><td>Desktop Busy</td></tr><tr><td>
-<img src="https://github.com/user-attachments/assets/2b2f32ed-15bf-463a-8485-6b54815746b4"/></td><td>
-<img src="https://github.com/user-attachments/assets/50d05b9c-315d-4805-b8ab-3058dc34fe81"/></td></tr>
+<div align="center"><table>
+<td><img src="https://github.com/user-attachments/assets/1a51ca4e-7b2b-46be-bfe4-0844dc2eea03"/></td>
+<td><img src="https://github.com/user-attachments/assets/71eb38d4-0691-4346-b6e3-3df6aa432c96"/></td>
 </table></div>
 
 <br>
