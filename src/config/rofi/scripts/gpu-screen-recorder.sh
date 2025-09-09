@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+#
+# gpu-screen-recorder constrols for rofi
+#
+# Author: Justus0405
+# Date: 30.04.2025
+# License: MIT
 
 # Make sure the "Videos" folder exists
 if [ ! -d "$HOME/Videos" ]; then
