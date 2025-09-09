@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get main directory for variable install paths
-dirMain=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+DIRMAIN=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
 
 # //////////////////////////////////////////////////
 #
@@ -138,7 +138,7 @@ EOF
 # //////////////////////////////////////////////////
 installPackages() {
 	local file="$1"
-	sed '/^\s*#/d;/^\s*$/d' "$dirMain/packages/$file" | sudo pacman -S --needed --noconfirm - || errorHandling 2
+	sed '/^\s*#/d;/^\s*$/d' "$DIRMAIN/packages/$file" | sudo pacman -S --needed --noconfirm - || errorHandling 2
 }
 
 # //////////////////////////////////////////////////
@@ -188,7 +188,7 @@ EOF
 	"0")
 		# Minimal
 		installPackages "minimal.txt"
-		sed -i 's/brave/chromium/g' "$dirMain/config/i3/config"
+		sed -i 's/brave/chromium/g' "$DIRMAIN/config/i3/config"
 		;;
 	"1")
 		# Standard
@@ -213,11 +213,11 @@ EOF
 #
 # //////////////////////////////////////////////////
 installYay() {
-	cd "$dirMain" || exit 1
+	cd "$DIRMAIN" || exit 1
 	git clone https://aur.archlinux.org/yay.git
 	cd yay || exit 1
 	makepkg -si --noconfirm
-	cd "$dirMain" || exit 1
+	cd "$DIRMAIN" || exit 1
 }
 
 # //////////////////////////////////////////////////
@@ -295,11 +295,10 @@ EOF
 			break
 			;;
 		"2" | "xf86-input-evdev")
-			# xf86-input-evdev
 			echo -e "You chose xf86-input-evdev"
 			mkdir -p "$HOME/.config"
 			sudo mv "/usr/share/X11/xorg.conf.d/40-libinput.conf" "$HOME/.config/"
-			sudo cp -r "$dirMain/assets/xf86-input-evdev/50-mouse-acceleration.conf" "/etc/X11/xorg.conf.d/"
+			sudo cp -r "$DIRMAIN/assets/xf86-input-evdev/50-mouse-acceleration.conf" "/etc/X11/xorg.conf.d/"
 			break
 			;;
 		*)
@@ -358,6 +357,24 @@ EOF
 		esac
 	done
 	echo -e ""
+
+	while true; do
+		read -rp "Set CPU Governor to performance? (powersave by default) [y/N] " yn
+		case "$yn" in
+		[Yy])
+			echo -e "Setting CPU Governor to performance..."
+			sudo pacman -S --needed --noconfirm cpupower
+			echo "governor='performance'" | sudo tee /etc/default/cpupower
+			sudo systemctl enable cpupower --now
+			break
+			;;
+		*)
+			echo -e "Skipping..."
+			break
+			;;
+		esac
+	done
+	echo -e ""
 }
 
 # //////////////////////////////////////////////////
@@ -380,28 +397,28 @@ EOF
 	mkdir -p "$HOME/.config" "$HOME/.local/share/themes" "$HOME/.local/share/PrismLauncher/themes"
 
 	# GTK and Prismlauncher themes
-	unzip -o "$dirMain/assets/gtk/catppuccin-mocha-mauve-standard+default.zip" -d "$HOME/.local/share/themes/" || errorHandling 3
-	unzip -o "$dirMain/assets/gtk/gtk-4.0.zip" -d "$HOME/.config/" || errorHandling 3
-	unzip -o "$dirMain/assets/prismlauncher/Prismlauncher-themes.zip" -d "$HOME/.local/share/PrismLauncher/themes/" || errorHandling 3
+	unzip -o "$DIRMAIN/assets/gtk/catppuccin-mocha-mauve-standard+default.zip" -d "$HOME/.local/share/themes/" || errorHandling 3
+	unzip -o "$DIRMAIN/assets/gtk/gtk-4.0.zip" -d "$HOME/.config/" || errorHandling 3
+	unzip -o "$DIRMAIN/assets/prismlauncher/Prismlauncher-themes.zip" -d "$HOME/.local/share/PrismLauncher/themes/" || errorHandling 3
 
 	# Nitrogen config
-	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/cloudy_crescent.png\nmode=5\nbgcolor=#000000" >"$dirMain/config/nitrogen/bg-saved.cfg"
-	echo -e "[geometry]\n\n[nitrogen]\nview=list\nrecurse=true\nsort=alpha\nicon_caps=false\ndirs=/home/$USER/.config/wallpapers;" >"$dirMain/config/nitrogen/nitrogen.cfg"
+	echo -e "[xin_-1]\nfile=/home/$USER/.config/wallpapers/cloudy_crescent.png\nmode=5\nbgcolor=#000000" >"$DIRMAIN/config/nitrogen/bg-saved.cfg"
+	echo -e "[geometry]\n\n[nitrogen]\nview=list\nrecurse=true\nsort=alpha\nicon_caps=false\ndirs=/home/$USER/.config/wallpapers;" >"$DIRMAIN/config/nitrogen/nitrogen.cfg"
 
 	# Permissions & .config
-	chmod +x "$dirMain/config/polybar/launch.sh"
-	chmod +x "$dirMain/config/rofi/scripts/"*
-	cp -r "$dirMain"/config/* "$HOME/.config/"
+	chmod +x "$DIRMAIN/config/polybar/launch.sh"
+	chmod +x "$DIRMAIN/config/rofi/scripts/"*
+	cp -r "$DIRMAIN"/config/* "$HOME/.config/"
 
 	# SDDM Theme
-	sudo unzip -o "$dirMain/assets/sddm/catppuccin-mocha.zip" -d "/usr/share/sddm/themes/" || errorHandling 3
-	sudo cp -r "$dirMain/assets/sddm/sddm.conf" "/etc/"
+	sudo unzip -o "$DIRMAIN/assets/sddm/catppuccin-mocha.zip" -d "/usr/share/sddm/themes/" || errorHandling 3
+	sudo cp -r "$DIRMAIN/assets/sddm/sddm.conf" "/etc/"
 
 	# Nemo scripts & config
 	gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty
 	gsettings set org.nemo.icon-view default-zoom-level 'larger'
 	mkdir -p "$HOME/.local/share/nemo/scripts/"
-	cp -r "$dirMain/assets/nemo/"* "$HOME/.local/share/nemo/scripts/"
+	cp -r "$DIRMAIN/assets/nemo/"* "$HOME/.local/share/nemo/scripts/"
 
 	# Bashrc
 	case "$edition" in
@@ -434,6 +451,7 @@ EOF
 
 	systemctl --user enable pipewire pipewire-pulse wireplumber
 	sudo systemctl enable systemd-timesyncd --now
+	sudo systemctl enable fstrim.timer
 	sudo systemctl enable NetworkManager
 	sudo systemctl disable gdm
 	sudo systemctl disable lightdm
