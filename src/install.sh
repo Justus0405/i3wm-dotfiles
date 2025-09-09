@@ -1,4 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
+#
+# Automated dotfiles installer
+#
+# Author: Justus0405
+# Date: 04.03.2024
+# License: MIT
 
 # Get main directory for variable install paths
 DIRMAIN=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
