@@ -371,7 +371,7 @@ EOF
 	echo -e ""
 
 	while true; do
-		read -rp "Set CPU Governor to performance? (powersave by default) [y/N] " option
+		read -rp "Set CPU Governor to performance? (does not work in VMs) [y/N] " option
 		case "${option}" in
 		[Yy])
 			echo -e "Setting CPU Governor to performance..."
