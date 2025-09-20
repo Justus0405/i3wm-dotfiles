@@ -156,29 +156,8 @@ installPackages() {
 
 	local file="$1"
 	if [[ ${file} == "full.txt" ]]; then
-		sed '/^\s*#/d;/^\s*$/d' "${directory}/packages/${file}" | sudo pacman -S --needed - || errorHandling 2
-	else
-		sed '/^\s*#/d;/^\s*$/d' "${directory}/packages/${file}" | sudo pacman -S --needed --noconfirm - || errorHandling 2
-	fi
-}
+		# Vulkan driver table because of steam.
 
-pacmanPackages() {
-	# Handles installing the packages for each edition.
-
-	clear
-	cat <<"EOF"
-┌──────────────────────────────────────────────────┐
-│                                                  │
-│ Installing System Packages...                    │
-│                                                  │
-└──────────────────────────────────────────────────┘
-
-EOF
-
-	# Info message for right vulkan driver
-	case "${edition}" in
-	"2")
-		# Full
 		echo -e ""
 		echo -e "┌─────────────────────────────────────────────────────────────────┐"
 		echo -e "│ Steam requires the usage of vulkan which needs a specific       │"
@@ -198,8 +177,24 @@ EOF
 		echo -e "│ Software -> vulkan-swrast         (Open-Source) (Very Slow)     │"
 		echo -e "└─────────────────────────────────────────────────────────────────┘"
 		echo -e ""
-		;;
-	esac
+		sed '/^\s*#/d;/^\s*$/d' "${directory}/packages/${file}" | sudo pacman -S --needed - || errorHandling 2
+	else
+		sed '/^\s*#/d;/^\s*$/d' "${directory}/packages/${file}" | sudo pacman -S --needed --noconfirm - || errorHandling 2
+	fi
+}
+
+pacmanPackages() {
+	# Handles installing the packages for each edition.
+
+	clear
+	cat <<"EOF"
+┌──────────────────────────────────────────────────┐
+│                                                  │
+│ Installing System Packages...                    │
+│                                                  │
+└──────────────────────────────────────────────────┘
+
+EOF
 
 	# Pacman packages.
 	case "${edition}" in
@@ -435,16 +430,16 @@ EOF
 
 	# Bashrc
 	if ! grep -q "catnap" "${HOME}/.bashrc"; then
-	case "${edition}" in
-	"1")
-		# Standard
-		echo "catnap" >>"${HOME}/.bashrc"
-		;;
-	"2")
-		# Full
-		echo "catnap" >>"${HOME}/.bashrc"
-		;;
-	esac
+		case "${edition}" in
+		"1")
+			# Standard
+			echo "catnap" >>"${HOME}/.bashrc"
+			;;
+		"2")
+			# Full
+			echo "catnap" >>"${HOME}/.bashrc"
+			;;
+		esac
 	fi
 }
 
