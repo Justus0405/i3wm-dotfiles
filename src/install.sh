@@ -155,7 +155,11 @@ installPackages() {
 	# Installs the packages inside the txt file provided in the packages/ directory.
 
 	local file="$1"
-	sed '/^\s*#/d;/^\s*$/d' "${directory}/packages/${file}" | sudo pacman -S --needed --noconfirm - || errorHandling 2
+	if [[ ${file} == "full.txt" ]]; then
+		sed '/^\s*#/d;/^\s*$/d' "${directory}/packages/${file}" | sudo pacman -S --needed - || errorHandling 2
+	else
+		sed '/^\s*#/d;/^\s*$/d' "${directory}/packages/${file}" | sudo pacman -S --needed --noconfirm - || errorHandling 2
+	fi
 }
 
 pacmanPackages() {
@@ -430,6 +434,7 @@ EOF
 	cp -r "${directory}/assets/nemo/"* "${HOME}/.local/share/nemo/scripts/"
 
 	# Bashrc
+	if ! grep -q "catnap" "${HOME}/.bashrc"; then
 	case "${edition}" in
 	"1")
 		# Standard
@@ -440,6 +445,7 @@ EOF
 		echo "catnap" >>"${HOME}/.bashrc"
 		;;
 	esac
+	fi
 }
 
 enableServices() {
