@@ -5,11 +5,13 @@ htop
 btop
 pacman-contrib
 ntfs-3g
+gdu
 
 # GNOME Applications
 gnome-calculator
 gnome-disk-utility
 gnome-text-editor
+pika-backup
 
 # Advanced File Management
 fuse
