@@ -21,17 +21,31 @@
 > This script is designed to be done after a minimal arch installation,
 > using it on previously installed desktop should work but will change whatever you currently have (gtk/qt theming, shell, sddm, etc) and is at your own risk.
 
-After a minimal Arch install (with grub and systemd), execute -
+1. Clone the repository:
 
 ```shell
-pacman -Syy git
-git clone https://github.com/Justus0405/i3wm-dotfiles.git
+git clone --depth 1 https://github.com/Justus0405/i3wm-dotfiles.git
+```
+
+2. Navigate to the directory:
+
+```shell
 cd i3wm-dotfiles/src/
+```
+
+3. Make the installation script executable:
+
+```shell
 chmod +x install.sh
+```
+
+4. Run the installation script:
+
+```shell
 ./install.sh
 ```
 
-After the installation is finished the script will automaticly reboot into the new enviroment.
+5. After the installation is finished the script will automaticly reboot into the new enviroment.
 
 <br>
 
