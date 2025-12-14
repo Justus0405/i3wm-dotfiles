@@ -58,6 +58,15 @@ chmod +x install.sh
 
 <br>
 
+## FAQ
+
+### How do I change, add, or delete wallpapers?
+
+- **To add or delete wallpapers:** Copy your wallpaper files to `~/.config/wallpapers/` to add them, or delete files from this directory to remove them.
+- **To change your wallpaper:** Press `SUPER + W`, select via arrow keys and press Enter to apply it.
+
+<br>
+
 ## Keybinds
 
 | Keys                                         | Action                               |
