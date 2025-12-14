@@ -42,6 +42,7 @@ chromium
 alacritty
 bash-completion
 gnome-keyring
+fastfetch
 nano
 qt5-graphicaleffects
 qt5-quickcontrols2

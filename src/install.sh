@@ -257,13 +257,13 @@ EOF
 		checkAurHelper
 
 		# Install aur packages for the standard edition.
-		yay -S --noconfirm brave-bin catnap-git
+		yay -S --noconfirm brave-bin
 		;;
 	"2")
 		checkAurHelper
 
 		# Install aur packages for the full edition.
-		yay -S --noconfirm brave-bin catnap-git vscodium-bin vesktop-bin r2modman-appimage curseforge gpu-screen-recorder
+		yay -S --noconfirm brave-bin vscodium-bin vesktop-bin r2modman-appimage curseforge gpu-screen-recorder
 		;;
 	esac
 }
@@ -429,18 +429,7 @@ EOF
 	cp -r "${directory}/assets/nemo/"* "${HOME}/.local/share/nemo/scripts/"
 
 	# Bashrc
-	if ! grep -q "catnap" "${HOME}/.bashrc"; then
-		case "${edition}" in
-		"1")
-			# Standard
-			echo "catnap" >>"${HOME}/.bashrc"
-			;;
-		"2")
-			# Full
-			echo "catnap" >>"${HOME}/.bashrc"
-			;;
-		esac
-	fi
+	cp "${directory}/assets/bashrc/bashrc.txt" "${HOME}/.bashrc"
 }
 
 enableServices() {
