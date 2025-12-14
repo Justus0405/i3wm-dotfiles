@@ -25,4 +25,4 @@ totem
 loupe
 
 # Appearance
-lxappearance-gtk3
+lxappearance
