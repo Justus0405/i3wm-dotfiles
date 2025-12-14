@@ -20,4 +20,4 @@ chosen=$(
 
 [ -z "${chosen}" ] && exit 0
 
-feh --bg-fill "${wallpaperDirectory}/${chosen}"
+feh --bg-scale "${wallpaperDirectory}/${chosen}"

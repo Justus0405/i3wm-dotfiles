@@ -17,7 +17,7 @@ askAction() {
     case "${action}" in
     "${optionsAction[0]}")
         # Shut down
-        askConfirm "shutdown"
+        askConfirm "poweroff"
         exit 0
         ;;
     "${optionsAction[1]}")

@@ -428,7 +428,7 @@ EOF
 	# Feh config
 	tee "${HOME}/.fehbg" >/dev/null <<EOF
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/${USER}/.config/wallpapers/cloudy_crescent.png'
+feh --no-fehbg --bg-scale '/home/${USER}/.config/wallpapers/Cloudy.png'
 EOF
 
 	# Permissions & .config
