@@ -7,8 +7,8 @@
 # License: MIT
 
 # Make sure the "Videos" folder exists
-if [ ! -d "$HOME/Videos" ]; then
-    mkdir -p "$HOME/Videos"
+if [ ! -d "${HOME}/Videos" ]; then
+    mkdir -p "${HOME}/Videos"
 fi
 
 # Create Menu Items
@@ -25,7 +25,7 @@ recording_options=(
     -w "screen"
     -f "60"
     -a "default_output|default_input"
-    -o "$HOME/Videos/Video-${date}.mp4"
+    -o "${HOME}/Videos/Video-${date}.mp4"
 )
 
 replay_options=(
@@ -34,11 +34,11 @@ replay_options=(
     -a "default_output|default_input"
     -c "mp4"
     -r "60"
-    -o "$HOME/Videos/Clip-${date}.mp4"
+    -o "${HOME}/Videos/Clip-${date}.mp4"
 )
 
 # Handle selected input
-case "$choice" in
+case "${choice}" in
 "${options[0]}")
     # START RECORDING
     gpu-screen-recorder "${recording_options[@]}"
