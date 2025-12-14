@@ -31,7 +31,8 @@
         },
         {
             "key": "{#37}│ 󰌽  {#33}Kernel   {#keys}{#}│",
-            "type": "kernel"
+            "type": "kernel",
+            "format": "{2}"
         },
         {
             "key": "{#37}│ 󰥔  {#32}Uptime   {#keys}{#}│",
