@@ -386,6 +386,22 @@ EOF
 		esac
 	done
 	echo -e ""
+
+	while true; do
+		read -rp "Overwrite current .bashrc? [y/N] " option
+		case "${option}" in
+		[Yy])
+			echo -e "Overwriting current .bashrc..."
+			cp "${directory}/assets/bashrc/bashrc.txt" "${HOME}/.bashrc"
+			break
+			;;
+		*)
+			echo -e "Skipping..."
+			break
+			;;
+		esac
+	done
+	echo -e ""
 }
 
 copyFiles() {
@@ -429,9 +445,6 @@ EOF
 	gsettings set org.nemo.icon-view default-zoom-level 'larger'
 	mkdir -p "${HOME}/.local/share/nemo/scripts/"
 	cp -r "${directory}/assets/nemo/"* "${HOME}/.local/share/nemo/scripts/"
-
-	# Bashrc
-	cp "${directory}/assets/bashrc/bashrc.txt" "${HOME}/.bashrc"
 }
 
 enableServices() {
