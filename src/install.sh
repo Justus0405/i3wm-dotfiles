@@ -409,6 +409,12 @@ EOF
 	unzip -o "${directory}/assets/gtk/gtk-4.0.zip" -d "${HOME}/.config/" || errorHandling 3
 	unzip -o "${directory}/assets/prismlauncher/Prismlauncher-themes.zip" -d "${HOME}/.local/share/PrismLauncher/themes/" || errorHandling 3
 
+	# Feh config
+	tee "${HOME}/.fehbg" >/dev/null <<EOF
+#!/bin/sh
+feh --no-fehbg --bg-scale '/home/${USER}/.config/wallpapers/cloudy_crescent.png'
+EOF
+
 	# Permissions & .config
 	chmod +x "${directory}/config/polybar/launch.sh"
 	chmod +x "${directory}/config/rofi/scripts/"*

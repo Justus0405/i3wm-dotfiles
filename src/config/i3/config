@@ -97,7 +97,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id ${HOME}/.screenlayout/default.sh
 
 exec_always --no-startup-id "${HOME}/.config/polybar/launch.sh"
-exec_always --no-startup-id feh --bg-scale "${HOME}/.config/wallpapers/cloudy_crescent.png"
+exec_always --no-startup-id "${HOME}/.fehbg"
 
 #
 #  _  __          _     _           _
