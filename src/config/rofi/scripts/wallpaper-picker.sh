@@ -8,10 +8,15 @@
 
 wallpaperDirectory="${HOME}/.config/wallpapers"
 
-chosen=$(find "${wallpaperDirectory}" -type f -print0 |
-    xargs -0 -n1 basename |
-    sort |
-    rofi -dmenu -i -p "Wallpaper")
+# Dont even ask...
+chosen=$(
+    find "${wallpaperDirectory}" -type f -print0 |
+        while IFS= read -r -d '' file; do
+            name=$(basename "${file}")
+            printf '%s\0icon\x1f%s\n' "${name}" "${file}"
+        done |
+        rofi -dmenu -i -p " 󰋩 Wallpapers " -show-icons
+)
 
 [ -z "${chosen}" ] && exit 0
 
