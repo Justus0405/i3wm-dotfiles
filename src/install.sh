@@ -426,7 +426,7 @@ EOF
 	unzip -o "${directory}/assets/prismlauncher/Prismlauncher-themes.zip" -d "${HOME}/.local/share/PrismLauncher/themes/" || errorHandling 3
 
 	# Feh config
-	cp "${directory}/assets/feh/fehbg.txt" "${HOME}.fehbg"
+	cp "${directory}/assets/feh/fehbg.txt" "${HOME}/.fehbg"
 	chmod +x "${HOME}/.fehbg"
 
 	# Permissions & .config
