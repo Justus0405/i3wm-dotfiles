@@ -85,6 +85,7 @@ chmod +x install.sh
 | <kbd>Super</kbd> + <kbd>D</kbd> | Rofi (application launcher) |
 | <kbd>Super</kbd> + <kbd>O</kbd> | Rofi (ssh selector)         |
 | <kbd>Super</kbd> + <kbd>P</kbd> | Rofi (calculator)           |
+| <kbd>Super</kbd> + <kbd>W</kbd> | Rofi (wallpaper picker)     |
 | <kbd>ALT</kbd> + <kbd>TAB</kbd> | Rofi (window switcher)      |
 
 <br>
