@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale '/home/justus/.config/wallpapers/Cloudy.png'

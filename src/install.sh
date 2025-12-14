@@ -426,10 +426,8 @@ EOF
 	unzip -o "${directory}/assets/prismlauncher/Prismlauncher-themes.zip" -d "${HOME}/.local/share/PrismLauncher/themes/" || errorHandling 3
 
 	# Feh config
-	tee "${HOME}/.fehbg" >/dev/null <<EOF
-#!/bin/sh
-feh --no-fehbg --bg-scale '/home/${USER}/.config/wallpapers/Cloudy.png'
-EOF
+	cp "${directory}/assets/feh/fehbg.txt" "${HOME}.fehbg"
+	chmod +x "${HOME}/.fehbg"
 
 	# Permissions & .config
 	chmod +x "${directory}/config/polybar/launch.sh"
