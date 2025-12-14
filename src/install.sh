@@ -409,10 +409,6 @@ EOF
 	unzip -o "${directory}/assets/gtk/gtk-4.0.zip" -d "${HOME}/.config/" || errorHandling 3
 	unzip -o "${directory}/assets/prismlauncher/Prismlauncher-themes.zip" -d "${HOME}/.local/share/PrismLauncher/themes/" || errorHandling 3
 
-	# Nitrogen config
-	echo -e "[xin_-1]\nfile=/home/${USER}/.config/wallpapers/cloudy_crescent.png\nmode=5\nbgcolor=#000000" >"${directory}/config/nitrogen/bg-saved.cfg"
-	echo -e "[geometry]\n\n[nitrogen]\nview=list\nrecurse=true\nsort=alpha\nicon_caps=false\ndirs=/home/${USER}/.config/wallpapers;" >"${directory}/config/nitrogen/nitrogen.cfg"
-
 	# Permissions & .config
 	chmod +x "${directory}/config/polybar/launch.sh"
 	chmod +x "${directory}/config/rofi/scripts/"*
