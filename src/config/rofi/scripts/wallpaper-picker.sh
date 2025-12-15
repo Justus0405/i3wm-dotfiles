@@ -37,4 +37,4 @@ chosen_index=$(
 
 # Use the selected index to retrieve the full path
 # from the ${files[@]} array and pass it to feh.
-feh --bg-scale "${files[${chosen_index}]}"
+feh --bg-fill "${files[${chosen_index}]}"

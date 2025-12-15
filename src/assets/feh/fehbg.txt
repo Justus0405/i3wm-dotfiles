@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale "${HOME}/.config/wallpapers/Cloudy.png"
+feh --no-fehbg --bg-fill "${HOME}/.config/wallpapers/Cloudy.png"
