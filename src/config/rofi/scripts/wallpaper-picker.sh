@@ -22,9 +22,9 @@ chosen_index=$(
         #
         # <label>\0icon\x1f<path>
         #
-        # \0       -> separates the label from metadata.
-        # icon\x1f -> tells rofi that the following value is an icon path.
-        # "$file"  -> full image path used for thumbnail rendering.
+        # \0        -> separates the label from metadata.
+        # icon\x1f  -> tells rofi that the following value is an icon path.
+        # "${file}" -> full image path used for thumbnail rendering.
         #
         # Example:
         #   foo.png\0icon\x1f/home/user/.config/wallpapers/foo.png
