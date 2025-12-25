@@ -102,36 +102,29 @@ chmod +x install.sh
 
 | Keys                            | Action      |
 | :------------------------------ | :---------- |
-| <kbd>Super</kbd> + <kbd>J</kbd> | focus left  |
-| <kbd>Super</kbd> + <kbd>K</kbd> | focus down  |
-| <kbd>Super</kbd> + <kbd>L</kbd> | focus up    |
-| <kbd>Super</kbd> + <kbd>O</kbd> | focus right |
+| <kbd>Super</kbd> + <kbd>H</kbd> | focus left  |
+| <kbd>Super</kbd> + <kbd>J</kbd> | focus down  |
+| <kbd>Super</kbd> + <kbd>K</kbd> | focus up    |
+| <kbd>Super</kbd> + <kbd>L</kbd> | focus right |
 
 <br>
 
 | Keys                                               | Action     |
 | :------------------------------------------------- | :--------- |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> | move left  |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> | move down  |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> | move up    |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> | move right |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd> | move left  |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> | move down  |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> | move up    |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> | move right |
 
 <br>
 
-| Keys                            | Action                                          |
-| :------------------------------ | :---------------------------------------------- |
-| <kbd>Super</kbd> + <kbd>H</kbd> | split in horizontal orientation                 |
-| <kbd>Super</kbd> + <kbd>V</kbd> | split in vertical orientation                   |
-| <kbd>Super</kbd> + <kbd>F</kbd> | enter fullscreen mode for the focused container |
-
-<br>
-
-| Keys                                                   | Action                                         |
-| :----------------------------------------------------- | :--------------------------------------------- |
-| <kbd>Super</kbd> + <kbd>SHIFT</kbd> + <kbd>SPACE</kbd> | toggle tiling / floating                       |
-| <kbd>Super</kbd> + <kbd>SPACE</kbd>                    | change focus between tiling / floating windows |
-| <kbd>Super</kbd> + <kbd>A</kbd>                        | focus the parent container                     |
-| <kbd>Super</kbd> + <kbd>D</kbd>                        | focus the child container                      |
+| Keys                                                   | Action                                          |
+| :----------------------------------------------------- | :---------------------------------------------- |
+| <kbd>Super</kbd> + <kbd>F</kbd>                        | enter fullscreen mode for the focused container |
+| <kbd>Super</kbd> + <kbd>SHIFT</kbd> + <kbd>SPACE</kbd> | toggle tiling / floating                        |
+| <kbd>Super</kbd> + <kbd>SPACE</kbd>                    | change focus between tiling / floating windows  |
+| <kbd>Super</kbd> + <kbd>A</kbd>                        | focus the parent container                      |
+| <kbd>Super</kbd> + <kbd>D</kbd>                        | focus the child container                       |
 
 <br>
 
