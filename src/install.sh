@@ -147,7 +147,7 @@ updateSystem() {
 
 EOF
 
-	sudo pacman -Syyu --noconfirm || errorHandling 1
+	sudo pacman -Syyu --noconfirm
 
 }
 
@@ -177,9 +177,9 @@ installPackages() {
 		echo -e "│ Software -> vulkan-swrast         (Open-Source) (Very Slow)     │"
 		echo -e "└─────────────────────────────────────────────────────────────────┘"
 		echo -e ""
-		sed '/^\s*#/d;/^\s*$/d' "${directory}/packages/${file}" | sudo pacman -S --needed - || errorHandling 2
+		sed '/^\s*#/d;/^\s*$/d' "${directory}/packages/${file}" | sudo pacman -S --needed -
 	else
-		sed '/^\s*#/d;/^\s*$/d' "${directory}/packages/${file}" | sudo pacman -S --needed --noconfirm - || errorHandling 2
+		sed '/^\s*#/d;/^\s*$/d' "${directory}/packages/${file}" | sudo pacman -S --needed --noconfirm -
 	fi
 }
 
