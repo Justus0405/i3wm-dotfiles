@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+[[ $# -eq 0 ]] && exit 0
+
+for file in "$@"; do
+    [[ -f "${file}" ]] || continue
+
+    dir=$(dirname "${file}")
+    base=$(basename "${file}")
+    birthTime=$(stat -c %w "${file}" 2>/dev/null || echo "-")
+
+    if [[ "${birthTime}" == "-" ]]; then
+        birthTime=$(stat -c %y "${file}")
+    fi
+
+    date=$(echo "${birthTime}" | cut -d' ' -f1)
+
+    ext=""
+    if [[ "${base}" == *.* ]]; then
+        ext=".${base##*.}"
+    fi
+
+    newName="${date}${ext}"
+    counter=1
+
+    while [[ -e "${dir}/${newName}" ]]; do
+        newName="${date}-${counter}${ext}"
+        ((counter++))
+    done
+
+    mv -- "${file}" "${dir}/${newName}"
+done

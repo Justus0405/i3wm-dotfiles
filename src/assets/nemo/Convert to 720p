@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-for FILE in "$@"; do
-    DIR=$(dirname "$FILE")
-    BASENAME=$(basename "$FILE")
-    OUTPUT="$DIR/${BASENAME%.*}-720p.mp4"
+for file in "$@"; do
+    dir=$(dirname "${file}")
+    basename=$(basename "${file}")
+    output="${dir}/${basename%.*}-720p.mp4"
 
-    ffmpeg -i "$FILE" -vf scale=-1:720 "$OUTPUT"
+    ffmpeg -i "${file}" -vf scale=-1:720 "${output}"
 done
