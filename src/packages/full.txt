@@ -1,11 +1,12 @@
 # Development Tools
 intellij-idea-community-edition
-pycharm-community-edition
 jdk8-openjdk
 jdk11-openjdk
 jdk17-openjdk
 jdk21-openjdk
 jdk-openjdk
+sqlitebrowser
+seahorse
 
 # Full Multimedia & Audio
 ffmpeg
