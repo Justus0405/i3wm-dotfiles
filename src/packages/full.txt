@@ -4,6 +4,7 @@ jdk8-openjdk
 jdk11-openjdk
 jdk17-openjdk
 jdk21-openjdk
+jdk25-openjdk
 jdk-openjdk
 sqlitebrowser
 seahorse
