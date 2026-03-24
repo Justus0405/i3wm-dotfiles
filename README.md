@@ -2,13 +2,13 @@
 
 <p align="center">
     <!-- Discord Badge -->
-    <a href="https://discord.justus0405.com/"><img src="https://img.shields.io/discord/1370519315400495234?logo=Discord&colorA=1e1e2e&colorB=a6e3a1&style=for-the-badge"></a>
+    <a href="https://discord.justus0405.com/"><img src="https://img.shields.io/discord/1370519315400495234?logo=Discord&logoColor=89b4fa&colorA=1e1e2e&colorB=a6e3a1&style=for-the-badge"></a>
     <!-- Forks Badge -->
     <a href="https://github.com/Justus0405/i3wm-dotfiles/forks"><img src="https://img.shields.io/github/forks/Justus0405/i3wm-dotfiles?colorA=1e1e2e&colorB=ea999c&style=for-the-badge"></a>
     <!-- Stars Badge -->
     <a href="https://github.com/Justus0405/i3wm-dotfiles/stargazers"><img src="https://img.shields.io/github/stars/Justus0405/i3wm-dotfiles?colorA=1e1e2e&colorB=b7bdf8&style=for-the-badge"></a>
     <!-- Last Commit Badge -->
-    <a href="https://github.com/Justus0405/i3wm-dotfiles/commits/main/"><img src="https://img.shields.io/github/last-commit/Justus0405/i3wm-dotfiles?logo=github&colorA=1e1e2e&colorB=cdd6f4&style=for-the-badge"></a>
+    <a href="https://github.com/Justus0405/i3wm-dotfiles/commits/main/"><img src="https://img.shields.io/github/last-commit/Justus0405/i3wm-dotfiles?logo=github&logoColor=cdd6f4&colorA=1e1e2e&colorB=cdd6f4&style=for-the-badge"></a>
 </p>
 
 ## Installation
