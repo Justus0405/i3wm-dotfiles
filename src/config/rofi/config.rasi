@@ -22,7 +22,7 @@ configuration {
 
 * {
     width: 600px;
-    font: "JetBrainsMono Nerd Font 16";
+    font: "JetBrainsMono Nerd Font Propo 16";
     base: #1e1e2e;
     mauve: #cba6f7;
     overlay: #6c7086;
