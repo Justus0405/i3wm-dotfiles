@@ -387,7 +387,7 @@ EOF
 		[Yy])
 			echo -e "Setting CPU Governor to performance..."
 			sudo pacman -S --needed --noconfirm cpupower
-			echo "governor='performance'" | sudo tee "/etc/default/cpupower"
+			echo "GOVERNOR='performance'" | sudo tee -a "/etc/default/cpupower-service.conf"
 			sudo systemctl enable cpupower --now
 			break
 			;;
