@@ -132,7 +132,7 @@ bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+b exec --no-startup-id brave
 bindsym $mod+e exec --no-startup-id nemo
 bindsym $mod+n exec --no-startup-id "flameshot gui"
-bindsym $mod+m exec --no-startup-id "flameshot screen"
+bindsym $mod+m exec --no-startup-id "flameshot full"
 bindsym Ctrl+Shift+Escape exec --no-startup-id resources
 
 # start rofi
