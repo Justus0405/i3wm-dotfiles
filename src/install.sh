@@ -40,7 +40,7 @@ confirmInstallation() {
 	cat <<"EOF"
 ┌──────────────────────────────────────────────────┐
 │                                                  │
-│ Catppuccin Dotfiles                              │
+│ i3-wm Catppuccin Dotfiles                        │
 │ By Justus0405                                    │
 │                                                  │
 │ Installer Version 1.7                            │
