@@ -14,7 +14,7 @@ alias hfolders='ls -d .*/ */'
 alias search='grep -rwl'
 
 # Package management
-alias up='sudo pacman -Syyu && yes | sudo pacman -Scc'
+alias up='sudo pacman -Syyu --noconfirm && sudo rm -rf /var/cache/pacman/pkg/* && yes | sudo pacman -Scc && sync && sudo pacman -Rns $(pacman -Qdtq)'
 alias clean='yes | sudo pacman -Scc'
 alias autoremove='sudo pacman -Rns $(pacman -Qdtq)'
 
