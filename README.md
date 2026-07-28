@@ -1,3 +1,5 @@
+<img width="2000" height="500" alt="Banner" src="https://github.com/user-attachments/assets/367e3101-1ad1-438b-875a-04a9136d67a0" /><br>
+
 <p align="center">
     <!-- Discord Badge -->
     <a href="https://discord.justus0405.com/"><img src="https://img.shields.io/discord/1370519315400495234?logo=Discord&logoColor=89b4fa&colorA=1e1e2e&colorB=a6e3a1&style=for-the-badge"></a>
