@@ -79,4 +79,5 @@ askConfirm() {
 
 ### PROGRAM START ###
 
+sync
 askAction
