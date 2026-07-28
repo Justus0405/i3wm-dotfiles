@@ -4,7 +4,7 @@ feh
 polybar
 rofi
 rofi-calc
-sddm
+ly
 
 # Icons & Themes
 papirus-icon-theme
@@ -19,6 +19,7 @@ noto-fonts-cjk
 noto-fonts-extra
 
 # File Management
+xdg-user-dirs
 nemo
 nemo-fileroller
 nemo-share
@@ -33,6 +34,9 @@ wireplumber
 
 # Multimedia & Plugins
 gst-plugin-pipewire
+gst-libav
+gst-plugins-ugly
+mpv
 flameshot
 chromium
 
@@ -42,6 +46,7 @@ bash-completion
 gnome-keyring
 fastfetch
 nano
+htop
 qt5-graphicaleffects
 qt5-quickcontrols2
 qt5-svg
@@ -49,6 +54,7 @@ qt6-svg
 qt6-declarative
 rtkit
 polkit-gnome
+brightnessctl
 
 # Input Drivers
 xf86-input-evdev

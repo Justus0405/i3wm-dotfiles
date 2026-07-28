@@ -23,5 +23,4 @@ prismlauncher
 # More GNOME Applications
 gnome-calendar
 gnome-color-manager
-resources
 pavucontrol
