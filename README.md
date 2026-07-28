@@ -1,5 +1,3 @@
-![Justus0405 i3-wm Catppuccin Dotfiles](https://github.com/user-attachments/assets/2eaa5c58-7aba-40a1-84ba-0abd88d56092)
-
 <p align="center">
     <!-- Discord Badge -->
     <a href="https://discord.justus0405.com/"><img src="https://img.shields.io/discord/1370519315400495234?logo=Discord&logoColor=89b4fa&colorA=1e1e2e&colorB=a6e3a1&style=for-the-badge"></a>
@@ -14,12 +12,8 @@
 ## Installation
 
 > [!IMPORTANT]
-> The installation script is made for Arch,
-> but **may** work on some Arch based distros with **systemd**.
-
-> [!CAUTION]
-> This script is designed to be done after a minimal arch installation,
-> using it on previously installed desktop should work but will change whatever you currently have (gtk/qt theming, shell, sddm, etc) and is at your own risk.
+> Made for Arch based distros with systemd, on a fresh minimal install.
+> Running it on an existing desktop overwrites your theming, shell, and display manager config.
 
 1. Clone the repository:
 
@@ -67,6 +61,27 @@ chmod +x install.sh
 
 <br>
 
+## Applications
+
+| Role           | Package                    |
+| -------------- | -------------------------- |
+| Window Manager | `i3-wm`                    |
+| Login Manager  | `ly`                       |
+| App Launcher   | `rofi`                     |
+| Status Bar     | `polybar`                  |
+| Wallpaper      | `feh`                      |
+| File Manager   | `nemo`                     |
+| Terminal       | `alacritty`                |
+| Browser        | `chromium` + `brave`       |
+| Media Player   | `mpv`                      |
+| Screenshot     | `flameshot`                |
+| Audio          | `pipewire` + `wireplumber` |
+| Text Editor    | `nano`                     |
+| Icon Theme     | `papirus-icon-theme`       |
+| Font           | `ttf-jetbrains-mono-nerd`  |
+
+<br>
+
 ## Keybinds
 
 | Keys                                         | Action                               |
@@ -90,58 +105,40 @@ chmod +x install.sh
 
 <br>
 
-| Keys                                                    | Action                              |
-| :------------------------------------------------------ | :---------------------------------- |
-| <kbd>Super</kbd> + <kbd>NUMBER</kbd>                    | switch to workspace                 |
-| <kbd>Super</kbd> + <kbd>SHIFT</kbd> + <kbd>NUMBER</kbd> | move focused container to workspace |
-| <kbd>Super</kbd> + <kbd>SHIFT</kbd> + <kbd>C</kbd>      | reload the configuration file       |
-| <kbd>Super</kbd> + <kbd>SHIFT</kbd> + <kbd>R</kbd>      | restart i3                          |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>      | quit i3 session                     |
-
-<br>
-
-| Keys                            | Action      |
-| :------------------------------ | :---------- |
-| <kbd>Super</kbd> + <kbd>H</kbd> | focus left  |
-| <kbd>Super</kbd> + <kbd>J</kbd> | focus down  |
-| <kbd>Super</kbd> + <kbd>K</kbd> | focus up    |
-| <kbd>Super</kbd> + <kbd>L</kbd> | focus right |
+| Keys                                                    | Action                                          |
+| :------------------------------------------------------ | :---------------------------------------------- |
+| <kbd>Super</kbd> + <kbd>NUMBER</kbd>                    | switch to workspace                             |
+| <kbd>Super</kbd> + <kbd>SHIFT</kbd> + <kbd>NUMBER</kbd> | move focused container to workspace             |
+| <kbd>Super</kbd> + <kbd>SHIFT</kbd> + <kbd>C</kbd>      | reload the configuration file                   |
+| <kbd>Super</kbd> + <kbd>SHIFT</kbd> + <kbd>R</kbd>      | restart i3                                      |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>      | quit i3 session                                 |
+| <kbd>Super</kbd> + <kbd>F</kbd>                         | enter fullscreen mode for the focused container |
+| <kbd>Super</kbd> + <kbd>SHIFT</kbd> + <kbd>SPACE</kbd>  | toggle tiling / floating                        |
 
 <br>
 
 | Keys                                               | Action     |
 | :------------------------------------------------- | :--------- |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>H</kbd> | move left  |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> | move down  |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> | move up    |
-| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> | move right |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>←</kbd> | move left  |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>↓</kbd> | move down  |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>↑</kbd> | move up    |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>→</kbd> | move right |
 
 <br>
 
-| Keys                                                   | Action                                          |
-| :----------------------------------------------------- | :---------------------------------------------- |
-| <kbd>Super</kbd> + <kbd>F</kbd>                        | enter fullscreen mode for the focused container |
-| <kbd>Super</kbd> + <kbd>SHIFT</kbd> + <kbd>SPACE</kbd> | toggle tiling / floating                        |
-| <kbd>Super</kbd> + <kbd>SPACE</kbd>                    | change focus between tiling / floating windows  |
-| <kbd>Super</kbd> + <kbd>A</kbd>                        | focus the parent container                      |
-| <kbd>Super</kbd> + <kbd>D</kbd>                        | focus the child container                       |
+| Keys                                | Action                                         |
+| :---------------------------------- | :--------------------------------------------- |
+| <kbd>Super</kbd> + <kbd>SPACE</kbd> | change focus between tiling / floating windows |
+| <kbd>Super</kbd> + <kbd>A</kbd>     | focus the parent container                     |
+| <kbd>Super</kbd> + <kbd>D</kbd>     | focus the child container                      |
 
 <br>
 
 ## Credits
 
-##### Catppuccin Team
-
-- [Alacritty](https://github.com/catppuccin/alacritty)
-- [Rofi](https://github.com/catppuccin/rofi)
-- [GTK](https://github.com/catppuccin/gtk)
-- [SDDM](https://github.com/catppuccin/sddm)
-
-##### Others
-
-- [iinsertNameHere](https://github.com/iinsertNameHere/catnap)
-- [prasanthrangan](https://github.com/prasanthrangan/hyprdots)
-- [jluttine](https://github.com/jluttine/rofi-power-menu)
+- [Catppuccin Team](https://github.com/catppuccin)
+- [adi1090x](https://github.com/adi1090x/rofi)
+- [Samillion](https://github.com/Samillion/ModernZ)
 
 #
 
