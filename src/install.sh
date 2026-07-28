@@ -43,7 +43,7 @@ confirmInstallation() {
 │ i3-wm Catppuccin Dotfiles                        │
 │ By Justus0405                                    │
 │                                                  │
-│ Installer Version 1.7                            │
+│ Installer Version 1.8                            │
 │                                                  │
 └──────────────────────────────────────────────────┘
 
@@ -84,7 +84,6 @@ EOF
 		echo -e "│ Packages : Window Manager, Login Manager, File Manager,         │"
 		echo -e "│            Basic Fonts, Icons, Audio, Input, Screenshots        │"
 		echo -e "│ Browser  : Chromium                                             │"
-		echo -e "│ Media    : none                                                 │"
 		echo -e "└─────────────────────────────────────────────────────────────────┘"
 		echo -e ""
 
@@ -94,7 +93,6 @@ EOF
 		echo -e "│ Packages : Minimal+, Calculator, Disk Utility, Yay              │"
 		echo -e "│                                                                 │"
 		echo -e "│ Browser  : Brave                                                │"
-		echo -e "│ Media    : Totem, Loupe                                         │"
 		echo -e "└─────────────────────────────────────────────────────────────────┘"
 		echo -e ""
 
@@ -104,7 +102,6 @@ EOF
 		echo -e "│ Packages : Standard+, GIMP, Shotcut, Steam, Dev-Enviroment,     │"
 		echo -e "│            Vesktop, Prismlauncher, CurseForge, r2modman, yt-dlp │"
 		echo -e "│ Browser  : Brave                                                │"
-		echo -e "│ Media    : Totem, Loupe                                         │"
 		echo -e "└─────────────────────────────────────────────────────────────────┘"
 		echo -e ""
 
@@ -275,7 +272,7 @@ EOF
 		checkAurHelper
 
 		# Install aur packages for the full edition.
-		yay -S --noconfirm brave-bin vscodium-bin vesktop-bin r2modman-appimage curseforge gpu-screen-recorder
+		yay -S --noconfirm brave-bin vscodium-bin vesktop-bin r2modman-appimage curseforge gpu-screen-recorder protonplus
 		;;
 	esac
 }
@@ -349,7 +346,7 @@ chooseExtras() {
 EOF
 
 	while true; do
-		read -rp "Add a Wifi Menu to the top bar? (Recommended for Laptops) [y/N] " option
+		read -rp "Add a Wifi tray icon? (Recommended for Laptops) [y/N] " option
 		case "${option}" in
 		[Yy])
 			echo -e "Adding Wifi Menu..."
@@ -365,7 +362,7 @@ EOF
 	echo -e ""
 
 	while true; do
-		read -rp "Add Bluetooth support? [y/N] " option
+		read -rp "Add Bluetooth support with tray icon? [y/N] " option
 		case "${option}" in
 		[Yy])
 			echo -e "Adding Bluetooth Menu..."
@@ -437,6 +434,9 @@ EOF
 	unzip -o "${directory}/assets/gtk/gtk-4.0.zip" -d "${HOME}/.config/" || errorHandling 3
 	unzip -o "${directory}/assets/prismlauncher/Prismlauncher-themes.zip" -d "${HOME}/.local/share/PrismLauncher/themes/" || errorHandling 3
 
+	# MPV ModernZ Theme
+	unzip -o "${directory}/assets/mpv/ModernZ-Catppuccin-Mocha.zip" -d "${HOME}/.config/mpv/" || errorHandling 3
+
 	# Feh config
 	cp "${directory}/assets/feh/fehbg.txt" "${HOME}/.fehbg"
 	chmod +x "${HOME}/.fehbg"
@@ -446,9 +446,9 @@ EOF
 	chmod +x "${directory}/config/rofi/scripts/"*
 	cp -r "${directory}"/config/* "${HOME}/.config/"
 
-	# SDDM Theme
-	sudo unzip -o "${directory}/assets/sddm/catppuccin-mocha.zip" -d "/usr/share/sddm/themes/" || errorHandling 3
-	sudo cp -r "${directory}/assets/sddm/sddm.conf" "/etc/"
+	# Ly Theme
+	chmod +x "${directory}/assets/ly/startup.sh"
+	sudo cp -r "${directory}/assets/ly/"* "/etc/ly/"*
 
 	# Nemo scripts & config
 	gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty
@@ -479,9 +479,11 @@ EOF
 	# SSD, NVME blocks cleanup
 	sudo systemctl enable fstrim.timer
 	# Display Managers
+	sudo systemctl enable ly@tty2.service
+	sudo systemctl disable getty@tty2.service
 	sudo systemctl disable gdm
 	sudo systemctl disable lightdm
-	sudo systemctl enable sddm
+	sudo systemctl disable sddm
 }
 
 finished() {
