@@ -1,6 +1,5 @@
 # System Utilities
 dosfstools
-nvtop
 btop
 pacman-contrib
 ntfs-3g

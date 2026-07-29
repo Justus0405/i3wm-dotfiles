@@ -1,3 +1,17 @@
+# System Utilities
+nvtop
+pavucontrol
+
+# Multimedia Editing
+gimp
+shotcut
+qt6-multimedia-ffmpeg
+yt-dlp
+
+# GNOME Applications
+gnome-calendar
+gnome-color-manager
+
 # Development Tools
 intellij-idea-community-edition
 jdk8-openjdk
@@ -9,18 +23,6 @@ jdk-openjdk
 sqlitebrowser
 seahorse
 
-# Full Multimedia & Audio
-ffmpeg
-gimp
-shotcut
-qt6-multimedia-ffmpeg
-yt-dlp
-
 # Gaming
 steam
 prismlauncher
-
-# More GNOME Applications
-gnome-calendar
-gnome-color-manager
-pavucontrol

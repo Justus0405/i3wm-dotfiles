@@ -13,6 +13,8 @@ papirus-icon-theme
 
 # Fonts
 gnu-free-fonts
+ttf-liberation
+ttf-dejavu
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 noto-fonts
@@ -35,9 +37,6 @@ pipewire-pulse
 wireplumber
 
 # Multimedia & Plugins
-gst-plugin-pipewire
-gst-libav
-gst-plugins-ugly
 mpv
 flameshot
 chromium
