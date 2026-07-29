@@ -11,6 +11,10 @@
     <a href="https://github.com/Justus0405/i3wm-dotfiles/commits/main/"><img src="https://img.shields.io/github/last-commit/Justus0405/i3wm-dotfiles?logo=github&logoColor=cdd6f4&colorA=1e1e2e&colorB=cdd6f4&style=for-the-badge"></a>
 </p>
 
+<p align="center">
+My personal dotfiles. Built with simplicity, no animations, no blur, no rounded corners, no compositor.
+</p>
+
 ## Installation
 
 > [!IMPORTANT]
@@ -125,14 +129,6 @@ chmod +x install.sh
 | <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>↓</kbd> | move down  |
 | <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>↑</kbd> | move up    |
 | <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>→</kbd> | move right |
-
-<br>
-
-| Keys                                | Action                                         |
-| :---------------------------------- | :--------------------------------------------- |
-| <kbd>Super</kbd> + <kbd>SPACE</kbd> | change focus between tiling / floating windows |
-| <kbd>Super</kbd> + <kbd>A</kbd>     | focus the parent container                     |
-| <kbd>Super</kbd> + <kbd>D</kbd>     | focus the child container                      |
 
 <br>
 
