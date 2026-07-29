@@ -47,11 +47,6 @@ gnome-keyring
 fastfetch
 nano
 htop
-qt5-graphicaleffects
-qt5-quickcontrols2
-qt5-svg
-qt6-svg
-qt6-declarative
 rtkit
 polkit-gnome
 brightnessctl
