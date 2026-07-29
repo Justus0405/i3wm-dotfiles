@@ -6,7 +6,7 @@
 # Date: 04.03.2024
 # License: MIT
 
-export scriptVersion="1.7"
+export scriptVersion="1.8"
 
 ### COLOR CODES ###
 export black="\e[1;30m"
@@ -448,7 +448,7 @@ EOF
 
 	# Ly Theme
 	chmod +x "${directory}/assets/ly/startup.sh"
-	sudo cp -r "${directory}/assets/ly/"* "/etc/ly/"*
+	sudo cp -r "${directory}/assets/ly/"* "/etc/ly/"
 
 	# Nemo scripts & config
 	gsettings set org.cinnamon.desktop.default-applications.terminal exec alacritty
