@@ -1,10 +1,12 @@
 # Window Manager & UI
 i3-wm
+xorg-server
+xorg-xauth
+ly
 feh
 polybar
 rofi
 rofi-calc
-ly
 
 # Icons & Themes
 papirus-icon-theme
