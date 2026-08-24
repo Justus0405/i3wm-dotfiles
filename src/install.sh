@@ -272,7 +272,7 @@ EOF
 		checkAurHelper
 
 		# Install aur packages for the full edition.
-		yay -S --noconfirm brave-bin vscodium-bin vesktop-bin r2modman-appimage curseforge gpu-screen-recorder protonplus
+		yay -S --noconfirm brave-bin vscodium-bin vesktop-bin r2modman-bin curseforge gpu-screen-recorder protonplus
 		;;
 	esac
 }
